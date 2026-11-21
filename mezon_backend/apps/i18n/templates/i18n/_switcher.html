@@ -1,0 +1,8 @@
+<form method="post" action="{% url 'set_language' %}" style="margin: 0">{% csrf_token %}
+  <input type="hidden" name="next" value="{{ request.get_full_path }}">
+  <select name="language" onchange="this.form.submit()" title="Til / Language / Язык" aria-label="Til / Language / Язык"
+          style="background: var(--base, #0B0F17); color: var(--text, #E6EAF2); border: 1px solid var(--border, #242F48);
+                 border-radius: 4px; font: 500 12px var(--mono, monospace); padding: 3px 6px; width: auto">
+    {% for code, name in ui_languages %}<option value="{{ code }}"{% if code == ui_language %} selected{% endif %}>{{ name }}</option>{% endfor %}
+  </select>
+</form>

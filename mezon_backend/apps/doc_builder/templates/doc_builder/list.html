@@ -1,0 +1,44 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ ui_language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% trans "Hujjatlar konstruktori" %} — MEZON AI</title>
+{% include "cases/_style.html" %}
+<style>
+  main { max-width: 980px; margin: 24px auto; padding: 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-bottom: 22px; }
+  .tpl { display: block; text-decoration: none; color: var(--text); }
+  .tpl:hover { border-color: var(--blue); }
+  .tpl h3 { margin: 0 0 6px; font-size: 15px; }
+  h2 { font-size: 13px; font-family: var(--mono); color: var(--muted); text-transform: uppercase; margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>MEZON AI</h1>
+  {% include "accounts/_nav.html" with active="templates" %}
+  {% include "accounts/_userbar.html" %}
+</header>
+<main>
+  <p class="muted">{% blocktrans trimmed %}Shablonni tanlang, formani toʻldiring — hujjat Times New Roman 14 pt bilan DOCX yoki PDF koʻrinishida tayyorlanadi. Kiritilgan maʼlumotlar serverda saqlanmaydi.{% endblocktrans %}</p>
+  {% for label, items in groups %}
+    <h2>{{ label }}</h2>
+    <div class="grid">
+      {% for t in items %}
+      <a class="card tpl" href="{% url 'template_fill' t.id %}">
+        <h3>{{ t.title }}</h3>
+        <div class="muted" style="font-size: 13px">{{ t.description }}</div>
+        <div style="margin-top: 8px">
+          {% if t.approved_at %}<span class="pill ok">{% blocktrans trimmed with v=t.version %}moderator tasdiqlagan · v{{ v }}{% endblocktrans %}</span>
+          {% else %}<span class="pill warn">{% trans "namuna · moderator tasdiqlamagan" %}</span>{% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  {% empty %}
+    <p class="muted">{% trans "Hozircha shablon yoʻq." %}</p>
+  {% endfor %}
+</main>
+</body>
+</html>

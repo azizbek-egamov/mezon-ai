@@ -1,0 +1,205 @@
+/* @mezon/web-kit tema: designs/mezon_klassik/DESIGN.md ("Mezon Klassik"). Ilova CSS ida:
+     @import "tailwindcss"; @import "@mezon/web-kit/theme.css"; @source "<yo'l>/packages/web-kit/src";
+   Rejim: <html data-theme="light|dark">; atribut bo'lmasa — tizim sozlamasi (prefers-color-scheme).
+   Klasslar semantik: bg-canvas (sahifa), bg-surface (karta), bg-subtle (hover/input), border-line, text-ink,
+   text-muted, primary (asosiy amal), gold (faqat qonun havolalari), green/red/amber (holat). */
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --mz-canvas: #f7f4ec;
+  --mz-surface: #ffffff;
+  --mz-subtle: #f1ece0;
+  --mz-line: #e4dccb;
+  --mz-ink: #1d2433;
+  --mz-muted: #6b6658;
+  --mz-primary: #1f3a5f;
+  --mz-primary-fg: #ffffff;
+  --mz-gold: #8a6a1f;
+  --mz-green: #2f7d4f;
+  --mz-red: #b4382f;
+  --mz-amber: #a9671a;
+  --mz-quote: #34465f;
+  --mz-card-shadow: 0 1px 2px rgb(29 36 51 / 0.04), 0 2px 8px rgb(29 36 51 / 0.04);
+  color-scheme: light;
+}
+
+/* Qorong'i — iliq kulrang (ko'k-qora emas). data-theme ni theme.ts har doim aniq qo'yadi (dark: varianti uchun);
+   media-so'rov — JS yuklanguncha zaxira. */
+[data-theme="dark"] {
+  --mz-canvas: #17181b;
+  --mz-surface: #1f2024;
+  --mz-subtle: #292a2f;
+  --mz-line: #34353b;
+  --mz-ink: #eceae4;
+  --mz-muted: #a19d93;
+  --mz-primary: #9dbbe0;
+  --mz-primary-fg: #10213a;
+  --mz-gold: #d9b565;
+  --mz-green: #6cc08f;
+  --mz-red: #eb7b70;
+  --mz-amber: #e2a65a;
+  --mz-quote: #c9d6e8;
+  --mz-card-shadow: none;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --mz-canvas: #17181b;
+    --mz-surface: #1f2024;
+    --mz-subtle: #292a2f;
+    --mz-line: #34353b;
+    --mz-ink: #eceae4;
+    --mz-muted: #a19d93;
+    --mz-primary: #9dbbe0;
+    --mz-primary-fg: #10213a;
+    --mz-gold: #d9b565;
+    --mz-green: #6cc08f;
+    --mz-red: #eb7b70;
+    --mz-amber: #e2a65a;
+    --mz-quote: #c9d6e8;
+    --mz-card-shadow: none;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-canvas: var(--mz-canvas);
+  --color-surface: var(--mz-surface);
+  --color-subtle: var(--mz-subtle);
+  --color-line: var(--mz-line);
+  --color-ink: var(--mz-ink);
+  --color-muted: var(--mz-muted);
+  --color-primary: var(--mz-primary);
+  --color-primary-foreground: var(--mz-primary-fg);
+  --color-gold: var(--mz-gold);
+  --color-green: var(--mz-green);
+  --color-red: var(--mz-red);
+  --color-amber: var(--mz-amber);
+  --color-quote: var(--mz-quote);
+
+  /* shadcn nomlari */
+  --color-background: var(--mz-canvas);
+  --color-foreground: var(--mz-ink);
+  --color-card: var(--mz-surface);
+  --color-card-foreground: var(--mz-ink);
+  --color-popover: var(--mz-surface);
+  --color-popover-foreground: var(--mz-ink);
+  --color-secondary: var(--mz-subtle);
+  --color-secondary-foreground: var(--mz-ink);
+  --color-muted-foreground: var(--mz-muted);
+  --color-accent: var(--mz-subtle);
+  --color-accent-foreground: var(--mz-ink);
+  --color-destructive: var(--mz-red);
+  --color-border: var(--mz-line);
+  --color-input: var(--mz-line);
+  --color-ring: var(--mz-primary);
+
+  --shadow-card: var(--mz-card-shadow);
+  --shadow-glow: 0 0 0 2px color-mix(in oklab, var(--mz-primary) 35%, transparent);
+  --shadow-overlay: 0 16px 40px -8px rgb(0 0 0 / 0.25);
+}
+
+@theme {
+  --font-sans: "Inter Variable", "Segoe UI", system-ui, sans-serif;
+  --font-serif: "Lora Variable", Georgia, "Times New Roman", serif;
+  --font-mono: "Cascadia Mono", Consolas, ui-monospace, monospace;
+
+  --radius-sm: 0.375rem;
+  --radius: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--mz-line);
+  }
+  body {
+    background: var(--mz-canvas);
+    color: var(--mz-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--mz-primary) 22%, transparent);
+  }
+}
+
+/* Kichik bo'lim yorlig'i (oddiy jumla harfida; texnik kod uslubi emas) */
+@utility label-code {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* Qog'oz varag'i — shablon hujjatining ko'rinishi (DOCX/PDF bilan bir xil bloklar) */
+.paper {
+  background: #fff;
+  color: #111;
+  font: 15px/1.5 "Times New Roman", Times, serif;
+  padding: 40px 36px 40px 56px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.08), 0 0 0 1px rgb(0 0 0 / 0.04);
+}
+.paper .b-right { text-align: right; }
+.paper .b-center { text-align: center; font-weight: 700; }
+.paper .b-title { text-align: center; font-weight: 700; font-size: 17px; }
+.paper .b-h1, .paper .b-h2 { font-weight: 700; margin-top: 10px; }
+.paper .b-p { text-align: justify; text-indent: 1.25cm; margin: 0 0 4px; }
+.paper .b-item { margin: 0 0 2px 22px; text-align: justify; }
+.paper .b-item::before { content: "– "; }
+.paper .b-meta { font-size: 12px; font-style: italic; color: #555; }
+.paper .b-sign { display: flex; justify-content: space-between; margin-top: 6px; }
+.paper .b-space { height: 14px; }
+
+.cursor-blink::after {
+  content: "▍";
+  color: var(--mz-primary);
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Kirish animatsiyalari: sahifa, karta, ro'yxat elementi va navbat (stagger) uchun umumiy tizim.
+   `prefers-reduced-motion` yoqilgan foydalanuvchida butunlay o'chadi (elementlar darhol to'liq ko'rinadi). */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-in-up { animation: mz-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-in-fade { animation: mz-in-fade 0.35s ease-out both; }
+  .animate-in-scale { animation: mz-in-scale 0.18s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-in-left { animation: mz-in-left 0.22s cubic-bezier(0.16, 1, 0.3, 1) both; }
+}
+@keyframes mz-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes mz-in-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes mz-in-scale {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes mz-in-left {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Yuqori yupqa yuklanish chizig'i (sahifa/ma'lumot yuklanayotganda, TopLoader komponenti) */
+@keyframes mz-loader-slide {
+  0% { transform: translateX(-100%); }
+  55% { transform: translateX(60%); }
+  100% { transform: translateX(160%); }
+}
+.animate-loader-slide { animation: mz-loader-slide 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite; }

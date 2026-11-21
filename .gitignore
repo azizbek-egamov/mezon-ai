@@ -1,0 +1,99 @@
+# ============================================================
+# Maxfiy sozlamalar va muhit fayllari (Xavfsizlik)
+# ============================================================
+.env
+.env.*
+!.env.example
+!.env.nollm
+
+# Maxfiy kalitlar va sertifikatlar
+*.pem
+*.key
+*.keystore
+credentials/
+**/credentials/
+
+# ============================================================
+# Paketlar va Muhitlar (Dependencies)
+# ============================================================
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+**/.venv/
+**/venv/
+
+# Python bytecode va keshlar
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Node / Frontend paketlari
+node_modules/
+**/node_modules/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# Ma'lumotlar, Bazalar, Keshlar va Loglar
+# ============================================================
+# Backend ma'lumotlar papkasi (SQLite baza, Qdrant ma'lumotlari, yuklangan ishlar, keshlar)
+mezon_backend/data/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3.bak*
+*.log
+**/logs/
+
+# Qdrant server ikkilik fayllari va ma'lumotlari
+qdrant_server/qdrant.exe
+qdrant_server/*.exe
+.qdrant-initialized
+**/.qdrant-initialized
+
+# Zaxira nusxalar (Zaxira .mzb arxivlari 100MB+ bo'lishi mumkin)
+backups/
+*.mzb
+
+# Katta hajmdagi manba fayllar va tahlil eskizlari
+lex-uz-dagi-qonunlar/barcha_57950_hujjat.json
+MEZON-AI.pdf
+analysis/export_preview/
+
+# ============================================================
+# Frontend & Mobil Build Artefaktlari
+# ============================================================
+dist/
+**/dist/
+build/
+**/build/
+.vite/
+**/.vite/
+.expo/
+**/.expo/
+web-build/
+expo-env.d.ts
+*.tsbuildinfo
+
+# Expo / React Native Android & iOS avtomatik generatsiya qilingan papkalar
+frontend/apps/mobile/android/
+frontend/apps/mobile/ios/
+.kotlin/
+.metro-health-check*
+
+# ============================================================
+# Muhit va OT (OS / IDE) chiqindilari
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.swp
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json

@@ -1,0 +1,18 @@
+{
+  "name": "@mezon/i18n",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MEZON interfeys tillari: backend .po kataloglaridan eksport (manage.py i18n_export_json) + i18next",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "i18next": "^26.5.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  }
+}

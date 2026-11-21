@@ -1,0 +1,6 @@
+.venv/
+data/
+.env
+__pycache__/
+staticfiles/
+tools/cloudflared/config.yml

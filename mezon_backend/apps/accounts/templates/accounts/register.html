@@ -1,0 +1,31 @@
+{% extends "accounts/_form_page.html" %}{% load i18n %}
+{% block title %}{% trans "Roʻyxatdan oʻtish" %}{% endblock %}
+{% block content %}
+<h2>{% trans "Roʻyxatdan oʻtish" %}</h2>
+<p class="muted">{% trans "SMS orqali tasdiqlash keyingi bosqichda qoʻshiladi." %}</p>
+{% for e in form.non_field_errors %}<p class="alert">{{ e }}</p>{% endfor %}
+<form method="post">{% csrf_token %}
+  <p><label for="id_phone_number">{% trans "Telefon" %}</label>
+     <input type="tel" name="phone_number" id="id_phone_number" placeholder="+998 90 123 45 67"
+            value="{{ form.phone_number.value|default:'' }}" autocomplete="username" required autofocus>
+     {{ form.phone_number.errors }}</p>
+  <p><label for="id_full_name">{% trans "F.I.Sh." %}</label>
+     <input type="text" name="full_name" id="id_full_name" value="{{ form.full_name.value|default:'' }}" required>
+     {{ form.full_name.errors }}</p>
+  <p><label for="id_role">{% trans "Kim sifatida" %}</label>{{ form.role }}{{ form.role.errors }}</p>
+  <p><label for="id_advocate_license_no">{% trans "Advokatlik guvohnomasi raqami (advokatlar uchun)" %}</label>
+     <input type="text" name="advocate_license_no" id="id_advocate_license_no"
+            value="{{ form.advocate_license_no.value|default:'' }}">
+     {{ form.advocate_license_no.errors }}</p>
+  <p><label for="id_password1">{% trans "Parol" %}</label>
+     <input type="password" name="password1" id="id_password1" autocomplete="new-password" required>
+     {{ form.password1.errors }}</p>
+  <p><label for="id_password2">{% trans "Parolni takrorlang" %}</label>
+     <input type="password" name="password2" id="id_password2" autocomplete="new-password" required>
+     {{ form.password2.errors }}</p>
+  <p class="check"><input type="checkbox" name="consent" id="id_consent" {% if form.consent.value %}checked{% endif %} required>
+     <label for="id_consent">{{ form.consent.label }}</label>{{ form.consent.errors }}</p>
+  <button type="submit">{% trans "Roʻyxatdan oʻtish" %}</button>
+</form>
+<p class="alt muted">{% trans "Akkauntingiz bormi?" %} <a href="{% url 'login' %}">{% trans "Kirish" %}</a></p>
+{% endblock %}

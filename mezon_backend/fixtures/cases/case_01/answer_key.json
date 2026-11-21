@@ -1,0 +1,504 @@
+{
+  "case": "№ 2026/0457",
+  "synthetic": true,
+  "total_pages": 30,
+  "documents": [
+    {
+      "title": "JINOYAT ISHI № 2026/0457",
+      "pages": [
+        1,
+        1
+      ]
+    },
+    {
+      "title": "ARIZA",
+      "pages": [
+        2,
+        2
+      ]
+    },
+    {
+      "title": "JINOYAT ISHINI QOʻZGʻATISH TOʻGʻRISIDA QAROR",
+      "pages": [
+        3,
+        3
+      ]
+    },
+    {
+      "title": "JABRLANUVCHI VA FUQAROVIY DAʼVOGAR DEB TOPISH TOʻGʻRISIDA QAROR",
+      "pages": [
+        4,
+        4
+      ]
+    },
+    {
+      "title": "JABRLANUVCHINI SOʻROQ QILISH BAYONNOMASI",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "title": "TINTUV BAYONNOMASI",
+      "pages": [
+        7,
+        7
+      ]
+    },
+    {
+      "title": "GUMON QILINUVCHINI USHLAB TURISH BAYONNOMASI",
+      "pages": [
+        8,
+        8
+      ]
+    },
+    {
+      "title": "GUMON QILINUVCHINI SOʻROQ QILISH BAYONNOMASI",
+      "pages": [
+        9,
+        9
+      ]
+    },
+    {
+      "title": "QAMOQQA OLISH TARZIDAGI EHTIYOT CHORASINI QOʻLLASH TOʻGʻRISIDA ILTIMOSNOMA",
+      "pages": [
+        10,
+        10
+      ]
+    },
+    {
+      "title": "GUVOHNI SOʻROQ QILISH BAYONNOMASI",
+      "pages": [
+        11,
+        11
+      ]
+    },
+    {
+      "title": "ГУВОҲНИ СЎРОҚ ҚИЛИШ БАЁННОМАСИ",
+      "pages": [
+        12,
+        12
+      ]
+    },
+    {
+      "title": "TANIB OLISH UCHUN KOʻRSATISH BAYONNOMASI",
+      "pages": [
+        13,
+        13
+      ]
+    },
+    {
+      "title": "BANK KOʻCHIRMASI",
+      "pages": [
+        14,
+        14
+      ]
+    },
+    {
+      "title": "EKSPERTIZA TAYINLASH TOʻGʻRISIDA QAROR",
+      "pages": [
+        15,
+        15
+      ]
+    },
+    {
+      "title": "ЗАКЛЮЧЕНИЕ ЭКСПЕРТА",
+      "pages": [
+        16,
+        16
+      ]
+    },
+    {
+      "title": "EHTIYOT CHORASINI QOʻLLASH TOʻGʻRISIDA AJRIM",
+      "pages": [
+        17,
+        17
+      ]
+    },
+    {
+      "title": "HIMOYACHINING SHIKOYATI",
+      "pages": [
+        18,
+        18
+      ]
+    },
+    {
+      "title": "AYBLANUVCHI TARIQASIDA ISHDA ISHTIROK ETISHGA JALB QILISH TOʻGʻRISIDA QAROR",
+      "pages": [
+        19,
+        19
+      ]
+    },
+    {
+      "title": "AYBLANUVCHINI SOʻROQ QILISH BAYONNOMASI",
+      "pages": [
+        20,
+        20
+      ]
+    },
+    {
+      "title": "MULKNI XATLASH BAYONNOMASI",
+      "pages": [
+        21,
+        21
+      ]
+    },
+    {
+      "title": "YUZLASHTIRISH BAYONNOMASI",
+      "pages": [
+        22,
+        22
+      ]
+    },
+    {
+      "title": "“UCELL” MOBIL ALOQA OPERATORINING JAVOB XATI",
+      "pages": [
+        23,
+        23
+      ]
+    },
+    {
+      "title": "“OʻZBEKISTON TEMIR YOʻLLARI” AJ JAVOB XATI",
+      "pages": [
+        24,
+        24
+      ]
+    },
+    {
+      "title": "GUVOHNI SOʻROQ QILISH BAYONNOMASI (AVTOMOBIL EGASI)",
+      "pages": [
+        25,
+        25
+      ]
+    },
+    {
+      "title": "SUDLANGANLIK TOʻGʻRISIDA MAʼLUMOTNOMA",
+      "pages": [
+        26,
+        26
+      ]
+    },
+    {
+      "title": "MAHALLA FUQAROLAR YIGʻINI TAVSIFNOMASI",
+      "pages": [
+        27,
+        27
+      ]
+    },
+    {
+      "title": "EKSPERTIZA TAYINLASH TOʻGʻRISIDAGI QAROR BILAN TANISHTIRISH BAYONNOMASI",
+      "pages": [
+        28,
+        28
+      ]
+    },
+    {
+      "title": "JINOYAT ISHI MATERIALLARI BILAN TANISHTIRISH BAYONNOMASI",
+      "pages": [
+        29,
+        29
+      ]
+    },
+    {
+      "title": "AYBLOV XULOSASI",
+      "pages": [
+        30,
+        30
+      ]
+    }
+  ],
+  "fact_pages": {
+    "victim_meeting_14": 2,
+    "victim_transfer_date_0303": 2,
+    "victim_meeting_14_interrogation": 5,
+    "victim_amount_85": 5,
+    "victim_denies_receipt": 5,
+    "search_receipt_found": 7,
+    "detention_start": 8,
+    "accused_alibi_samarkand": 9,
+    "accused_car_grey": 9,
+    "accused_amount_58": 9,
+    "custody_motion_2003_1745": 10,
+    "witness1_meeting_1930": 11,
+    "witness1_car_white": 11,
+    "witness2_time_14_silver": 12,
+    "identification_single_photo": 13,
+    "bank_transfer_0403": 14,
+    "expertise_ordered_2003": 15,
+    "expert_probable_victim": 16,
+    "court_defense_objection": 17,
+    "custody_order_2103_1100": 17,
+    "defense_complaint_detention": 18,
+    "accused_requests_check": 20,
+    "confrontation_victim_unsure_time": 22,
+    "confrontation_amounts": 22,
+    "billing_moving": 23,
+    "billing_samarkand_14": 23,
+    "billing_sergeli_1924": 23,
+    "train_ticket": 24,
+    "owner_car_in_fergana": 25,
+    "expertise_familiarization_0204": 28,
+    "defense_motion_alibi": 29,
+    "investigator_rejects_motion": 29,
+    "indictment_0303_14_85": 30,
+    "indictment_expert_misread": 30
+  },
+  "contradictions": [
+    {
+      "id": "C1",
+      "topic": "Toʻlangan summa",
+      "facts": [
+        "victim_amount_85",
+        "accused_amount_58",
+        "search_receipt_found"
+      ],
+      "note": "Jabrlanuvchi 85 000 000 soʻm deydi; ayblanuvchi va tilxat — 58 000 000 soʻm. Bank koʻchirmasida 85 000 000.",
+      "pages": [
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "C2",
+      "topic": "Uchrashuv vaqti",
+      "facts": [
+        "victim_meeting_14_interrogation",
+        "witness1_meeting_1930",
+        "witness2_time_14_silver",
+        "accused_alibi_samarkand"
+      ],
+      "note": "Jabrlanuvchi va qorovul 14:00 deydi; jabrlanuvchining dugonasi (guvoh) va ayblanuvchi — kechqurun 19:00–19:30.",
+      "pages": [
+        5,
+        9,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "C3",
+      "topic": "Pul oʻtkazilgan sana",
+      "facts": [
+        "victim_transfer_date_0303",
+        "bank_transfer_0403"
+      ],
+      "note": "Jabrlanuvchi va ayblov xulosasi 3-mart deydi; bank koʻchirmasida 04.03.2026 10:12.",
+      "pages": [
+        2,
+        14
+      ]
+    },
+    {
+      "id": "C4",
+      "topic": "Avtomobil rangi",
+      "facts": [
+        "witness1_car_white",
+        "accused_car_grey",
+        "witness2_time_14_silver"
+      ],
+      "note": "Jabrlanuvchi va guvoh Hasanova — oq; ayblanuvchi — kulrang; qorovul — kumushrang.",
+      "pages": [
+        9,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "C5",
+      "topic": "Ekspertiza xulosasi ayblov xulosasida notoʻgʻri bayon qilingan",
+      "facts": [
+        "expert_probable_victim",
+        "indictment_expert_misread"
+      ],
+      "note": "Ekspert: tilxat matni va imzo EHTIMOL jabrlanuvchiga tegishli (ayblanuvchi versiyasini qoʻllaydi); ayblov xulosasi: tilxat soxtaligi tasdiqlangan.",
+      "pages": [
+        16,
+        30
+      ]
+    },
+    {
+      "id": "C6",
+      "topic": "Ayblanuvchining soat 14:00 dagi joylashuvi",
+      "facts": [
+        "indictment_0303_14_85",
+        "billing_samarkand_14",
+        "train_ticket",
+        "billing_sergeli_1924"
+      ],
+      "note": "Ayblov: 14:00 da Sergeli bozorida. Billing: 13:40–14:32 Samarqandda; poyezd 15:40 da Samarqanddan joʻnagan; 19:24 da Sergeli bozori hududida — kechki uchrashuv versiyasiga mos.",
+      "pages": [
+        23,
+        24,
+        30
+      ]
+    },
+    {
+      "id": "C7",
+      "topic": "Koʻrsatilgan avtomobil",
+      "facts": [
+        "victim_meeting_14_interrogation",
+        "owner_car_in_fergana"
+      ],
+      "note": "Jabrlanuvchi 01 A 777 BC raqamli oq Cobaltni koʻrgan deydi; uning egasi avtomobil 3-mart kuni Fargʻonada boʻlganini koʻrsatgan.",
+      "pages": [
+        5,
+        25
+      ]
+    },
+    {
+      "id": "C8",
+      "topic": "Jabrlanuvchi uchrashuv vaqtini aniq eslamasligi",
+      "facts": [
+        "victim_meeting_14_interrogation",
+        "confrontation_victim_unsure_time"
+      ],
+      "note": "Soʻroqda “14:00”; yuzlashtirishda “aniq eslolmayman, adashgan boʻlishim mumkin”.",
+      "pages": [
+        5,
+        22
+      ]
+    }
+  ],
+  "procedural_issues": [
+    {
+      "id": "P1",
+      "topic": "Ushlab turish muddati",
+      "facts": [
+        "detention_start",
+        "custody_order_2103_1100",
+        "court_defense_objection"
+      ],
+      "note": "18.03.2026 09:30 da ushlab turilgan, qamoqqa olish toʻgʻrisidagi ajrim 21.03.2026 11:00 — taxminan 73,5 soat; ishda muddatni uzaytirish toʻgʻrisidagi qaror yoʻq. Ushlab turish muddati (JPK: 48 soat) buzilgan boʻlishi mumkin.",
+      "pages": [
+        8,
+        17
+      ]
+    },
+    {
+      "id": "P2",
+      "topic": "Ekspertiza tayinlash qarori bilan kech tanishtirish",
+      "facts": [
+        "expertise_ordered_2003",
+        "expert_probable_victim",
+        "expertise_familiarization_0204"
+      ],
+      "note": "Qaror 20.03.2026, xulosa 31.03.2026, tanishtirish 02.04.2026 — ekspertizadan keyin. Ayblanuvchi savol qoʻyish, ekspert muassasasini tanlash huquqlaridan foydalana olmagan.",
+      "pages": [
+        15,
+        16,
+        28
+      ]
+    },
+    {
+      "id": "P3",
+      "topic": "Alibini tasdiqlovchi dalillar inobatga olinmagan",
+      "facts": [
+        "accused_alibi_samarkand",
+        "billing_samarkand_14",
+        "train_ticket",
+        "defense_motion_alibi",
+        "investigator_rejects_motion"
+      ],
+      "note": "Billing va temir yoʻl javobi ayblanuvchi 14:00 da Samarqandda boʻlganini koʻrsatadi; ayblov xulosasi esa alibi “tasdiqlanmadi” deydi, himoyachining iltimosnomasi asoslantirilmay rad etilgan.",
+      "pages": [
+        9,
+        23,
+        24,
+        29
+      ]
+    },
+    {
+      "id": "P4",
+      "topic": "Tanib olish bitta fotosurat bilan oʻtkazilgan",
+      "facts": [
+        "identification_single_photo",
+        "defense_complaint_detention"
+      ],
+      "note": "Guvohga faqat ayblanuvchining bitta fotosurati koʻrsatilgan — tanib olish tartibi buzilgan boʻlishi mumkin, natija ishonchsiz.",
+      "pages": [
+        13,
+        18
+      ]
+    }
+  ],
+  "pii_values": [
+    "41503881230051",
+    "31205910450027",
+    "42201900560034",
+    "30310670120018",
+    "31404790330041",
+    "+998 90 123-45-67",
+    "+998 93 555-12-90",
+    "+998 97 444-08-08",
+    "AD 2231475"
+  ],
+  "pii_names": [
+    "Qodirova",
+    "Malika",
+    "Rustamov",
+    "Jasur",
+    "Hasanova",
+    "Dilnoza",
+    "Ergashev",
+    "Эргашев",
+    "Шуҳрат",
+    "Sobirov",
+    "Yusupov",
+    "Юсупов",
+    "Abdullayev",
+    "Mirzayev",
+    "Кодиров",
+    "Каримов"
+  ],
+  "timeline": [
+    [
+      "2026-03-03",
+      "Uchrashuv va kelishuv (vaqti ziddiyatli: 14:00 yoki 19:00–19:30)"
+    ],
+    [
+      "2026-03-04 10:12",
+      "85 000 000 soʻm P2P oʻtkazma (bank koʻchirmasi)"
+    ],
+    [
+      "2026-03-12",
+      "Ariza"
+    ],
+    [
+      "2026-03-14",
+      "Jinoyat ishi qoʻzgʻatildi"
+    ],
+    [
+      "2026-03-18 07:40",
+      "Tintuv"
+    ],
+    [
+      "2026-03-18 09:30",
+      "Ushlab turish"
+    ],
+    [
+      "2026-03-20",
+      "Ekspertiza tayinlandi"
+    ],
+    [
+      "2026-03-21 11:00",
+      "Qamoqqa olish ajrimi"
+    ],
+    [
+      "2026-03-25",
+      "Ayblov eʼlon qilindi"
+    ],
+    [
+      "2026-03-31",
+      "Ekspert xulosasi"
+    ],
+    [
+      "2026-04-02",
+      "Ekspertiza qarori bilan tanishtirish"
+    ],
+    [
+      "2026-04-10",
+      "Ayblov xulosasi"
+    ]
+  ]
+}

@@ -1,0 +1,33 @@
+<style>
+  /* designs/mezon_sovereign_precision/DESIGN.md; shriftlar — tizim shriftlari (tashqi CDN yo'q) */
+  :root {
+    --base: #0B0F17; --slate1: #121824; --slate2: #1A2234; --border: #242F48;
+    --text: #E6EAF2; --muted: #8A94A8; --blue: #3B82F6; --gold: #E5C158;
+    --green: #10B981; --red: #EF4444; --amber: #F59E0B;
+    --sans: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--base); color: var(--text); font: 14px/1.55 var(--sans); }
+  header { display: flex; align-items: center; gap: 16px; padding: 12px 24px; background: var(--slate1);
+           border-bottom: 1px solid var(--border); }
+  header h1 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.02em; }
+  header nav a { color: var(--muted); text-decoration: none; font: 500 12px var(--mono); margin-right: 14px; }
+  header nav a.active, header nav a:hover { color: var(--text); }
+  .card { background: var(--slate1); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; }
+  .muted { color: var(--muted); }
+  .mono { font-family: var(--mono); }
+  .pill { display: inline-block; border-radius: 999px; padding: 1px 9px; font: 600 11px var(--mono); border: 1px solid var(--border); }
+  .pill.ok { color: var(--green); border-color: rgba(16,185,129,0.45); background: rgba(16,185,129,0.1); }
+  .pill.bad { color: var(--red); border-color: rgba(239,68,68,0.5); background: rgba(239,68,68,0.08); }
+  .pill.warn { color: var(--amber); border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.08); }
+  .pill.info { color: var(--blue); border-color: rgba(59,130,246,0.5); }
+  button, .btn { background: var(--blue); color: #fff; border: none; border-radius: 4px; padding: 8px 16px;
+                 font: 600 14px var(--sans); cursor: pointer; text-decoration: none; }
+  input[type=text], input[type=file] { background: var(--base); color: var(--text); border: 1px solid var(--border);
+                 border-radius: 4px; padding: 7px 9px; font: 14px var(--sans); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid var(--border); padding: 7px 8px; text-align: left; vertical-align: top; }
+  th { color: var(--muted); font: 600 11px var(--mono); text-transform: uppercase; }
+  a { color: var(--blue); }
+</style>

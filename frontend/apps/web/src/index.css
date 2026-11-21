@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "@mezon/web-kit/theme.css";
+/* umumiy komponentlardagi Tailwind klasslari ham yig'ilsin */
+@source "../../../packages/web-kit/src";

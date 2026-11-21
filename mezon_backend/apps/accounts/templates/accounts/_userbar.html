@@ -1,0 +1,11 @@
+{% load i18n %}
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px; font: 500 12px var(--mono, monospace)">
+  {% include "i18n/_switcher.html" %}
+  {% if user.is_authenticated %}
+  <span style="color: var(--muted, #8A94A8)">{{ user.get_short_name }} · {{ user.get_role_display }}</span>
+  <form method="post" action="{% url 'logout' %}" style="margin: 0">{% csrf_token %}
+    <button type="submit" style="background: none; border: 1px solid var(--border, #242F48); color: var(--text, #E6EAF2);
+            padding: 3px 10px; font: 500 12px var(--mono, monospace); border-radius: 4px; cursor: pointer">{% trans "Chiqish" %}</button>
+  </form>
+  {% endif %}
+</div>

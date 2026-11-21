@@ -1,0 +1,76 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ ui_language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ template.title }} — MEZON AI</title>
+{% include "cases/_style.html" %}
+<style>
+  .layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 20px; max-width: 1280px;
+            margin: 20px auto; padding: 0 20px; }
+  form p { margin: 0 0 12px; }
+  label { display: block; font: 600 12px var(--mono); color: var(--muted); margin-bottom: 4px; }
+  input, select, textarea { width: 100%; background: var(--base); color: var(--text); border: 1px solid var(--border);
+                            border-radius: 4px; padding: 8px 10px; font: 14px var(--sans); }
+  .helptext { font-size: 12px; color: var(--muted); }
+  .errorlist { list-style: none; padding: 0; margin: 4px 0 0; color: var(--red); font-size: 12px; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; position: sticky; bottom: 0; background: var(--slate1);
+             padding: 10px 0; }
+  /* Hujjat ko'rinishi: qog'oz varag'i */
+  .paper { background: #fff; color: #111; font: 15px/1.5 "Times New Roman", Times, serif; padding: 40px 36px 40px 56px;
+           border-radius: 4px; min-height: 400px; }
+  .paper .right { text-align: right; }
+  .paper .center { text-align: center; font-weight: 700; }
+  .paper .h2 { font-weight: 700; margin-top: 10px; }
+  .paper .p { text-align: justify; text-indent: 1.25cm; margin: 0 0 4px; }
+  .paper .item { margin: 0 0 2px 22px; text-align: justify; }
+  .paper .item::before { content: "– "; }
+  .paper .sign { display: flex; justify-content: space-between; margin-top: 6px; }
+  .paper .space { height: 14px; }
+  @media (max-width: 1000px) { .layout { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>MEZON AI</h1>
+  {% include "accounts/_nav.html" with active="templates" %}
+  {% include "accounts/_userbar.html" %}
+</header>
+<div class="layout">
+  <div class="card">
+    <h2 style="margin: 0 0 4px; font-size: 17px">{{ template.title }}</h2>
+    <p class="muted" style="margin: 0 0 8px">{{ template.description }}</p>
+    {% if template.approved_at %}<span class="pill ok">{% blocktrans trimmed with v=template.version %}moderator tasdiqlagan · v{{ v }}{% endblocktrans %}</span>
+    {% else %}<span class="pill warn">{% trans "namuna · moderator tasdiqlamagan — matnni tekshirib foydalaning" %}</span>{% endif %}
+    {% if legal_basis %}<div class="muted" style="font-size: 12px; margin: 10px 0">{% trans "Asos:" %}
+      {% for line in legal_basis %}<div>· {{ line }}</div>{% endfor %}</div>{% endif %}
+    <form method="post" novalidate>{% csrf_token %}
+      {% if quota_error %}<p class="err" style="color: var(--red)">{{ quota_error }} <a href="/billing/">{% trans "Tarif" %}</a></p>{% endif %}
+      {% for e in form.non_field_errors %}<p class="err" style="color: var(--red)">{{ e }}</p>{% endfor %}
+      {% for field in form %}
+        <p>{{ field.label_tag }}{{ field }}{% if field.help_text %}<span class="helptext">{{ field.help_text }}</span>{% endif %}
+           {{ field.errors }}</p>
+      {% endfor %}
+      <div class="actions">
+        <button type="submit" name="action" value="preview">{% trans "Koʻrib chiqish" %}</button>
+        <button type="submit" name="action" value="docx">{% trans "DOCX yuklab olish" %}</button>
+        <button type="submit" name="action" value="pdf">{% trans "PDF yuklab olish" %}</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    {% if blocks %}
+    <div class="paper">
+      {% for b in blocks %}
+        {% if b.kind == "sign" %}<div class="sign"><span>{{ b.sign_left }}</span><span>{{ b.sign_right }}</span></div>{% else %}
+        <div class="{{ b.kind }}">{{ b.text }}</div>{% endif %}
+      {% endfor %}
+    </div>
+    <p class="muted" style="font-size: 12px">{% trans "Hujjat yuridik maslahat emas — topshirishdan oldin advokat tekshiradi." %}</p>
+    {% else %}
+    <div class="card muted">{% trans "Formani toʻldirib “Koʻrib chiqish”ni bosing — hujjat shu yerda koʻrinadi." %}</div>
+    {% endif %}
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ ui_language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{% endblock %} — MEZON AI</title>
+{% include "cases/_style.html" %}
+<style>
+  main { max-width: 420px; margin: 48px auto; padding: 0 16px; }
+  h2 { font-size: 20px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  form p { margin: 0 0 12px; }
+  label { display: block; font: 600 12px var(--mono); color: var(--muted); margin-bottom: 4px; }
+  input[type=text], input[type=password], input[type=tel], select {
+    width: 100%; background: var(--base); color: var(--text); border: 1px solid var(--border); border-radius: 4px;
+    padding: 9px 10px; font: 14px var(--sans); }
+  input[type=checkbox] { margin-right: 6px; }
+  .password-wrap { position: relative; display: block; }
+  .password-wrap input { padding-right: 42px; }
+  .password-reveal { position: absolute; right: 2px; top: 2px; width: 38px; height: calc(100% - 4px); margin: 0;
+    padding: 0; border: 0; background: transparent; color: var(--muted); display: grid; place-items: center; touch-action: none; }
+  .password-reveal:hover, .password-reveal:focus-visible { color: var(--text); }
+  .password-reveal svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .check label { display: inline; font: 13px var(--sans); color: var(--text); }
+  .errorlist { list-style: none; padding: 0; margin: 4px 0 0; color: var(--red); font-size: 12px; }
+  .alert { color: var(--red); margin: 0 0 12px; }
+  button { width: 100%; margin-top: 6px; }
+  header select { width: auto; padding: 3px 6px; }
+  header button { width: auto; margin-top: 0; }
+  .alt { margin-top: 16px; text-align: center; }
+</style>
+</head>
+<body>
+<header><h1>MEZON AI</h1>{% include "accounts/_userbar.html" %}</header>
+<main>
+  <div class="card">{% block content %}{% endblock %}</div>
+  <p class="muted" style="font-size: 12px; margin-top: 14px">{% trans "Tizim yuridik maslahat emas — advokat uchun yordamchi vosita." %}</p>
+</main>
+<script>
+  (() => {
+    const label = "{% trans 'Parolni koʻrish uchun bosib turing' %}";
+    document.querySelectorAll('input[type="password"]').forEach((input) => {
+      const wrap = document.createElement("span");
+      wrap.className = "password-wrap";
+      input.parentNode.insertBefore(wrap, input);
+      wrap.appendChild(input);
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "password-reveal";
+      button.setAttribute("aria-label", label);
+      button.title = label;
+      button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>';
+      const show = (event) => { event?.preventDefault(); input.type = "text"; };
+      const hide = () => { input.type = "password"; };
+      button.addEventListener("pointerdown", show);
+      ["pointerup", "pointercancel", "pointerleave", "blur"].forEach((name) => button.addEventListener(name, hide));
+      button.addEventListener("keydown", (event) => {
+        if (event.key === " " || event.key === "Enter") show(event);
+      });
+      button.addEventListener("keyup", (event) => {
+        if (event.key === " " || event.key === "Enter") hide();
+      });
+      wrap.appendChild(button);
+    });
+  })();
+</script>
+</body>
+</html>

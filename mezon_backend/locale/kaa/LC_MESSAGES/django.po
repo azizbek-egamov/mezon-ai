@@ -1,0 +1,4023 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MEZON AI\n"
+"Language: kaa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/cases/templates/cases/detail.html:158
+#: frontend/apps/mobile/src/app/case/[id].tsx:71
+#: frontend/apps/web/src/pages/cases/Report.tsx:97
+msgid "%(n)s fakt · %(v)s iqtibos tasdiqlandi"
+msgstr "%(n)s факт · %(v)s цитата тастыйықланды"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:58
+msgid "%(n)s obunachi"
+msgstr "%(n)s жазылыўшы"
+
+#: apps/cases/templates/cases/detail.html:160
+#: frontend/apps/mobile/src/app/case/[id].tsx:73
+#: frontend/apps/web/src/pages/cases/Report.tsx:99
+msgid "%(n)s protsessual muammo"
+msgstr "%(n)s процессуал мәселе"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:53
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:60
+msgid "%(n)s ta akkaunt bitta IP dan"
+msgstr "Бир IP дан %(n)s аккаунт"
+
+#: apps/rag/templates/rag/chat.html:193
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:128
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:157
+msgid "%(n)s ta manba topildi · javob yozilmoqda…"
+msgstr "%(n)s дәрек табылды · жуўап жазылмақта…"
+
+#: apps/rag/templates/rag/chat.html:190
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:127
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:156
+msgid "%(n)s ta yoʻnalish: %(topics)s · qidirilmoqda…"
+msgstr "%(n)s бағдар: %(topics)s · излеў жүрмекте…"
+
+#: apps/cases/templates/cases/detail.html:157
+#: frontend/apps/admin/src/pages/CostsPage.tsx:81
+#: frontend/apps/admin/src/pages/UsersPage.tsx:291
+#: frontend/apps/mobile/src/app/case/[id].tsx:70
+#: frontend/apps/mobile/src/app/case/[id].tsx:141
+msgid "%(n)s varaq"
+msgstr "%(n)s варақ"
+
+#: apps/cases/templates/cases/detail.html:159
+#: frontend/apps/mobile/src/app/case/[id].tsx:72
+#: frontend/apps/web/src/pages/cases/Report.tsx:98
+msgid "%(n)s ziddiyat"
+msgstr "%(n)s қарама-қарсылық"
+
+#: apps/doc_builder/models.py:62
+msgid ""
+"%(n)s-maydon nomi notoʻgʻri: %(name)s (kichik lotin harflari, raqam, _)"
+msgstr "%(n)s-майдан аты қәте: %(name)s (киши латын ҳәрплери, санлар, _)"
+
+#: apps/doc_builder/models.py:59
+msgid "%(n)s-maydon obyekt boʻlishi kerak"
+msgstr "%(n)s-майдан объект болыўы керек"
+
+#: apps/cases/templates/cases/detail.html:103
+#: frontend/apps/mobile/src/app/case/[id].tsx:40
+#: frontend/apps/mobile/src/app/case/[id].tsx:85
+#: frontend/apps/web/src/pages/cases/common.tsx:25
+msgid "%(n)s-v"
+msgstr "%(n)s-в"
+
+#: apps/cases/templates/cases/detail.html:143
+#: frontend/apps/web/src/pages/cases/Report.tsx:117
+msgid "%(n)s-varaq:"
+msgstr "%(n)s-варақ:"
+
+#: apps/cases/services.py:115
+msgid "%(name)s + %(n)s fayl"
+msgstr "%(name)s + %(n)s файл"
+
+#: apps/cases/intake.py:174
+msgid ""
+"%(name)s: %(n)s ta ichki rasm ajratib olindi va alohida varaq sifatida "
+"qoʻshildi"
+msgstr ""
+"%(name)s: %(n)s ишки сүўрет ажыратып алынды ҳәм бөлек бет сыпатында қосылды"
+
+#: apps/cases/intake.py:105
+msgid "%(name)s: DOCX da matn topilmadi"
+msgstr "%(name)s: DOCX да текст табылмады"
+
+#: apps/cases/intake.py:87
+msgid "%(name)s: DOCX faylni oʻqib boʻlmadi"
+msgstr "%(name)s: DOCX файлын оқып болмады"
+
+#: apps/cases/intake.py:55
+msgid "%(name)s: PDF faylni oʻqib boʻlmadi"
+msgstr "%(name)s: PDF файлын оқып болмады"
+
+#: apps/cases/intake.py:57
+msgid "%(name)s: PDF parol bilan himoyalangan"
+msgstr "%(name)s: PDF пароль менен қорғалған"
+
+#: apps/cases/intake.py:154
+msgid "%(name)s: faqat PDF, DOCX, JPG yoki PNG qabul qilinadi"
+msgstr "%(name)s: тек PDF, DOCX, JPG yamasa PNG қабыл етиледи"
+
+#: apps/doc_builder/models.py:68
+msgid "%(name)s: label (yorliq) kerak"
+msgstr "%(name)s: label (ярлық) керек"
+
+#: apps/doc_builder/models.py:70
+msgid "%(name)s: nomaʼlum tur %(type)s (mumkin: %(types)s)"
+msgstr "%(name)s: белгисиз түр %(type)s (мүмкин: %(types)s)"
+
+#: apps/cases/intake.py:67
+msgid "%(name)s: rasm juda katta (%(w)s×%(h)s)"
+msgstr "%(name)s: сүўрет дым үлкен (%(w)s×%(h)s)"
+
+#: apps/cases/intake.py:70
+msgid "%(name)s: rasmni oʻqib boʻlmadi"
+msgstr "%(name)s: сүўретти оқып болмады"
+
+#: apps/doc_builder/models.py:73
+msgid "%(name)s: select uchun options kerak"
+msgstr "%(name)s: select ушын options керек"
+
+#: apps/rag/answer.py:148
+msgid "%(num)s-modda manbalar orasida yo'q — tekshirish kerak"
+msgstr "%(num)s-статья дәреклер арасында жоқ — тексериў керек"
+
+#: apps/rag/verifier.py:134
+msgid "%(number)s-modda %(date)s da kuchda boʻlmagan (chiqarib tashlangan)"
+msgstr "%(number)s-статья %(date)s да күшинде болмаған (шығарылған)"
+
+#: apps/rag/verifier.py:131
+msgid "%(number)s-modda %(first)s dan kuchga kirgan — %(date)s da yoʻq edi"
+msgstr ""
+"%(number)s-статья %(first)s нан баслап күшке кирген — %(date)s да жоқ еди"
+
+#: apps/rag/verifier.py:121
+msgid "%(number)s-modda %(title)s da yoʻq — modda oʻylab topilgan"
+msgstr "%(number)s-статья «%(title)s» да жоқ — статья ойлап табылған"
+
+#: apps/rag/verifier.py:139
+msgid "%(number)s-modda hozirgi tahrirda yoʻq (chiqarilgan)"
+msgstr "%(number)s-статья ҳәзирги тахрирде жоқ (шығарылған)"
+
+#: apps/rag/verifier.py:146
+msgid ""
+"%(number)s-moddaning %(part)s-qismi topilmadi (moddada ~%(count)s qism)"
+msgstr ""
+"%(number)s-статьяның %(part)s-бөлими табылмады (статьяда ~%(count)s бөлим)"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:550
+msgid "%(shown)s / %(total)s ta koʻrsatilmoqda"
+msgstr "%(shown)s / %(total)s kórsetilmekte"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:975
+msgid ".pptx yuklab olish"
+msgstr ".pptx júklep alıw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:954
+msgid "1-bosishda .pptx yuklab olish"
+msgstr "1-basıwda .pptx júklep alıw"
+
+#: apps/student/models.py:51
+msgid "AI / IRAC tahlili"
+msgstr "AI / IRAC analizi"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:722
+msgid "AI tekshirishi va baholashi uchun"
+msgstr "AI tekseriwi hám bahalawı ushın"
+
+#: apps/cases/worker.py:38
+msgid "AI xarajat chegarasi tugadi — administratorga murojaat qiling."
+msgstr "AI қәрежет шегарасы питти — администраторға хабарласың."
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:34
+msgid "AI xarajati — bugun"
+msgstr "AI қәрежети — бүгин"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:249
+msgid "AI xarajati — jami"
+msgstr "AI қәрежети — жәми"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:20
+#: frontend/apps/admin/src/pages/CostsPage.tsx:24
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:44
+msgid "AI xarajatlari"
+msgstr "ЖИ қәрежетлери"
+
+#: apps/rag/views.py:152 apps/rag/views.py:240
+msgid "AI xizmati hozircha band. Keyinroq qayta urinib koʻring."
+msgstr "AI хызмети ҳәзир бәнт. Кейинирек қайта урынып көриң."
+
+#: apps/rag/views.py:155 apps/rag/views.py:243
+msgid "AI xizmati javobni oxirigacha yubora olmadi. Savolni qayta yuboring."
+msgstr "AI хызмети жуўапты аяғына шекем жибере алмады. Соравды қайта жибериң."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1945
+msgid "Adabiyotlar roʻyxati:"
+msgstr "Ádebiyatlar dizimi:"
+
+#: frontend/apps/admin/src/pages/LoginPage.tsx:47
+msgid "Admin panelga kirish"
+msgstr "Админ панелге кириў"
+
+#: frontend/apps/admin/src/router.tsx:34
+msgid "Admin panelga ruxsat yoʻq"
+msgstr "Админ панелге руқсат жоқ"
+
+#: apps/accounts/models.py:28
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:31
+#: frontend/apps/admin/src/pages/UsersPage.tsx:63
+#: frontend/apps/admin/src/pages/UsersPage.tsx:146
+#: frontend/apps/mobile/src/app/register.tsx:55
+msgid "Advokat / yurist"
+msgstr "Адвокат / юрист"
+
+#: apps/doc_builder/models.py:36
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:50
+msgid "Advokat soʻrovi"
+msgstr "Адвокат сораўы"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:135
+msgid "Advokat tekshiruvi"
+msgstr "Адвокат тексериўи"
+
+#: apps/accounts/forms.py:55
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:42
+#: frontend/apps/web/src/pages/ProfilePage.tsx:67
+msgid "Advokatlik guvohnomasi raqami"
+msgstr "Адвокатлық гүўалығы номери"
+
+#: apps/accounts/templates/accounts/register.html:16
+#: frontend/apps/mobile/src/app/register.tsx:75
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:188
+msgid "Advokatlik guvohnomasi raqami (advokatlar uchun)"
+msgstr "Адвокатлық гүўалығы номери (адвокатлар ушын)"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:174
+msgid "Advokatlik ishingizni bugun osonlashtiring"
+msgstr "Адвокатлық жумысыңызды бүгин жеңиллетиң"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:154
+msgid "Advokatlik siri va mijoz maʼlumotlari himoyalangan holda saqlanadi."
+msgstr "Адвокатлық сыры ҳәм клиент мағлыўматлары қорғалған түрде сақланады."
+
+#: frontend/apps/admin/src/pages/CostsPage.tsx:71
+#: frontend/apps/admin/src/pages/UsersPage.tsx:281
+msgid "Advokatlik siri: ish nomi va mazmuni admin panelda koʻrsatilmaydi"
+msgstr "Адвокатлық сыр: ис аты ҳәм мазмуны админ панелде көрсетилмейди"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:34
+msgid ""
+"Agar bekor qilish asossiz boʻlsa, ishga tiklash toʻgʻrisidagi daʼvo bilan "
+"buyruq nusxasi topshirilgan kundan boshlab uch oy ichida sudga murojaat "
+"qilishingiz mumkin…"
+msgstr ""
+"Егер бийкар етиў тийкарсыз болса, буйрық нусқасы тапсырылған күннен баслап "
+"үш ай ишинде жумысқа қайта тиклеў ҳаққындағы даўа менен судқа мүрәжат "
+"етиўиңиз мүмкин…"
+
+#: frontend/apps/web/src/components/layout/AppShell.tsx:16
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:580
+msgid "Akademiya (Talabalar)"
+msgstr "Akademiya (Studentler)"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:68
+msgid "Akkaunt bloklansinmi? Foydalanuvchi tizimga kira olmaydi."
+msgstr "Аккаунт блоклансын ба? Пайдаланыўшы системаға кире алмайды."
+
+#: apps/accounts/templates/accounts/register.html:30
+#: frontend/apps/mobile/src/app/register.tsx:107
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:243
+msgid "Akkauntingiz bormi?"
+msgstr "Аккаунтыңыз бар ма?"
+
+#: apps/accounts/templates/accounts/login.html:18
+#: frontend/apps/mobile/src/app/login.tsx:112
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:107
+msgid "Akkauntingiz yoʻqmi?"
+msgstr "Аккаунтыңыз жоқ па?"
+
+#: apps/rag/templates/rag/chat.html:88
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:111
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:135
+msgid "Aldab pul olgan odamga qanday jazo beriladi?"
+msgstr "Алдап пул алғанға қандай жаза берилиўи мүмкин?"
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:134
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:163
+msgid ""
+"Aloqa uzildi: javob toʻliq emas va tekshirilmagan. Savolni qayta yuboring."
+msgstr ""
+"Байланыс үзилди: жуўап толық емес ҳәм тексерилмеген. Соравды қайта жибериң."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1461
+msgid "Amaldagi 1 BHM = 375 000 soʻm stavkasi boʻyicha aniq hisoblanadi"
+msgstr "Ámeldegi 1 BEM = 375 000 som stavkası boyınsha anıq esaplanadı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1009
+msgid "Amaliy maslahat:"
+msgstr "Ámeliy másláhát:"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:24
+#: frontend/apps/admin/src/pages/AuditPage.tsx:22
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:105
+#: frontend/apps/admin/src/pages/UsersPage.tsx:303
+msgid "Amallar jurnali"
+msgstr "Әмеллер журналы"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:831
+msgid "Analysis — Qonunni faktlarga tatbiq etish (Tahlil)"
+msgstr "Analysis — Nızamdı faktlerge qollanıw (Analiz)"
+
+#: apps/doc_builder/models.py:31
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:45
+msgid "Arizalar"
+msgstr "Arzalar"
+
+#: apps/doc_builder/templates/doc_builder/fill.html:45
+msgid "Asos:"
+msgstr "Тийкар:"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1738
+msgid "Asosiy argumentlar:"
+msgstr "Tiykarǵı argumentler:"
+
+#: apps/cases/templates/cases/detail.html:83
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:59
+msgid ""
+"Asosiy dalillar va qonun moddalari bilan tanishdim. Hujjat yuridik maslahat "
+"emasligini va yakuniy pozitsiyani oʻzim belgilashimni tushunaman."
+msgstr ""
+"Тийкарғы дәлиллер ҳәм нызам статьялары менен танысып шықтым. Ҳүжжет "
+"юридикалық кеңес емес екенин ҳәм ақырғы позицияны өзим белгилейтуғынымды "
+"түсинемен."
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:65
+msgid "Asoslangan natija oling"
+msgstr "Тийкарланған нәтийже алың"
+
+#: apps/cases/templates/cases/detail.html:98
+#: frontend/apps/mobile/src/app/case/[id].tsx:27
+#: frontend/apps/web/src/pages/cases/Report.tsx:23
+msgid "Asossiz"
+msgstr "Тийкарсыз"
+
+#: apps/student/models.py:89
+msgid "Atama / Iboraning nomi"
+msgstr "Termin / Sóz dizbeginiń atı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1620
+msgid "Atama yoki lotincha iborani qidiring..."
+msgstr "Termin yamasa latınsha sóz dizbegin izleń..."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1630
+msgid "Atamalar topilmadi"
+msgstr "Terminler tabılmadı"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:217
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:278
+msgid "Avval oʻzgarishlarni saqlang"
+msgstr "Алдын өзгерислерди сақлаң"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:284
+msgid "Avval shablonni saqlang"
+msgstr "Алдын үлгини сақлаң"
+
+#: apps/accounts/decorators.py:12 apps/api/exceptions.py:22
+msgid "Avval tizimga kiring"
+msgstr "Алдын системаға кириң"
+
+#: apps/cases/services.py:189
+msgid "Avval “tanishdim” tasdigʻini bering"
+msgstr "Алдын «таныстым» деген тастыйықлаўды бериң"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:572
+msgid "BMI & Kurs ishi"
+msgstr "BMI & Kurs jumısı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1829
+msgid "BMI va Kurs ishi konstruktori"
+msgstr "BMI hám Kurs jumısı konstruktorı"
+
+#: apps/student/models.py:52
+msgid "Baholash (0-100)"
+msgstr "Bahalaw (0-100)"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:221
+msgid "Bajarilmoqda…"
+msgstr "Орынланбақта…"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:293
+msgid "Barcha hujjatlar"
+msgstr "Barlıq hújjetler"
+
+#: frontend/apps/admin/src/pages/SyncPage.tsx:49
+msgid "Barcha kodekslarni tekshirish (uzoq)"
+msgstr "Барлық кодекслерди тексериў (узақ)"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:62
+msgid "Barcha rollar"
+msgstr "Барлық роллер"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:452
+msgid "Barcha shablonlarni koʻrsatish"
+msgstr "Barlıq shablonlardı kórsetiw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1152
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1589
+msgid "Barcha sohalar"
+msgstr "Barlıq tarawlar"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:133
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:368
+msgid "Barchasi"
+msgstr "Барлығы"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:133
+msgid "Bekor qilingan"
+msgstr "Бийкар етилген"
+
+#: apps/api/views/admin.py:338
+msgid "Bekor qilingan toʻlovni tasdiqlab boʻlmaydi"
+msgstr "Бийкар етилген төлемди тастыйықлап болмайды"
+
+#: apps/cases/templates/cases/detail.html:86
+#: frontend/apps/admin/src/pages/UsersPage.tsx:268
+#: frontend/apps/mobile/src/app/case/[id].tsx:127
+#: frontend/apps/mobile/src/lib/errors.ts:18
+msgid "Bekor qilish"
+msgstr "Бийкар етиў"
+
+#: apps/billing/models.py:15
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:76
+msgid "Bepul"
+msgstr "Бепул"
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:215
+msgid "Bepul tarifda jami %(lim)s ta savol berish mumkin."
+msgstr "Biypul tarifte jámi %(lim)s soraw beriw múmkin."
+
+#: apps/cases/services.py:97
+msgid "Bir ishga %(n)s tadan ortiq fayl yuklab boʻlmaydi"
+msgstr "Бир исге %(n)s файлдан артық жүклеўге болмайды"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1854
+msgid "Bitiruv malakaviy ishi (BMI)"
+msgstr "Pútiw mamanlıq jumısı (BMI)"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:25
+msgid "Bitta IP manzildan roʻyxatdan oʻtgan yoki kirgan koʻp akkaunt"
+msgstr "Бир IP мәнзилден дизимнен өткен ямаса кирген көп аккаунт"
+
+#: apps/billing/templates/billing/plans.html:31
+#: frontend/apps/admin/src/pages/UsersPage.tsx:249
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:40
+#: frontend/apps/web/src/pages/BillingPage.tsx:54
+msgid "Bitta ish hajmi: %(n)s varaqgacha."
+msgstr "Бир иістиң көлеми: %(n)s варақққа шекем."
+
+#: apps/billing/templates/billing/plans.html:47
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:15
+#: frontend/apps/web/src/pages/BillingPage.tsx:13
+msgid "Bitta ish — %(n)s varaqgacha"
+msgstr "Бир ис — %(n)s варақққа шекем"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:23
+msgid "Bitta ish, varaq"
+msgstr "Бир ис, бет"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:119
+msgid "Bitta tizimda — savol-javobdan hujjat tayyorlashgacha."
+msgstr "Бир системада — сораў-жуўаптан ҳүжжет таярлаўға шекем."
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:67
+msgid "Bloklash"
+msgstr "Блоклаў"
+
+#: apps/student/models.py:17
+msgid "Boshlangʻich (1-2 kurs)"
+msgstr "Baslanǵısh (1-2 kurs)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1500
+msgid "Boshlanish sanasi"
+msgstr "Baslanıw sánesi"
+
+#: apps/doc_builder/models.py:43
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:56
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:149
+msgid "Boshqa"
+msgstr "Басқа"
+
+#: apps/cases/case_types.py:124
+msgid "Boshqa / aralash"
+msgstr "Басқа / аралас"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:16
+#: frontend/apps/admin/src/components/AdminShell.tsx:71
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:28
+#: frontend/apps/admin/src/pages/LoginPage.tsx:42
+msgid "Boshqaruv paneli"
+msgstr "Басқарыў панели"
+
+#: apps/accounts/forms.py:59
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:207
+#: frontend/apps/web/src/pages/ProfilePage.tsx:87
+msgid "Bosqich / Kurs"
+msgstr "Basqısh / Kurs"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:319
+msgid "Boʻlimni ochish"
+msgstr "Bólimdi ashıw"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:319
+msgid "Boʻlimni yopish"
+msgstr "Bólimdi jabıw"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:140
+msgid ""
+"Boʻsh limit — cheklovsiz. Tarif oʻchirilmaydi, faolsizlantiriladi (obunalar "
+"saqlanadi)."
+msgstr ""
+"Бос шегара — шеклеўсиз. Тариф өширилмейди, активсизлендириледи (жазылыўлар "
+"сақланады)."
+
+#: apps/api/exceptions.py:28
+msgid "Bu HTTP usuli ushbu amal uchun ruxsat etilmagan."
+msgstr "Бул HTTP усылы усы әмел ушын рухсат етилмеген."
+
+#: apps/api/exceptions.py:34
+msgid "Bu amal uchun ruxsat yoʻq."
+msgstr "Бул әмел ушын рухсат жоқ."
+
+#: apps/api/exceptions.py:30
+msgid "Bu fayl turi qoʻllab-quvvatlanmaydi."
+msgstr "Бул файл түри қоллап-қуўатланбайды."
+
+#: apps/api/views/laws.py:79
+msgid "Bu hujjat matni bazada yoʻq"
+msgstr "Бул ҳүжжет тексти базада жоқ"
+
+#: apps/i18n/errors.py:34
+msgid "Bu maydon boʻsh qiymat qabul qilmaydi."
+msgstr "Бул майдан бос мәнисти қабыл етпейди."
+
+#: apps/accounts/forms.py:24 apps/accounts/forms.py:25
+#: apps/accounts/forms.py:16 apps/accounts/forms.py:32
+#: apps/accounts/forms.py:64
+msgid "Bu maydonni toʻldiring."
+msgstr "Бул майданды толтырың."
+
+#: apps/i18n/errors.py:25
+msgid "Bu parol juda koʻp ishlatiladi. Murakkabroq parol tanlang."
+msgstr "Бул пароль жүдә көп қолланылады. Қурамалырақ пароль таңлаң."
+
+#: apps/i18n/errors.py:54
+msgid "Bu qiymat allaqachon mavjud."
+msgstr "Бул мәнис алдыннан бар."
+
+#: apps/accounts/forms.py:73
+msgid "Bu raqam bilan akkaunt allaqachon bor"
+msgstr "Бул номер менен аккаунт бурыннан бар"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:97
+msgid "Bu tarif narxi belgilanmagan"
+msgstr "Бул тарифтиң баҳасы белгиленбеген"
+
+#: apps/billing/quota.py:112
+msgid ""
+"Bu tarifda bitta ish %(max)s varaqdan oshmasligi kerak (yuklangan: %(n)s "
+"varaq)."
+msgstr ""
+"Бул тарифте бир ис %(max)s варақтан аспаўы керек (жүкленген: %(n)s варақ)."
+
+#: apps/billing/quota.py:62
+msgid ""
+"Bu tarifdagi hujjat yuklab olish limiti tugadi (jami %(limit)s ta). Davom "
+"etish uchun obuna rasmiylashtiring."
+msgstr ""
+"Бул тарифтеги ҳүжжет жүклеп алыў шегарасы питти (жәми %(limit)s). Дәвам етиў"
+" ушын жазылыў рәсмийлестириң."
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:261
+msgid ""
+"Bu tarifdagi hujjat yuklab olish limiti tugadi. Davom etish uchun obuna "
+"rasmiylashtiring."
+msgstr ""
+"Bul tariftegi hújjet júklep alıw limiti tawısıldı. Dawam etiw ushın "
+"jazılıwdı rásmiylestiriń."
+
+#: apps/billing/quota.py:58
+msgid ""
+"Bu tarifdagi ish tahlili limiti tugadi (jami %(limit)s ta). Davom etish "
+"uchun obuna rasmiylashtiring."
+msgstr ""
+"Бул тарифтеги ис таллаўы шегарасы питти (жәми %(limit)s). Дәвам етиў ушын "
+"жазылыў рәсмийлестириң."
+
+#: apps/billing/quota.py:60
+msgid ""
+"Bu tarifdagi savol limiti tugadi (jami %(limit)s ta). Davom etish uchun "
+"obuna rasmiylashtiring."
+msgstr ""
+"Бул тарифтеги сораў шегарасы питти (жәми %(limit)s). Дәвам етиў ушын жазылыў"
+" рәсмийлестириң."
+
+#: apps/rag/templates/rag/chat.html:135
+#: frontend/apps/web/src/pages/cases/Report.tsx:40
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:84
+msgid "Bunday manba berilmagan"
+msgstr "Бундай дәрек берилмеген"
+
+#: apps/doc_builder/models.py:42
+msgid "Buyruq"
+msgstr "Buyrıq"
+
+#: apps/cases/templates/cases/detail.html:97
+#: frontend/apps/mobile/src/app/case/[id].tsx:25
+#: frontend/apps/web/src/pages/cases/Report.tsx:19
+msgid "Buzilish ehtimoli"
+msgstr "Бузыў итималлығы"
+
+#: apps/billing/templates/billing/plans.html:29
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:38
+#: frontend/apps/web/src/pages/BillingPage.tsx:50
+msgid "Cheklovlarsiz rejim (xodim akkaunti yoki kvotalar oʻchirilgan)."
+msgstr "Шеклеўсиз режим (хызметкер аккаунты яки квоталар өшириўлген)."
+
+#: frontend/apps/web/src/components/layout/AppShell.tsx:44
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:287
+msgid "Cheklovsiz"
+msgstr "Шеклеўсиз"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:74
+msgid "Cheklovsiz rejim (%(mb)s MB gacha)"
+msgstr "Sheklenbegen rejim (%(mb)s MB ǵa shekem)"
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:283
+msgid "Cheklovsiz savol-javob"
+msgstr "Sheklenbegen soraw-juwap"
+
+#: apps/accounts/templates/accounts/_userbar.html:8
+#: frontend/apps/admin/src/components/AdminShell.tsx:61
+#: frontend/apps/admin/src/router.tsx:37
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:64
+#: frontend/apps/web/src/components/layout/AppShell.tsx:106
+msgid "Chiqish"
+msgstr "Шығыў"
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:160
+msgid "Chuqur"
+msgstr "Терең"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:846
+msgid "Conclusion — Sud yoki amaliy xulosa"
+msgstr "Conclusion — Sud yamasa ámeliy juwmaq"
+
+#: apps/cases/templates/cases/detail.html:196
+#: apps/doc_builder/templates/doc_builder/fill.html:56
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:200
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:456
+msgid "DOCX yuklab olish"
+msgstr "DOCX жүклеп алыў"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1542
+msgid ""
+"Dam olish kuniga toʻgʻri kelgani sababli keyingi ish kuniga koʻchirildi"
+msgstr ""
+"Dem alıs kúnine tuwra kelgenligi sebepli keyingi jumıs kúnine kóshirildi"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:477
+msgid "Davlat boji hisoblandi"
+msgstr "Mámleketlik bajı esaplandı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1309
+msgid "Davlat boji kalkulyatori (OʻRQ-600)"
+msgstr "Mámleketlik bajı kalkulyatorı (OʻRQ-600)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1430
+msgid "Davlat boji miqdori"
+msgstr "Mámleketlik bajı muǵdarı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1332
+msgid "Davlat boji parametrlari"
+msgstr "Mámleketlik bajı parametrleri"
+
+#: apps/accounts/forms.py:68
+msgid "Davom etish uchun rozilikni tasdiqlang."
+msgstr "Даўам етиў ушын разылығыңызды тастыйықлаң."
+
+#: apps/doc_builder/models.py:38
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:52
+msgid "Daʼvo arizasi"
+msgstr "Дәўа арзасы"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1383
+msgid "Daʼvo bahosi (soʻmda)"
+msgstr "Dáwa bahası (somda)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1701
+msgid "Daʼvo talabi (ixtiyoriy)"
+msgstr "Dáwa talabı (ıqtıyarlı)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1365
+msgid "Daʼvo turi"
+msgstr "Dáwa túri"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1729
+msgid "Daʼvogar (Ayblov / Advokat)"
+msgstr "Dáwager (Ayıplaw / Advokat)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1814
+msgid ""
+"Daʼvogar, Javobgar va Sudya pozitsiyalari TDYU Moot Court qoidalari asosida "
+"shakllanadi"
+msgstr ""
+"Dáwager, Juwapker hám Sudya poziciyaları TDYU Moot Court qádeleri tiykarında"
+" qáliplesedi"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1805
+msgid "Ehtimoliy sud qarori yoʻnalishi:"
+msgstr "Iqtımal bolǵan sud qararı baǵdarı:"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:147
+msgid "Eksport formati"
+msgstr "Экспорт форматы"
+
+#: frontend/apps/admin/src/pages/CostsPage.tsx:50
+msgid "Eng koʻp sarflaganlar"
+msgstr "Ең көп қәрежет етиўшилер"
+
+#: frontend/apps/admin/src/pages/CostsPage.tsx:70
+msgid "Eng qimmat ish tahlillari"
+msgstr "Ең қымбат ис таллаўлары"
+
+#: apps/billing/models.py:18
+msgid "Enterprise (yillik)"
+msgstr "Enterprise (жыллық)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1046
+msgid "Eski tahrir (A variant)"
+msgstr "Eski redakciya (A variant)"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:469
+msgid ""
+"Eslatma: Bepul tarifda yuklab olingan hujjatlarga “Bepul tarif” belgisi "
+"qoʻshiladi. Belgisiz toza hujjat olish uchun Pro tarifiga oʻting."
+msgstr ""
+"Eskertpe: Biypul tarifte júklep alınǵan hújjetlerge 'Biypul tarif' belgisi "
+"qosıladı. Belgisiz taza hújjet alıw ushın Pro taripine ótiń."
+
+#: apps/accounts/forms.py:50 apps/accounts/templates/accounts/register.html:12
+#: frontend/apps/admin/src/pages/UsersPage.tsx:84
+#: frontend/apps/mobile/src/app/register.tsx:66
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:182
+msgid "F.I.Sh."
+msgstr "А.Ж.Ә."
+
+#: apps/api/serializers.py:58
+msgid "F.I.Sh. boʻsh boʻlmasin"
+msgstr "А.Ж.Ә. бос болмаўы керек"
+
+#: apps/cases/templates/cases/detail.html:177
+#: frontend/apps/web/src/pages/cases/Report.tsx:153
+msgid "Fakt va iqtibos"
+msgstr "Факт ҳәм цитата"
+
+#: apps/cases/templates/cases/detail.html:171
+#: frontend/apps/web/src/pages/cases/Report.tsx:129
+msgid "Faktlar"
+msgstr "Фактлар"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:56
+msgid ""
+"Faktlar, sanalar va ishtirokchilar asl ish materiallariga mosligini koʻrib "
+"chiqdim."
+msgstr ""
+"Фактлар, сәнелер ҳәм қатнасыўшылардың ис материалларына сәйкеслигин көрип "
+"шықтым."
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:32
+msgid "Faol (7 kun)"
+msgstr "Актив (7 күн)"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:153
+msgid "Faol (tizimga kira oladi)"
+msgstr "Актив (системаға кире алады)"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:78
+msgid "Faol (yangi obunaga beriladi)"
+msgstr "Актив (жаңа жазылыўға бериледи)"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:91
+msgid "Faol obunalar"
+msgstr "Актив жазылыўлар"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1606
+msgid "Faqat Rim huquqi / Lotincha aforizmlar"
+msgstr "Faqat Rim huqıqı / Latınsha aforizmler"
+
+#: apps/api/views/admin.py:354
+msgid "Faqat kutilayotgan toʻlovni bekor qilish mumkin"
+msgstr "Тек күтилип атырған төлемди бийкар етиўге болады"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:70
+msgid "Faqat shubhalilar"
+msgstr "Тек гүманлылар"
+
+#: apps/api/permissions.py:24
+msgid "Faqat superadmin uchun"
+msgstr "Тек суперадмин ушын"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:73
+msgid "Faqat tasdiqlanmaganlar"
+msgstr "Тек тастыйықланбағанлар"
+
+#: apps/cases/services.py:126 apps/cases/services.py:137
+msgid "Faqat xato bilan tugagan tahlilni qayta boshlash mumkin"
+msgstr "Тек қәте менен питкен таллаўды қайта баслаўға болады"
+
+#: apps/api/permissions.py:17 frontend/apps/admin/src/pages/LoginPage.tsx:48
+#: frontend/apps/admin/src/router.tsx:35
+msgid "Faqat yurist-moderator yoki superadmin uchun"
+msgstr "Тек юрист-модератор яки суперадмин ушын"
+
+#: apps/i18n/errors.py:62
+msgid "Fayl notoʻgʻri yoki oʻqib boʻlmaydi."
+msgstr "Файл қәте ямаса оны оқып болмайды."
+
+#: apps/cases/intake.py:143 apps/cases/services.py:95
+#: frontend/packages/i18n/src/index.ts:3
+msgid "Fayl tanlang"
+msgstr "Файл таңлаң"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:130
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:135
+msgid "Fayllar"
+msgstr "Файллар"
+
+#: apps/cases/services.py:100
+msgid "Fayllar jami %(mb)s MB dan katta"
+msgstr "Файллар жәми %(mb)s МБ тан үлкен"
+
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:12
+#: frontend/apps/web/src/pages/LandingPage.tsx:158
+msgid "Fayllar va hisobotlar serverda shifrlangan holda saqlanadi"
+msgstr "Файллар ҳәм есабатлар серверде шифрланған түрде сақланады"
+
+#: apps/cases/templates/cases/detail.html:63
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:109
+msgid "Fayllar:"
+msgstr "Файллар:"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:136
+msgid "Fayllarni shu yerga tashlang yoki tanlang"
+msgstr "Файлларды усы жерге таслаң яки таңлаң"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:403
+msgid "Faylni yuklab olishda xatolik"
+msgstr "Fayldı júklep alıwda qátelik"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:434
+msgid "Filtrni tozalash"
+msgstr "Filtrdi tazalaw"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:255
+msgid "Forma sxemasi (JSON)"
+msgstr "Форма схемасы (JSON)"
+
+#: apps/doc_builder/models.py:55
+msgid "Forma sxemasi — maydonlar roʻyxati boʻlishi kerak"
+msgstr "Форма схемасы майданлар дизими болыўы керек"
+
+#: apps/doc_builder/templates/doc_builder/fill.html:71
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:496
+msgid ""
+"Formani toʻldirib “Koʻrib chiqish”ni bosing — hujjat shu yerda koʻrinadi."
+msgstr "Формани толтырып «Көриў» тусымасын басың — ҳүжжет усы жерде көринеди."
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:151
+msgid "Foydalanuvchi"
+msgstr "Пайдаланыўшы"
+
+#: frontend/apps/admin/src/components/common.tsx:27
+msgid "Foydalanuvchi oʻzgartirildi"
+msgstr "Пайдаланыўшы өзгертилди"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:17
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:30
+#: frontend/apps/admin/src/pages/UsersPage.tsx:54
+#: frontend/apps/admin/src/pages/UsersPage.tsx:225
+msgid "Foydalanuvchilar"
+msgstr "Пайдаланыўшылар"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:270
+msgid "Foydalanuvchilarga koʻrinadi (eʼlon qilingan)"
+msgstr "Пайдаланыўшыларға көринеди (жәрияланған)"
+
+#: apps/accounts/models.py:30
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:31
+#: frontend/apps/admin/src/pages/UsersPage.tsx:64
+#: frontend/apps/admin/src/pages/UsersPage.tsx:145
+#: frontend/apps/mobile/src/app/register.tsx:55
+msgid "Fuqaro"
+msgstr "Пуқара"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:146
+msgid "Fuqarolik"
+msgstr "Пуқаралық"
+
+#: apps/student/models.py:7
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1153
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1590
+msgid "Fuqarolik huquqi"
+msgstr "Puqaralıq huqıqı"
+
+#: apps/cases/case_types.py:54
+msgid "Fuqarolik ishi"
+msgstr "Пуқаралық ис"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1342
+msgid "Fuqarolik ishlari boʻyicha sud"
+msgstr "Puqaralıq isleri boyınsha sud"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:118
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:123
+msgid "Galereya"
+msgstr "Галерея"
+
+#: apps/rag/templates/rag/chat.html:89
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:112
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:136
+msgid "Gumon qilinuvchini necha soatgacha ushlab turish mumkin?"
+msgstr "Гүманланыўшыны неше саатқа шекем услап турыўға болады?"
+
+#: apps/student/models.py:28
+msgid "Hal qilinishi lozim boʻlgan savol"
+msgstr "Sheshiliwi tiyis bolǵan soraw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:705
+msgid "Hal qilinishi lozim boʻlgan savol (Talab)"
+msgstr "Sheshiliwi tiyis bolǵan soraw (Talap)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1796
+msgid "Hal qiluvchi savollar:"
+msgstr "Sheshiwshi sorawlar:"
+
+#: frontend/apps/admin/src/components/common.tsx:46
+msgid "Hali amal yoʻq"
+msgstr "Ҳәзирше әмел жоқ"
+
+#: apps/cases/templates/cases/list.html:60
+#: frontend/apps/admin/src/pages/UsersPage.tsx:298
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:218
+msgid "Hali ish yuklanmagan."
+msgstr "Ис еле жүкленбеген."
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:85
+#: frontend/apps/admin/src/pages/SyncPage.tsx:63
+msgid "Hali sinxronizatsiya boʻlmagan"
+msgstr "Ҳәзирше синхронизация болмаған"
+
+#: frontend/apps/admin/src/pages/CostsPage.tsx:65
+#: frontend/apps/admin/src/pages/CostsPage.tsx:88
+msgid "Hali xarajat yoʻq"
+msgstr "Ҳәзирше қәрежет жоқ"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:160
+msgid "Har bir huquqiy iqtibos rasmiy manba bilan solishtiriladi"
+msgstr "Ҳәр бир ҳуқықый цитата ресмий дәрек пенен салыстырылады"
+
+#: frontend/apps/admin/src/pages/SyncPage.tsx:40
+msgid ""
+"Har kecha 02:00 da (tools/nightly_sync.ps1) — yangi hujjatlar, tahrirlar va "
+"indeks"
+msgstr ""
+"Ҳәр түни 02:00 де (tools/nightly_sync.ps1) — жаңа ҳүжжетлер, тахрирлер ҳәм "
+"индекс"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1777
+msgid "Himoya nutqi loyihasi:"
+msgstr "Qorǵaw sózi joybarı:"
+
+#: apps/cases/templates/cases/detail.html:126
+#: frontend/apps/mobile/src/app/case/[id].tsx:50
+#: frontend/apps/web/src/pages/cases/Report.tsx:57
+msgid "Himoyachi uchun:"
+msgstr "Қорғаўшы ушын:"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1424
+msgid "Hisoblangan toʻlovlar"
+msgstr "Esaplanǵan tólemler"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1411
+msgid "Hisoblash"
+msgstr "Esaplaw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:479
+msgid "Hisoblashda xatolik"
+msgstr "Esaplawda qátelik"
+
+#: apps/cases/templates/cases/list.html:44
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:155
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:228
+msgid "Holat"
+msgstr "Ҳалат"
+
+#: apps/cases/templates/cases/detail.html:78
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:113
+msgid "Holati"
+msgstr "Ҳалаты"
+
+#: apps/cases/services.py:107
+msgid "Hozircha %(max)s varaqdan oshmasin (%(n)s varaq)"
+msgstr "Ҳәзирше %(max)s варақтан аспасын (%(n)s варақ)"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:203
+msgid "Hozircha ishlar yoʻq. Yuqoridagi skaner orqali yangi ish yuklang."
+msgstr "Әзирге ислер жоқ. Жоқарыдағы сканер арқалы жаңа ис жүклең."
+
+#: apps/doc_builder/templates/doc_builder/list.html:40
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:80
+msgid "Hozircha shablon yoʻq."
+msgstr "Ҳәзирше шаблон жоқ."
+
+#: apps/cases/templates/cases/detail.html:78
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:110
+msgid "Hujjat"
+msgstr "Ҳүжжет"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:59
+msgid "Hujjat konstruktori"
+msgstr "Ҳүжжет конструктору"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:276
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:481
+msgid "Hujjat koʻrinishi"
+msgstr "Ҳүжжеттиң көриниси"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:262
+msgid "Hujjat matni"
+msgstr "Ҳүжжет тексти"
+
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:93
+msgid "Hujjat nomi yoki raqami"
+msgstr "Ҳүжжет аты яки номери"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:93
+msgid "Hujjat raqami (ixtiyoriy)"
+msgstr "Ҳүжжет номери (мәжбүрий емес)"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:60
+msgid "Hujjat varaqlari"
+msgstr "Ҳүжжет бетлери"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:25
+msgid "Hujjat yuklab olish"
+msgstr "Ҳүжжет жүклеп алыў"
+
+#: apps/billing/quota.py:192
+msgid "Hujjat yuklab olish — bugun"
+msgstr "Ҳүжжет жүклеп алыў — бүгин"
+
+#: apps/billing/quota.py:193
+msgid "Hujjat yuklab olish — jami"
+msgstr "Ҳүжжет жүклеп алыў — жәми"
+
+#: apps/billing/templates/billing/plans.html:50
+#: frontend/apps/web/src/pages/BillingPage.tsx:23
+msgid "Hujjat yuklab olish — jami %(n)s ta"
+msgstr "Ҳүжжет жүклеп алыў — жәми %(n)s"
+
+#: apps/billing/templates/billing/plans.html:50
+#: frontend/apps/web/src/pages/BillingPage.tsx:25
+msgid "Hujjat yuklab olish — kuniga %(n)s ta"
+msgstr "Ҳүжжет жүклеп алыў — күнине %(n)s ге шекем"
+
+#: apps/doc_builder/templates/doc_builder/fill.html:69
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:491
+msgid "Hujjat yuridik maslahat emas — topshirishdan oldin advokat tekshiradi."
+msgstr "Ҳүжжет юридикалық кеңес емес — тапсырыўдан алдын адвокат тексереди."
+
+#: apps/cases/templates/cases/detail.html:209
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:99
+msgid "Hujjatda ular “TASDIQLANMAGAN” deb belgilanadi."
+msgstr "Ҳүжжетте олар «ТАСТЫЙЫҚЛАНБАҒАН» деп белгиленеди."
+
+#: apps/accounts/templates/accounts/_nav.html:1
+#: apps/rag/templates/rag/chat.html:79
+#: frontend/apps/web/src/components/layout/AppShell.tsx:14
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:212
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:408
+msgid "Hujjatlar"
+msgstr "Ҳүжжетлер"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:302
+msgid "Hujjatlar katalogi"
+msgstr "Hújjetler katalogı"
+
+#: apps/doc_builder/templates/doc_builder/list.html:6
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:235
+msgid "Hujjatlar konstruktori"
+msgstr "Ҳүжжетлер конструктору"
+
+#: apps/billing/templates/billing/plans.html:50
+#: frontend/apps/web/src/pages/BillingPage.tsx:26
+msgid "Hujjatlar — cheklovsiz"
+msgstr "Ҳүжжетлер — шеклеўсиз"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:58
+msgid ""
+"Hujjatni OCR orqali oʻqiydi, faktlarni ajratadi, ziddiyatlarni topadi va "
+"huquqiy asoslash tayyorlaydi."
+msgstr ""
+"Ҳүжжетти OCR арқалы оқыйды, фактларды ажыратады, қарама-қарсылықларды табады"
+" ҳәм ҳуқықый тийкарлаўды таярлайды."
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:338
+msgid "Hujjatni shakllantirish tili:"
+msgstr "Hújyetti qáliplestiriw tili:"
+
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:114
+msgid "Hujjatni tanlang"
+msgstr "Ҳүжжетти таңлаң"
+
+#: apps/cases/templates/cases/detail.html:98
+#: frontend/apps/mobile/src/app/case/[id].tsx:26
+#: frontend/apps/web/src/pages/cases/Report.tsx:21
+msgid "Huquqiy ahamiyatli"
+msgstr "Ҳуқықый әҳмийетли"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1004
+msgid "Huquqiy asos:"
+msgstr "Huqıqıy tiykar:"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1453
+msgid "Huquqiy asosi:"
+msgstr "Huqıqıy tiykarı:"
+
+#: apps/cases/templates/cases/detail.html:116
+#: frontend/apps/mobile/src/app/case/[id].tsx:42
+#: frontend/apps/web/src/pages/cases/Report.tsx:42
+msgid "Huquqiy asoslash oʻtkazib yuborildi (muhimligi past)."
+msgstr "Ҳуқықый тийкарлаў өткерип жиберилди (әҳмийети төмен)."
+
+#: apps/cases/templates/cases/detail.html:129
+#: frontend/apps/mobile/src/app/case/[id].tsx:52
+#: frontend/apps/web/src/pages/cases/Report.tsx:65
+msgid "Huquqiy baho olinmadi:"
+msgstr "Ҳуқықый баҳа алынбады:"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:140
+msgid "Huquqlar va holat"
+msgstr "Ҳуқықлар ҳәм ҳалат"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:581
+msgid ""
+"Huquqshunos talabalar, magistrlar va amaliyotchilar uchun ixtisoslashgan "
+"yuridik ustaxona"
+msgstr ""
+"Huqıqtanıwshı studentler, magistrler hám ámeliyatshılar ushın qánigelesken "
+"yuridikalıq ustaxana"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:738
+msgid "IRAC uslubida tahlil qilish"
+msgstr "IRAC usılında analiz qılıw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1835
+msgid "Ilmiy ish mavzusi"
+msgstr "Ilimiy jumıs teması"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1959
+msgid "Ilmiy ish mavzusini kiriting va reja tuzing"
+msgstr "Ilimiy jumıs temasın kiritiń hám reje dúziń"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:539
+msgid "Iltimos, ilmiy ish mavzusini kiriting"
+msgstr "Iltimas, ilimiy jumıs temasın kiritiń"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:511
+msgid "Iltimos, ish faktlarini kiriting"
+msgstr "Iltimas, is faktlerin kiritiń"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:317
+msgid "Iltimos, kazus faktlarini kiriting"
+msgstr "Iltimas, kazus faktlerin kiritiń"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:354
+msgid "Iltimos, taqdimot mavzusini kiriting"
+msgstr "Iltimas, prezentaciya temasın kiritiń"
+
+#: apps/doc_builder/models.py:37
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:51
+msgid "Iltimosnoma"
+msgstr "Илтимаснама"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:77
+msgid "Imkoniyatlar"
+msgstr "Мүмкиншиликлер"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:568
+msgid "Imtihon trenajyori"
+msgstr "Imtixan trenajyorı"
+
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:60
+#: frontend/apps/web/src/pages/ProfilePage.tsx:112
+msgid "Interfeys tili"
+msgstr "Интерфейс тили"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:65
+msgid "Iqtibosli javob, tahlil hisoboti yoki tayyor hujjatni darhol koʻring."
+msgstr "Цитаталы жуўапты, таллаў есабатын яки таяр ҳүжжетти дәрҳал көриң."
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:147
+msgid "Iqtisodiy"
+msgstr "Экономикалық"
+
+#: apps/cases/case_types.py:77
+msgid "Iqtisodiy ish"
+msgstr "Экономикалық ис"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1343
+msgid "Iqtisodiy sud"
+msgstr "Ekonomikalıq sud"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1792
+msgid "Isbotlash majburiyati (Onus probandi):"
+msgstr "Dálillew májbúriyatı (Onus probandi):"
+
+#: apps/cases/templates/cases/list.html:44
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:225
+msgid "Ish"
+msgstr "Ис"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:30
+msgid "Ish beruvchi tashabbusi bilan bekor qilish"
+msgstr "Ис бериўши тәшәббиси менен бийкар етиў"
+
+#: apps/rag/templates/rag/chat.html:90
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:137
+msgid "Ish beruvchi xodimni qanday asoslarda ishdan boʻshatishi mumkin?"
+msgstr "Ис берүўши хызметкерди қандай тийкарларда жумыстан босата алады?"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1813
+msgid "Ish faktlarini kiriting va sud majlisini simulyatsiya qiling"
+msgstr "Is faktlerin kiritiń hám sud májilisin simulyaciya qılıw"
+
+#: apps/cases/templates/cases/detail.html:53
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:99
+msgid "Ish hujjati"
+msgstr "Ис ҳүжжети"
+
+#: apps/cases/templates/cases/list.html:23
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:68
+msgid "Ish hujjatini yuklash"
+msgstr "Ис ҳүжжетин жүклеў"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:58
+msgid "Ish hujjatlarini tahlili"
+msgstr "Ис ҳүжжетлерин таллаў"
+
+#: apps/cases/templates/cases/list.html:28
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:139
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:160
+msgid "Ish nomi (ixtiyoriy)"
+msgstr "Ис аталыўы (мәжбүрий емес)"
+
+#: apps/accounts/templates/accounts/_nav.html:1
+#: apps/rag/templates/rag/chat.html:78
+#: frontend/apps/admin/src/components/CostChart.tsx:68
+#: frontend/apps/admin/src/components/CostChart.tsx:78
+#: frontend/apps/admin/src/pages/CostsPage.tsx:41
+msgid "Ish tahlili"
+msgstr "Ис таллаўы"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:104
+msgid "Ish tahlili limitingiz tugagan"
+msgstr "Is analizi limitińiz tawısılǵan"
+
+#: apps/billing/templates/billing/plans.html:51
+#: frontend/apps/admin/src/pages/PlansPage.tsx:78
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:20
+#: frontend/apps/web/src/pages/BillingPage.tsx:28
+msgid "Ish tahlili navbatida oldinda"
+msgstr "Ис таллаўы кезегинде алдыда"
+
+#: frontend/apps/admin/src/pages/CostsPage.tsx:24
+msgid "Ish tahlili va savol-javob uchun sarflangan mablagʻ"
+msgstr "Ис таллаўы ҳәм сораў-жуўап ушын жумсалған қаражат"
+
+#: apps/billing/quota.py:190
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:36
+msgid "Ish tahlili — bugun"
+msgstr "Ис таллаўы — бүгин"
+
+#: apps/billing/templates/billing/plans.html:48
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:17
+#: frontend/apps/web/src/pages/BillingPage.tsx:18
+msgid "Ish tahlili — cheklovsiz"
+msgstr "Ис таллаўы — шеклеўсиз"
+
+#: apps/billing/quota.py:191
+msgid "Ish tahlili — jami"
+msgstr "Ис таллаўы — жәми"
+
+#: apps/billing/templates/billing/plans.html:48
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:16
+#: frontend/apps/web/src/pages/BillingPage.tsx:14
+msgid "Ish tahlili — jami %(n)s marta"
+msgstr "Ис таллаўы — жәми %(n)s мәрте"
+
+#: apps/billing/templates/billing/plans.html:48
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:17
+#: frontend/apps/web/src/pages/BillingPage.tsx:16
+msgid "Ish tahlili — kuniga %(n)s tagacha"
+msgstr "Ис таллаўы — күнине %(n)s ге шекем"
+
+#: apps/billing/quota.py:190
+msgid "Ish tahlili — shu oy"
+msgstr "Ис таллаўы — усы ай"
+
+#: apps/cases/templates/cases/list.html:29
+#: apps/cases/templates/cases/list.html:44
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:142
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:164
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:226
+msgid "Ish turi"
+msgstr "Ис түри"
+
+#: apps/cases/services.py:93
+msgid "Ish turi notoʻgʻri"
+msgstr "Ис түри дурыс емес"
+
+#: apps/cases/templates/cases/detail.html:59
+#: frontend/apps/mobile/src/app/case/[id].tsx:126
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:90
+msgid "Ish, PDF va hisobot butunlay oʻchiriladi. Davom etasizmi?"
+msgstr "Ис, PDF ҳәм есабат пүткиллей өшириледи. Дәвам етесизби?"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:25
+msgid "Ishdan nohaq boʻshatilsam, qanday harakat qilaman?"
+msgstr "Жумыстан әдалатсыз босатылсам, қандай ис-ҳәрекет қыламан?"
+
+#: apps/cases/templates/cases/list.html:41
+#: frontend/apps/admin/src/pages/UsersPage.tsx:87
+#: frontend/apps/admin/src/pages/UsersPage.tsx:280
+#: frontend/apps/mobile/src/app/(tabs)/_layout.tsx:36
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:198
+msgid "Ishlar"
+msgstr "Ислер"
+
+#: apps/cases/templates/cases/detail.html:61
+#: frontend/apps/mobile/src/app/case/[id].tsx:126
+#: frontend/apps/mobile/src/app/case/[id].tsx:128
+#: frontend/apps/mobile/src/app/case/[id].tsx:163
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:91
+msgid "Ishni oʻchirish"
+msgstr "Исти өшириў"
+
+#: apps/doc_builder/models.py:40
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:54
+msgid "Ishonchnoma"
+msgstr "Исеним хат"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:801
+msgid "Issue — Huquqiy muammo"
+msgstr "Issue — Huqıqıy mashqala"
+
+#: apps/doc_builder/rendering.py:39
+msgid "JSHSHIR — 14 ta raqam"
+msgstr "ЖСШШИР — 14 сан"
+
+#: apps/rag/views.py:319
+msgid "JSON kutilgan"
+msgstr "JSON күтилген еди"
+
+#: frontend/apps/admin/src/components/CostChart.tsx:74
+#: frontend/apps/admin/src/pages/CostsPage.tsx:39
+msgid "Jami"
+msgstr "Жәми"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1445
+msgid "Jami toʻlov"
+msgstr "Jámi tólem"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:57
+msgid ""
+"Javob amaldagi qonun moddasiga tayanadi — har bir iqtibos manba bilan "
+"solishtiriladi."
+msgstr ""
+"Жуўап әмелдеги нызам статьясына тийкарланады — ҳәр бир цитата дәрек пенен "
+"салыстырылады."
+
+#: apps/rag/templates/rag/chat.html:86
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:11
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:189
+msgid ""
+"Javob lex.uz dagi amaldagi moddalarga tayanadi, har bir iqtibos manba bilan "
+"solishtiriladi."
+msgstr ""
+"Жуўап lex.uz дағы күшинде болған статьяларға тийкарланады, ҳәр бир цитата "
+"дәрек пенен салыстырылады."
+
+#: apps/rag/templates/rag/chat.html:98
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:244
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:245
+msgid "Javob tili"
+msgstr "Жуўап тили"
+
+#: apps/rag/views.py:159 apps/rag/views.py:247
+msgid "Javob yaratishda xato yuz berdi."
+msgstr "Жуўап жаратыўда қәте жүз берди."
+
+#: apps/rag/answer.py:121
+msgid "Javobda birorta ham [M#] manba havolasi yo'q"
+msgstr "Жуўапта бирде-бир [M#] дәрек силтемеси жоқ"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1758
+msgid "Javobgar (Himoya)"
+msgstr "Juwapker (Qorǵaw)"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:145
+msgid "Jinoyat"
+msgstr "Жынаят"
+
+#: apps/student/models.py:8
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1155
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1591
+msgid "Jinoyat huquqi"
+msgstr "Jınayat huqıqı"
+
+#: apps/cases/case_types.py:44
+msgid "Jinoyat ishi"
+msgstr "Жынаят иси"
+
+#: apps/billing/templates/billing/plans.html:28
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:36
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:61
+#: frontend/apps/web/src/pages/BillingPage.tsx:47
+#: frontend/apps/web/src/pages/BillingPage.tsx:88
+msgid "Joriy tarifingiz"
+msgstr "Ҳәзирги тарифиңиз"
+
+#: apps/accounts/views.py:33 apps/api/views/auth.py:71
+msgid "Juda koʻp notoʻgʻri urinish. 15 daqiqadan keyin qayta urinib koʻring."
+msgstr "Дым көп қәте урыныслар. 15 минуттан кейин қайта урынып көриң."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:569
+msgid "Kalkulyator"
+msgstr "Kalkulyator"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:50
+msgid "Kameradan foydalanishga ruxsat berilmagan"
+msgstr "Камерадан пайдаланыўға руқсат берилмеген"
+
+#: apps/i18n/errors.py:43
+msgid "Kamida %(limit)s ta belgi kiriting."
+msgstr "Кеминде %(limit)s белги киритиң."
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:27
+msgid "Kamida akkaunt"
+msgstr "Кеминде аккаунт"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:439
+msgid "Kamida bitta savolga javob belgilang"
+msgstr "Keminde bir sorawǵa juwap belgileń"
+
+#: apps/student/models.py:49
+msgid "Kazus faktlari"
+msgstr "Kazus faktleri"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:691
+msgid "Kazus holati (Faktlar)"
+msgstr "Kazus jaǵdayı (Faktler)"
+
+#: apps/student/models.py:27
+msgid "Kazus holati (faktlar)"
+msgstr "Kazus jaǵdayı (faktler)"
+
+#: apps/student/models.py:24
+msgid "Kazus mavzusi"
+msgstr "Kazus teması"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:343
+msgid "Kazus muvaffaqiyatli tahlil qilindi"
+msgstr "Kazus tabıslı analiz qılındı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:685
+msgid "Kazus parametrlari va talaba yechimi"
+msgstr "Kazus parametrleri hám student sheshimi"
+
+#: apps/student/models.py:48
+msgid "Kazus sarlavhasi"
+msgstr "Kazus ataması"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:698
+msgid "Kazus tafsilotlarini batafsil yozing..."
+msgstr "Kazus faktlerin tolıq jazıń..."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1687
+msgid "Kazus yoki nizo holati"
+msgstr "Kazus yamasa nızas jaǵdayı"
+
+#: apps/student/models.py:37 apps/student/models.py:38
+msgid "Kazuslar banki"
+msgstr "Kazuslar banki"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:565
+msgid "Kazuslar ustaxonasi"
+msgstr "Kazuslar ustaxanası"
+
+#: apps/cases/templates/cases/detail.html:77
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:105
+msgid "Keltirilgan qonun moddalari"
+msgstr "Келтирилген нызам статьялары"
+
+#: apps/accounts/forms.py:51 apps/accounts/templates/accounts/register.html:15
+#: frontend/apps/mobile/src/app/register.tsx:51
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:163
+msgid "Kim sifatida"
+msgstr "Ким ретинде"
+
+#: apps/accounts/templates/accounts/login.html:2
+#: apps/accounts/templates/accounts/login.html:4
+#: apps/accounts/templates/accounts/login.html:16
+#: apps/accounts/templates/accounts/register.html:30
+#: frontend/apps/admin/src/pages/LoginPage.tsx:65
+msgid "Kirish"
+msgstr "Кириў"
+
+#: apps/i18n/errors.py:44
+msgid "Kiritilgan matn juda qisqa."
+msgstr "Киритилген текст жүдә қысқа."
+
+#: apps/accounts/forms.py:24 apps/doc_builder/rendering.py:21
+#: apps/i18n/errors.py:40
+msgid "Kiritilgan matn juda uzun."
+msgstr "Киритилген текст жүдә узын."
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:118
+msgid "Kod"
+msgstr "Код"
+
+#: apps/student/models.py:13
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1593
+msgid "Konstitutsiyaviy huquq"
+msgstr "Konstituciyalıq huqıq"
+
+#: apps/doc_builder/models.py:35
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:49
+msgid "Korporativ hujjatlar"
+msgstr "Korporativ hújjetler"
+
+#: apps/i18n/errors.py:39
+msgid "Koʻpi bilan %(limit)s ta belgi kiriting."
+msgstr "Көби менен %(limit)s белги киритиң."
+
+#: apps/doc_builder/templates/doc_builder/fill.html:55
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:279
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:448
+msgid "Koʻrib chiqish"
+msgstr "Көриў"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:407
+msgid ""
+"Koʻrib chiqish bepul, lekin faylni yuklab olish uchun tarifni yangilang."
+msgstr "Kórip shıǵıw biypul, biraq fayldı júklep alıw ushın tarifti jańalań."
+
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:47
+#: frontend/apps/web/src/pages/ProfilePage.tsx:116
+#: frontend/packages/web-kit/src/lib/theme.tsx:95
+msgid "Koʻrinish"
+msgstr "Көриниси"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:767
+msgid "Kuchli tomonlari:"
+msgstr "Kúshli tárepleri:"
+
+#: frontend/apps/admin/src/components/CostChart.tsx:77
+#: frontend/apps/admin/src/pages/CostsPage.tsx:45
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:43
+msgid "Kunlik AI xarajati"
+msgstr "Күнлик AI қәрежети"
+
+#: apps/billing/quota.py:61
+msgid ""
+"Kunlik hujjat yuklab olish limiti tugadi (%(limit)s ta). Ertaga qayta urinib"
+" koʻring yoki yuqoriroq tarifga oʻting."
+msgstr ""
+"Күнлик ҳүжжет жүклеп алыў шегарасы питти (%(limit)s). Ертең қайта урынып "
+"көриң яки жоқарырақ тарифке өтиң."
+
+#: apps/billing/quota.py:56
+msgid ""
+"Kunlik ish tahlili limiti tugadi (%(limit)s ta). Ertaga qayta urinib koʻring"
+" yoki yuqoriroq tarifga oʻting."
+msgstr ""
+"Күнлик ис таллаўы шегарасы питти (%(limit)s). Ертең қайта урынып көриң яки "
+"жоқарырақ тарифке өтиң."
+
+#: apps/billing/quota.py:59
+msgid ""
+"Kunlik savol limiti tugadi (%(limit)s ta). Ertaga qayta urinib koʻring yoki "
+"yuqoriroq tarifga oʻting."
+msgstr ""
+"Күнлик сораў шегарасы питти (%(limit)s). Ертең қайта урынып көриң яки "
+"жоқарырақ тарифке өтиң."
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:216
+msgid "Kunlik savol limitingiz (%(lim)s ta) tugadi."
+msgstr "Kúndelik soraw limitińiz (%(lim)s) tawısıldı."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1853
+msgid "Kurs ishi"
+msgstr "Kurs jumısı"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:92
+msgid "Kutilayotgan toʻlovlar"
+msgstr "Күтилип атырған төлемлер"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:133
+msgid "Kutilmoqda"
+msgstr "Күтилмекте"
+
+#: frontend/apps/admin/src/pages/SyncPage.tsx:55
+msgid "LLM chaqirilmaydi; lex.uz va Qdrant server ishlab turishi kerak."
+msgstr "LLM шақырылмайды; lex.uz ҳәм Qdrant сервери ислеп турыўы керек."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1576
+msgid ""
+"Lotincha iboralar, Rim xususiy huquqi va Oʻzbekiston qonunchiligi asosidagi "
+"atamalar glossariysi"
+msgstr ""
+"Latınsha sóz dizbekleri, Rim jeke huqıqı hám Ózbekstan nızamshılıǵı "
+"tiykarındaǵı terminler glossariyi"
+
+#: apps/student/models.py:90
+msgid "Lotincha yozilishi"
+msgstr "Latınsha jazılıwı"
+
+#: apps/doc_builder/views.py:33
+msgid "MEZON AI bepul tarifida tayyorlandi"
+msgstr "MEZON AI бепул тарифинде таярланды"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1855
+msgid "Magistrlik dissertatsiyasi"
+msgstr "Magistrlik dissertaciyası"
+
+#: frontend/apps/admin/src/pages/SyncPage.tsx:53
+msgid "Majburiy sinxronizatsiya"
+msgstr "Мәжбүрий синхронизация"
+
+#: apps/cases/templates/cases/detail.html:177
+#: frontend/apps/web/src/pages/cases/Report.tsx:152
+msgid "Manba"
+msgstr "Дәрек"
+
+#: apps/rag/templates/rag/chat.html:195
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:35
+msgid "Manbalar"
+msgstr "Дәреклер"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1908
+msgid "Maqsad va vazifalar:"
+msgstr "Maqset hám wazıypalar:"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:139
+msgid "Masalan: 1-sonli jinoyat ishi"
+msgstr "Мысалы: 1-санлы жынаят ислери"
+
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:210
+#: frontend/apps/web/src/pages/ProfilePage.tsx:92
+msgid "Masalan: 3-kurs, Magistratura..."
+msgstr "Mısalı: 3-kurs, Magistratura..."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:711
+msgid "Masalan: Bitim haqiqiy deb topilishi mumkinmi?"
+msgstr "Mısalı: Pitim haqıyqıy dep tabılıwı múmkin be?"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:914
+msgid "Masalan: Fuqarolik huquqida garov shartnomasining xususiyatlari"
+msgstr "Mısalı: Puqaralıq huqıqında girew shártnamasınıń ózgeshelikleri"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1842
+msgid ""
+"Masalan: Oʻzbekiston Respublikasida elektron tijorat shartnomalarini huquqiy"
+" tartibga solish"
+msgstr ""
+"Mısalı: Ózbekstan Respublikasında elektron sawda shártnamaların huqıqıy "
+"tártipke salıw"
+
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:199
+#: frontend/apps/web/src/pages/ProfilePage.tsx:80
+msgid "Masalan: TDYU, SamDU, OʻzMU..."
+msgstr "Mısalı: TDYU, SamDU, ÓzMU..."
+
+#: frontend/apps/web/src/pages/ProfilePage.tsx:103
+msgid "Masalan: TDYU-12345"
+msgstr "Mısalı: TDYU-12345"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1707
+msgid "Masalan: Yetkazilgan 50 mln soʻm zararni undirish"
+msgstr "Mısalı: Jetkerilgen 50 mln som zıyandı óndiriw"
+
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:164
+msgid "Masalan: firibgarlik uchun jazo"
+msgstr "Мысалы: алаяқлық ушын жаза"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:222
+msgid ""
+"Matn yoki sxema oʻzgarsa — yangi versiya, moderator qayta tasdiqlashi kerak."
+msgstr ""
+"Текст яки схема өзгерсе — жаңа версия, модератор қайта тастыйықлаўы керек."
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:481
+msgid "Mavjud tillar"
+msgstr "Qoljetimli tiller"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:341
+msgid "Mavjud tillar: %(n)s ta"
+msgstr "Qoljetimli tiller: %(n)s"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1019
+msgid ""
+"Mavzuni kiriting va slaydlarni koʻring yoki toʻgʻridan-toʻgʻri yuklab oling"
+msgstr "Temanı kiritiń hám slaydlardı kóriń yamasa tikkeley júklep alıń"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1898
+msgid "Mavzuning dolzarbligi:"
+msgstr "Temanıń áhmiyetliligi:"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:153
+msgid "Maxfiylik — ustuvor"
+msgstr "Құпиялылық — биринши орында"
+
+#: apps/doc_builder/models.py:65
+msgid "Maydon nomi takrorlangan: %(name)s"
+msgstr "Майдан аты тәкирарланған: %(name)s"
+
+#: apps/student/models.py:93
+msgid "Mazmuni va huquqiy taʼrifi"
+msgstr "Mazmunı hám huqıqıy anıqlaması"
+
+#: apps/rag/templates/rag/chat.html:108
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:310
+msgid "Maʼlumot tanishish uchun. Yakuniy huquqiy xulosani advokat beradi."
+msgstr "Мағлыўмат таныс ушын. Ақырғы ҳуқықый жуўмақты адвокат береди."
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:148
+msgid "Maʼmuriy"
+msgstr "Әкимшилик"
+
+#: apps/student/models.py:10
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1156
+msgid "Maʼmuriy huquq"
+msgstr "Hákimshilik huqıq"
+
+#: apps/cases/case_types.py:100
+msgid "Maʼmuriy ish"
+msgstr "Мәмлекетлик-басқарыў иси"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1344
+msgid "Maʼmuriy sud"
+msgstr "Hákimshilik sud"
+
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:213
+msgid "Maʼno boʻyicha qidiruv"
+msgstr "Мәнис бойынша излеў"
+
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:167
+msgid ""
+"Maʼno boʻyicha qidiruv: AI javob yozmaydi, faqat mos moddalarni topadi."
+msgstr ""
+"Мәнис бойынша излеў: AI жуўап жазбайды, тек сәйкес статьяларды табады."
+
+#: apps/student/models.py:9
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1154
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1592
+msgid "Mehnat huquqi"
+msgstr "Miynet huqıqı"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:200
+msgid "Mening ishlarim"
+msgstr "Мениң ислерим"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:959
+msgid "Mezon Klassik formati:"
+msgstr "Mezon Klassik formatı:"
+
+#: apps/cases/templates/cases/detail.html:78
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:88
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:111
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:129
+msgid "Modda"
+msgstr "Статья"
+
+#: apps/cases/templates/cases/detail.html:205
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:128
+msgid "Modda keltirilmagan"
+msgstr "Статья келтирилмеген"
+
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:139
+msgid "Moddani tanlang"
+msgstr "Статьяны таңлаң"
+
+#: apps/rag/views.py:235
+msgid "Model bu so'rovga javob berishni rad etdi."
+msgstr "Модель бул сораўға жуўап беўден бас тартты."
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:449
+msgid "Mos keluvchi shablon topilmadi."
+msgstr "Sáykes shablon tabılmadı."
+
+#: apps/rag/views.py:217 frontend/apps/web/src/pages/laws/LawsPage.tsx:182
+msgid "Mos qonun moddalari topilmadi."
+msgstr "Сәйкес нызам статьялары табылмады."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:500
+msgid "Muddat hisoblandi"
+msgstr "Múddet esaplandı"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:22
+msgid "Muddat, kun"
+msgstr "Мүддет, күн"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:195
+#: frontend/apps/admin/src/pages/UsersPage.tsx:196
+msgid "Muddat, kun (boʻsh — tarif muddati)"
+msgstr "Мүддет, күн (бос — тариф мүддети)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1514
+msgid "Muddatni hisoblash"
+msgstr "Múddetti esaplaw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:502
+msgid "Muddatni hisoblashda xatolik"
+msgstr "Múddetti esaplawda qátelik"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1372
+msgid "Mulkiy daʼvo"
+msgstr "Múlklik dáwa"
+
+#: apps/student/models.py:19
+msgid "Murakkab (Magistratura / Sud)"
+msgstr "Quramalı (Magistratura / Sud)"
+
+#: apps/student/models.py:30
+msgid "Namunaviy IRAC yechimi"
+msgstr "Úlgili IRAC sheshimi"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:619
+msgid "Namunaviy kazuslar banki"
+msgstr "Úlgili kazuslar banki"
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:178
+msgid "Namunaviy savollar:"
+msgstr "Үлги сораўлар:"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:56
+msgid ""
+"Naqd yoki bank oʻtkazmasi. Pul tushgach “Toʻlandi” tugmasi obunani yoqadi."
+msgstr ""
+"Нақ яки банк өткермеси. Пул түскеннен кейин «Төленди» түймеси жазылыўды "
+"қосады."
+
+#: apps/cases/templates/cases/list.html:44
+msgid "Narx"
+msgstr "Баҳасы"
+
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:64
+msgid "Narx belgilanmagan"
+msgstr "Баҳа белгиленбеген"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:22
+msgid "Narx va muddat"
+msgstr "Баҳа ҳәм мүддет"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:22
+msgid "Narx, soʻm"
+msgstr "Баҳа, сум"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1221
+msgid "Natijani tekshirish"
+msgstr "Nátiyjeni tekseriw"
+
+#: apps/cases/models.py:13
+msgid "Navbatda"
+msgstr "Кезекте"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1374
+msgid "Nikohdan ajratish"
+msgstr "Nekeni biykarlaw"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:118
+msgid "Nima qila olasiz"
+msgstr "Сиз не ислей аласыз"
+
+#: apps/cases/services.py:186
+msgid "Nomaʼlum format"
+msgstr "Белгисиз формат"
+
+#: apps/api/serializers.py:52 apps/api/serializers.py:104
+msgid "Nomaʼlum til"
+msgstr "Белгисиз тил"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:60
+#: frontend/apps/admin/src/pages/PlansPage.tsx:123
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:228
+msgid "Nomi"
+msgstr "Аты"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1373
+msgid "Nomulkiy daʼvo"
+msgstr "Múlklik emes dáwa"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1934
+msgid "Normativ-huquqiy baza:"
+msgstr "Normativ-huqıqıy baza:"
+
+#: apps/doc_builder/models.py:33
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:47
+msgid "Notarial tasdiqlanadigan hujjatlar"
+msgstr "Notarial tastıyıqlanatuǵın hújjetler"
+
+#: apps/rag/views.py:300
+msgid "Noto'g'ri lang yoki effort"
+msgstr "Lang яки effort дурыс емес"
+
+#: apps/cases/templates/cases/detail.html:141
+#: frontend/apps/web/src/pages/cases/Report.tsx:106
+msgid "OCR: %(n)s ta skaner varaq"
+msgstr "OCR: %(n)s скан варақ"
+
+#: apps/accounts/forms.py:57
+msgid "OTM / Universitet"
+msgstr "JOO / Universitet"
+
+#: apps/billing/templates/billing/plans.html:30
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:39
+#: frontend/apps/web/src/pages/BillingPage.tsx:52
+msgid "Obuna %(d)s gacha amal qiladi."
+msgstr "Жазылыў %(d)s ге шекем күшинде."
+
+#: frontend/apps/admin/src/components/common.tsx:29
+msgid "Obuna bekor qilindi"
+msgstr "Жазылыў бийкар етилди"
+
+#: frontend/apps/admin/src/components/common.tsx:28
+#: frontend/apps/admin/src/pages/UsersPage.tsx:176
+msgid "Obuna berildi"
+msgstr "Жазылыў берилди"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:189
+#: frontend/apps/admin/src/pages/UsersPage.tsx:198
+msgid "Obuna berish"
+msgstr "Жазылыў бериў"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:255
+msgid "Obunalar"
+msgstr "Жазылыўлар"
+
+#: apps/billing/templates/billing/plans.html:56
+#: frontend/apps/web/src/pages/BillingPage.tsx:124
+msgid ""
+"Obunani Payme va Click orqali rasmiylashtirish tez orada qoʻshiladi. "
+"Hozircha tarifni oʻzgartirish uchun administrator bilan bogʻlaning."
+msgstr ""
+"Payme ҳәм Click арқалы жазылыўды рәсмийлестириў жақын арада қосылады. "
+"Ҳәзирше тарифти өзгертиў ушын администратор менен байланысың."
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:268
+msgid "Obunani bekor qilasizmi?"
+msgstr "Жазылыўды бийкар етесиз бе?"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:181
+msgid "Obunani yangilash"
+msgstr "Jazılıwdı jańalaw"
+
+#: apps/i18n/errors.py:58
+msgid "Obyekt yuborilishi kerak."
+msgstr "Объект жиберилиўи керек."
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:340
+msgid "Ochish"
+msgstr "Ashıw"
+
+#: apps/student/models.py:11
+msgid "Oila huquqi"
+msgstr "Shańaraq huqıqı"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:89
+#: frontend/apps/admin/src/pages/UsersPage.tsx:313
+msgid "Oxirgi kirish"
+msgstr "Ақырғы кириў"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1533
+msgid "Oxirgi muddat sanasi"
+msgstr "Aqırǵı múddet sánesi"
+
+#: frontend/apps/admin/src/pages/SyncPage.tsx:44
+msgid "Oxirgi necha kun"
+msgstr "Ақырғы неше күн"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:93
+msgid "Oxirgisini oʻchirish"
+msgstr "Ақырғысын өшириў"
+
+#: apps/billing/quota.py:57
+msgid ""
+"Oylik ish tahlili limiti tugadi (%(limit)s ta). Keyingi oyda qayta urinib "
+"koʻring yoki yuqoriroq tarifga oʻting."
+msgstr ""
+"Айлық ис таллаўы шегарасы питти (%(limit)s). Келеси айда қайта урынып көриң "
+"яки жоқарырақ тарифке өтиң."
+
+#: apps/student/models.py:18
+msgid "Oʻrta (3-4 kurs)"
+msgstr "Orta (3-4 kurs)"
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:160
+msgid "Oʻrtacha"
+msgstr "Орташа"
+
+#: frontend/apps/admin/src/pages/CostsPage.tsx:40
+msgid "Oʻrtacha — kuniga"
+msgstr "Орташа — күнине"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1090
+msgid "Oʻxshashlik:"
+msgstr "Uqsaslıq:"
+
+#: apps/api/serializers_admin.py:42
+msgid "Oʻz akkauntingiz rolini yoki holatini oʻzgartirib boʻlmaydi"
+msgstr "Өз аккаунтыңыздың ролин яки ҳалатын өзгертип болмайды"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:730
+msgid ""
+"Oʻz fikringiz va taxminiy huquqiy yechimingizni yozing. AI sizning "
+"yechimingizga xolis taqriz beradi..."
+msgstr ""
+"Óz pikirińiz hám shama menen huqıqıy sheshimińizdi jazıń. AI sizge xalis "
+"recenziya beredi..."
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:95
+msgid "Oʻzbekiston qonunchiligi boʻyicha ishonchli raqamli yordamchi"
+msgstr "Өзбекстан нызамшылығы бойынша исенимли цифрлы жәрдемши"
+
+#: apps/rag/templates/rag/chat.html:85
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:23
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:188
+msgid "Oʻzbekiston qonunchiligi boʻyicha savol bering"
+msgstr "Өзбекстан нызамшылығы бойынша сораў бериң"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:644
+msgid "Oʻzingizning kazusingiz yoki mustaqil ish topshirigʻingizni tekshiring"
+msgstr "Ózińizdiń kazusińiz yamasa ǵárezsiz jumıs tapsırmasın tekseriń"
+
+#: apps/api/views/cases.py:111 apps/cases/views.py:94
+#: frontend/apps/web/src/components/legal/PdfViewer.tsx:81
+msgid "PDF oʻchirilgan yoki topilmadi"
+msgstr "PDF өширилген яки табылмады"
+
+#: apps/cases/templates/cases/detail.html:54
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:74
+msgid ""
+"PDF tahlildan keyin serverdan oʻchirilgan (siz tanlagan rejim). Varaq "
+"raqamlari hisobotda qoladi."
+msgstr ""
+"PDF таллаўдан кейин серверден өширилген (өзиңиз таңлаған режим). Варақ "
+"номерлери есабатта қалады."
+
+#: apps/cases/templates/cases/detail.html:197
+#: apps/doc_builder/templates/doc_builder/fill.html:57
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:200
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:464
+msgid "PDF yuklab olish"
+msgstr "PDF жүклеп алыў"
+
+#: apps/cases/templates/cases/list.html:24
+msgid ""
+"PDF, DOCX, JPG yoki PNG — bir nechta faylni birga tanlash mumkin (varaqlar "
+"ketma-ket sanaladi). Jami %(pages)s varaqgacha, %(mb)s MB gacha; skaner va "
+"rasmlar OCR qilinadi. Shaxsiy maʼlumotlar (F.I.Sh., JSHSHIR, telefon, "
+"pasport) tahlilga yuborilishidan oldin niqoblanadi; fayl va hisobot serverda"
+" shifrlangan holda saqlanadi va faqat sizga koʻrinadi."
+msgstr ""
+"PDF, DOCX, JPG яки PNG — бир неше файлды бирге таңлаўға болады (варақлар "
+"кезекли саналады). Жәми %(pages)s варақққа шекем, %(mb)s МБ қа шекем; скан "
+"ҳәм сүўретлер OCR арқалы оқылады. Шахсый мағлыўматлар (А.Ж.Ә., ЖШШИР, "
+"телефон, паспорт) таллаўға жиберилмезден алдын жасырылады; файл ҳәм есабат "
+"серверде шифрланған түрде сақланады ҳәм тек сизге көринеди."
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:71
+msgid "PDF, DOCX, JPG yoki PNG — bir nechta faylni birga yuklash mumkin."
+msgstr "PDF, DOCX, JPG yamasa PNG — bir neshe fayldı birge júklewge boladı."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1460
+msgid "Parametrlarni tanlang va hisoblash tugmasini bosing"
+msgstr "Parametrlerdi tańlań hám esaplaw túymesin basıń"
+
+#: apps/accounts/forms.py:31 apps/accounts/forms.py:63
+#: apps/accounts/templates/accounts/login.html:14
+#: apps/accounts/templates/accounts/register.html:20
+#: frontend/apps/admin/src/pages/LoginPage.tsx:58
+msgid "Parol"
+msgstr "Пароль"
+
+#: apps/i18n/errors.py:27
+msgid "Parol faqat raqamlardan iborat boʻlmasin."
+msgstr "Пароль тек санлардан ибарат болмасын."
+
+#: apps/i18n/errors.py:21
+msgid ""
+"Parol juda qisqa. U kamida %(min_length)s ta belgidan iborat boʻlishi kerak."
+msgstr ""
+"Пароль жүдә қысқа. Ол кеминде %(min_length)s белгиден ибарат болыўы керек."
+
+#: apps/i18n/errors.py:29
+msgid "Parol shaxsiy maʼlumotlaringizga juda oʻxshash."
+msgstr "Пароль жеке мағлыўматларыңызға жүдә уқсас."
+
+#: apps/accounts/forms.py:80
+msgid "Parollar mos kelmadi"
+msgstr "Паролләр сәйкес келмеди"
+
+#: apps/accounts/templates/accounts/_form_page.html:40
+#: frontend/apps/admin/src/pages/LoginPage.tsx:59
+#: frontend/apps/mobile/src/app/login.tsx:89
+#: frontend/apps/mobile/src/app/register.tsx:84
+#: frontend/apps/mobile/src/app/register.tsx:92
+msgid "Parolni koʻrish uchun bosib turing"
+msgstr "Парольди көриў ушын басып турың"
+
+#: apps/accounts/forms.py:65 apps/accounts/templates/accounts/register.html:23
+#: frontend/apps/mobile/src/app/register.tsx:91
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:227
+msgid "Parolni takrorlang"
+msgstr "Паролди қайталаң"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:130
+msgid ""
+"Payme / Click webhooklari keyingi bosqichda; hozircha qoʻlda tasdiqlash"
+msgstr "Payme / Click вебхуклары келеси басқышта; ҳәзирше қолда тастыйықлаў"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1436
+msgid "Pochta xarajatlari"
+msgstr "Pochta qárejetleri"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1734
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1763
+msgid "Pozitsiyasi va talablar:"
+msgstr "Poziciyası hám talaplar:"
+
+#: apps/billing/models.py:17
+msgid "Pro (oylik)"
+msgstr "Pro (айлық)"
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:220
+msgid "Pro tarifiga oʻtish"
+msgstr "Pro taripine ótiw"
+
+#: frontend/apps/mobile/src/app/(tabs)/_layout.tsx:38
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:27
+#: frontend/apps/web/src/components/layout/AppShell.tsx:119
+#: frontend/apps/web/src/pages/ProfilePage.tsx:46
+msgid "Profil"
+msgstr "Профиль"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1480
+msgid "Protsessual harakat"
+msgstr "Processual háreket"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1474
+msgid "Protsessual harakat va boshlanish sanasi"
+msgstr "Processual háreket hám baslanıw sánesi"
+
+#: apps/cases/templates/cases/detail.html:168
+#: frontend/apps/mobile/src/app/case/[id].tsx:77
+#: frontend/apps/web/src/pages/cases/Report.tsx:126
+msgid "Protsessual muammolar"
+msgstr "Процессуал мәселелер"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1527
+msgid "Protsessual muddat xulosasi"
+msgstr "Processual múddet juwmaǵı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1321
+msgid "Protsessual muddatlar kalkulyatori"
+msgstr "Processual múddetler kalkulyatorı"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:247
+msgid "Qachon ishlatiladi"
+msgstr "Қашан қолланылады"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:78
+#: frontend/apps/web/src/pages/LandingPage.tsx:133
+msgid "Qanday ishlaydi"
+msgstr "Қалай ислейди"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1767
+msgid "Qarshi vajlar va eʼtirozlar:"
+msgstr "Qarsı pikirler hám qarsılıqlar:"
+
+#: apps/cases/templates/cases/detail.html:226
+#: frontend/apps/mobile/src/app/case/[id].tsx:153
+#: frontend/apps/mobile/src/components/Offline.tsx:34
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:130
+msgid "Qayta urinish"
+msgstr "Қайта урыныў"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:80
+msgid "Qayta yuklangan"
+msgstr "Қайта жүкленген"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:98
+msgid "Qaytarish"
+msgstr "Қайтарыў"
+
+#: apps/rag/templates/rag/chat.html:175
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:121
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:150
+msgid "Qidirilmoqda…"
+msgstr "Излеў жүрмекте…"
+
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:165
+msgid "Qidirish"
+msgstr "Излеў"
+
+#: apps/api/views/laws.py:130 apps/rag/views.py:201
+msgid "Qidiruvda xato yuz berdi."
+msgstr "Излеўде қәте жүз берди."
+
+#: apps/i18n/errors.py:47
+msgid "Qiymat %(limit)s dan oshmasin."
+msgstr "Мәнис %(limit)s ден аспасын."
+
+#: apps/doc_builder/rendering.py:20 apps/i18n/errors.py:65
+#: apps/i18n/errors.py:91 apps/i18n/errors.py:102
+msgid "Qiymat formati notoʻgʻri."
+msgstr "Мәнис форматы қәте."
+
+#: apps/i18n/errors.py:51
+msgid "Qiymat kamida %(limit)s boʻlsin."
+msgstr "Мәнис кеминде %(limit)s болсын."
+
+#: apps/doc_builder/rendering.py:22
+msgid "Qiymat manfiy boʻlmasin."
+msgstr "Мәнис терис болмасын."
+
+#: apps/i18n/errors.py:48
+msgid "Qiymat ruxsat etilgan chegaradan oshib ketgan."
+msgstr "Мәнис рухсат етилген шегарадан асып кеткен."
+
+#: apps/i18n/errors.py:52
+msgid "Qiymat ruxsat etilgan chegaradan past."
+msgstr "Мәнис рухсат етилген шегарадан төмен."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1086
+msgid "Qiyosiy natijalar"
+msgstr "Salıstırmalı nátiyjeler"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1075
+msgid "Qiyoslash"
+msgstr "Salıstırıw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1547
+msgid "Qoida mazmuni:"
+msgstr "Qáde mazmunı:"
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:283
+msgid "Qolgan savollar soni"
+msgstr "Qalǵan sorawlar sanı"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:57
+msgid "Qonun boʻyicha savol-javob"
+msgstr "Нызам бойынша сораў-жуўап"
+
+#: apps/cases/templates/cases/detail.html:97
+#: frontend/apps/mobile/src/app/case/[id].tsx:24
+#: frontend/apps/web/src/pages/cases/Report.tsx:17
+msgid "Qonun buzilishi"
+msgstr "Нызам бузыў"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:57
+msgid ""
+"Qonun moddalarining voqea paytidagi tahriri va amaldaligini tekshirdim."
+msgstr ""
+"Нызам статьяларының ўақыя ўақтындағы тахририн ҳәм күшинде екенин тексердим."
+
+#: apps/student/models.py:73
+msgid "Qonun moddasi"
+msgstr "Nızam statyası"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1276
+msgid "Qonun moddasi:"
+msgstr "Nızam statyası:"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:64
+msgid "Qonunchilik boʻyicha savol yozing yoki ish hujjatlarini yuklang."
+msgstr "Нызамшылық бойынша сораў жазың яки ис ҳүжжетлерин жүклең."
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:377
+msgid "Qonuniy asos:"
+msgstr "Huqıqıy tiykar:"
+
+#: apps/student/models.py:94
+msgid "Qonuniy asosi"
+msgstr "Huqıqıy tiykarı"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:251
+msgid "Qonuniy asoslar (har biri yangi qatorda)"
+msgstr "Нызамлы тийкарлар (ҳәр бири жаңа қатарда)"
+
+#: apps/student/models.py:72
+msgid "Qonuniy izoh"
+msgstr "Nızamlı túsindirme"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1655
+msgid "Qonuniy manbasi:"
+msgstr "Nızamlı dáregi:"
+
+#: frontend/apps/web/src/components/layout/AppShell.tsx:15
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:197
+msgid "Qonunlar"
+msgstr "Нызамлар"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:567
+msgid "Qonunlar qiyosi"
+msgstr "Nızamlar salıstırması"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1053
+msgid ""
+"Qonunning oldingi tahriri yoki boshlangʻich shartnoma matnini kiriting..."
+msgstr ""
+"Nızamnıń aldınǵı redakciyası yamasa baslanǵısh shártnama tekstin kiritiń..."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1066
+msgid "Qonunning yangi tahriri yoki oʻzgartirilgan loyihani kiriting..."
+msgstr "Nızamnıń jańa redakciyası yamasa ózgertilgen joybardı kiritiń..."
+
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:53
+#: frontend/packages/web-kit/src/lib/theme.tsx:91
+msgid "Qorongʻi"
+msgstr "Қараңғы"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:55
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:131
+msgid "Qoʻlda toʻlov"
+msgstr "Қолда төлем"
+
+#: apps/student/models.py:95
+msgid "Qoʻllanish misoli"
+msgstr "Qollanılıw mısalı"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:96
+msgid "Qurilma barmoq izi va SMS tasdiqlash keyingi bosqichda (TZ §8.2)."
+msgstr "Қурылма бармақ изи ҳәм SMS тастыйықлаў келеси басқышта (ТЗ §8.2)."
+
+#: frontend/apps/mobile/src/app/case/[id].tsx:160
+msgid "Rasmiy DOCX/PDF hisobot — veb-saytda (yuridik tasdiqdan keyin)."
+msgstr ""
+"Рәсмий DOCX/PDF есабат — веб-сайтта (юридикалық тастыйықлаўдан кейин)."
+
+#: apps/cases/templates/cases/detail.html:200
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:210
+msgid "Rasmiy hisobot (DOCX / PDF)…"
+msgstr "Расмий есабат (DOCX / PDF)…"
+
+#: apps/cases/templates/cases/detail.html:75
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:84
+msgid ""
+"Rasmiy hisobotni yaratishdan oldin xulosada ishlatilgan qonun moddalari va "
+"tekshiruvdan oʻtmagan baholarni koʻrib chiqing."
+msgstr ""
+"Расмий есабатты жаратыўдан алдын жуўмақта қолланылған нызам статьяларын ҳәм "
+"тексерилмеген баҳаларды қарап шығың."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1960
+msgid ""
+"Reja TDYU va OTM talablari boʻyicha dolzarblik, obyekt, reja va adabiyotlar "
+"roʻyxatini oʻz ichiga oladi"
+msgstr ""
+"Reje TDYU hám JOO talapları boyınsha áhmiyetlilik, obyekt, reje hám "
+"ádebiyatlardı óz ishine aladı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:558
+msgid "Reja tuzishda xatolik"
+msgstr "Reje dúziwde qátelik"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:945
+msgid "Rejani koʻrish"
+msgstr "Rejeni kóriw"
+
+#: apps/student/models.py:92
+msgid "Rim huquqi / Lotincha aforizm"
+msgstr "Rim huqıqı / Latınsha aforizm"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:61
+#: frontend/apps/admin/src/pages/UsersPage.tsx:85
+#: frontend/apps/admin/src/pages/UsersPage.tsx:143
+msgid "Rol"
+msgstr "Роль"
+
+#: frontend/apps/admin/src/pages/AuditPage.tsx:22
+msgid "Rol, tarif, toʻlov, shablon va sinxronizatsiya amallari"
+msgstr "Роль, тариф, төлем, үлги ҳәм синхронизация әмеллери"
+
+#: apps/i18n/errors.py:60
+msgid "Roʻyxat boʻsh boʻlmasin."
+msgstr "Дизим бос болмасын."
+
+#: apps/i18n/errors.py:56
+msgid "Roʻyxat yuborilishi kerak."
+msgstr "Дизим жиберилиўи керек."
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:88
+#: frontend/apps/admin/src/pages/UsersPage.tsx:312
+msgid "Roʻyxatdan oʻtgan"
+msgstr "Дизимнен өткен"
+
+#: apps/accounts/templates/accounts/login.html:18
+#: frontend/apps/mobile/src/app/login.tsx:114
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:109
+#: frontend/apps/web/src/pages/LandingPage.tsx:63
+msgid "Roʻyxatdan oʻting"
+msgstr "Дизимнен өтиң"
+
+#: apps/accounts/templates/accounts/register.html:2
+#: apps/accounts/templates/accounts/register.html:4
+#: apps/accounts/templates/accounts/register.html:28
+#: frontend/apps/mobile/src/app/register.tsx:44
+#: frontend/apps/mobile/src/app/register.tsx:104
+msgid "Roʻyxatdan oʻtish"
+msgstr "Дизимнен өтиў"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:816
+msgid "Rule — Amaldagi huquqiy norma"
+msgstr "Rule — Ámeldegi huqıqıy norma"
+
+#: apps/accounts/templates/accounts/register.html:5
+#: frontend/apps/mobile/src/app/register.tsx:45
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:159
+msgid "SMS orqali tasdiqlash keyingi bosqichda qoʻshiladi."
+msgstr "SMS арқалы тастыйықлаў кейинги басқышта қосылады."
+
+#: frontend/packages/web-kit/src/layout/RouteError.tsx:19
+msgid ""
+"Sahifani yangilang. Muammo takrorlansa, administratorga murojaat qiling."
+msgstr "Бетти жаңалаң. Мәселе қайталанса, әкимшиликке мүрәжәт етиң."
+
+#: frontend/packages/web-kit/src/layout/RouteError.tsx:21
+msgid "Sahifani yangilash"
+msgstr "Бетти жаңалаў"
+
+#: frontend/packages/web-kit/src/layout/RouteError.tsx:18
+msgid "Sahifani yuklab boʻlmadi"
+msgstr "Бетти жүклеў мүмкин болмады"
+
+#: apps/cases/templates/cases/list.html:44
+#: frontend/apps/admin/src/components/CostChart.tsx:78
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:150
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:229
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:256
+msgid "Sana"
+msgstr "Сане"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1555
+msgid "Sana va harakatni tanlang"
+msgstr "Sáne hám háreketti tańlań"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:44
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:171
+#: frontend/apps/admin/src/pages/UsersPage.tsx:133
+#: frontend/apps/web/src/pages/ProfilePage.tsx:36
+msgid "Saqlandi"
+msgstr "Сақланды"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:86
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:213
+#: frontend/apps/admin/src/pages/UsersPage.tsx:160
+#: frontend/apps/web/src/pages/ProfilePage.tsx:120
+msgid "Saqlash"
+msgstr "Сақлаў"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:238
+msgid "Sarf"
+msgstr "Сарып"
+
+#: apps/rag/views.py:298
+msgid "Savol 1–%(max)s belgi bo'lishi kerak"
+msgstr "Сораў 1–%(max)s белгиден ибарат болыўы керек"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:64
+msgid "Savol bering yoki ish yuklang"
+msgstr "Сораў бериң яки ис жүклең"
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:212
+msgid "Savol limitingiz tugadi:"
+msgstr "Soraw limitińiz tawısıldı:"
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:230
+msgid "Savol limitingiz tugagan. Davom etish uchun Pro tarifiga oʻting."
+msgstr "Soraw limitińiz tawısılǵan. Dawam etiw ushın Pro taripine ótiń."
+
+#: apps/student/models.py:69
+msgid "Savol matni"
+msgstr "Soraw teksti"
+
+#: apps/accounts/templates/accounts/_nav.html:1
+#: frontend/apps/admin/src/pages/PlansPage.tsx:24
+#: frontend/apps/mobile/src/app/(tabs)/_layout.tsx:35
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:156
+#: frontend/apps/web/src/components/layout/AppShell.tsx:12
+msgid "Savol-javob"
+msgstr "Сораў-жуўап"
+
+#: apps/billing/templates/billing/plans.html:49
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:19
+#: frontend/apps/web/src/pages/BillingPage.tsx:21
+msgid "Savol-javob — cheklovsiz"
+msgstr "Сораў-жуўап — шеклеўсиз"
+
+#: apps/billing/templates/billing/plans.html:49
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:18
+#: frontend/apps/web/src/pages/BillingPage.tsx:19
+msgid "Savol-javob — jami %(n)s ta savol"
+msgstr "Сораў-жуўап — жәми %(n)s сораў"
+
+#: apps/billing/templates/billing/plans.html:49
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:19
+#: frontend/apps/web/src/pages/BillingPage.tsx:20
+msgid "Savol-javob — kuniga %(n)s tagacha"
+msgstr "Сораў-жуўап — күнине %(n)s ге шекем"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:98
+msgid ""
+"Savolingizga amaldagi qonun moddasiga asoslangan javob olasiz, ish "
+"hujjatlarini tahlil qildirasiz va hujjatlarni shablon asosida tayyorlaysiz —"
+" bitta joyda."
+msgstr ""
+"Сораўыңызға әмелдеги нызам статьясына тийкарланған жуўап аласыз, ис "
+"ҳүжжетлерин таллатасыз ҳәм ҳүжжетлерди үлги тийкарында таярлайсыз — бир "
+"жерде."
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:175
+msgid ""
+"Savolingizni yozing: qonunchilik bazasidan moddalar topiladi va iqtiboslar "
+"bilan asoslab beriladi."
+msgstr ""
+"Соравыңызды жазың: нызамшылық базасынан статьялар табылады ҳәм жуўап "
+"дәйректемелер менен тийкарланады."
+
+#: apps/rag/templates/rag/chat.html:97
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:211
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:230
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:231
+msgid "Savolingizni yozing…"
+msgstr "Сорауыңызды жазың…"
+
+#: frontend/apps/admin/src/components/CostChart.tsx:68
+#: frontend/apps/admin/src/components/CostChart.tsx:78
+#: frontend/apps/admin/src/pages/CostsPage.tsx:42
+#: frontend/apps/admin/src/pages/CostsPage.tsx:59
+msgid "Savollar"
+msgstr "Сораўлар"
+
+#: apps/billing/quota.py:191
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:33
+msgid "Savollar — bugun"
+msgstr "Сораўлар — бүгин"
+
+#: apps/billing/quota.py:192
+msgid "Savollar — jami"
+msgstr "Сораўлар — жәми"
+
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:289
+msgid "Savollar: %(rem)s/%(lim)s"
+msgstr "Sorawlar: %(rem)s/%(lim)s"
+
+#: apps/api/views/laws.py:127 apps/rag/views.py:197
+msgid "Server band — bir ozdan keyin qayta urinib koʻring."
+msgstr "Сервер бәнт — бираздан соң қайта урынып көриң."
+
+#: apps/rag/templates/rag/chat.html:245
+#: frontend/apps/admin/src/pages/LoginPage.tsx:36
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:139
+#: frontend/apps/mobile/src/lib/errors.ts:10
+#: frontend/apps/mobile/src/lib/errors.ts:16
+msgid "Server bilan aloqa uzildi."
+msgstr "Сервер менен байланыс үзилди."
+
+#: frontend/apps/mobile/src/components/Offline.tsx:30
+msgid "Server bilan aloqa yoʻq"
+msgstr "Сервер менен байланыс жоқ"
+
+#: apps/cases/services.py:40
+msgid "Server qayta ishga tushdi — tahlilni qaytadan boshlang"
+msgstr "Сервер қайта иске түсти — анализди қайтадан баслаң"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:345
+msgid "Server xatosi"
+msgstr "Server qáteligi"
+
+#: apps/api/views/auth.py:116
+msgid "Sessiya muddati tugagan. Qaytadan kiring."
+msgstr "Сессия мүддети питти. Қайтадан кириң."
+
+#: apps/api/exceptions.py:24
+msgid "Sessiya yaroqsiz. Qaytadan kiring."
+msgstr "Сессия жарамсыз. Қайтадан кириң."
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:59
+msgid ""
+"Shablon asosida (AI ishtirokisiz) tez va aniq hujjat — DOCX yoki PDF "
+"koʻrinishida."
+msgstr ""
+"Үлги тийкарында (ЖИ қатнасыўынсыз) тез ҳәм анық ҳүжжет — DOCX яки PDF "
+"түринде."
+
+#: apps/doc_builder/models.py:148
+msgid "Shablon matnida xato: %(error)s"
+msgstr "Үлги текстинде қәте: %(error)s"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:22
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:70
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:205
+msgid "Shablon moderatsiyasi"
+msgstr "Үлги модерациясы"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:253
+msgid "Shablon nomi, boʻlimi yoki kalit soʻz boʻyicha qidirish…"
+msgstr "Shablon atı, bólimi yamasa gilt sózi boyınsha izlew…"
+
+#: frontend/apps/admin/src/components/common.tsx:37
+msgid "Shablon oʻzgartirildi"
+msgstr "Үлги өзгертилди"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:255
+msgid "Shablon qidirish"
+msgstr "Shablon izlew"
+
+#: frontend/apps/admin/src/components/common.tsx:38
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:185
+msgid "Shablon tasdiqlandi"
+msgstr "Үлги тастыйықланды"
+
+#: frontend/apps/admin/src/components/common.tsx:36
+msgid "Shablon yaratildi"
+msgstr "Үлги жаратылды"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:78
+msgid "Shablonlarga tarif belgisi"
+msgstr "Үлгилерге тариф белгиси"
+
+#: apps/doc_builder/templates/doc_builder/list.html:24
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:238
+msgid ""
+"Shablonni tanlang, formani toʻldiring — hujjat Times New Roman 14 pt bilan "
+"DOCX yoki PDF koʻrinishida tayyorlanadi. Kiritilgan maʼlumotlar serverda "
+"saqlanmaydi."
+msgstr ""
+"Шаблонды таңлаң, формани толтырың — ҳүжжет Times New Roman 14 pt менен DOCX "
+"яки PDF көринисинде таярланады. Киритилген мағлыўматлар серверде "
+"сақланбайды."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1556
+msgid ""
+"Shanba va yakshanba kunlari hisobga olingan holda oxirgi ish kuni aniqlanadi"
+msgstr ""
+"Shembi hám ekshembi kúnleri esapqa alınıp aqırǵı jumıs kúni anıqlanadı"
+
+#: apps/doc_builder/models.py:41
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:55
+msgid "Shartnoma"
+msgstr "Шәртнама"
+
+#: apps/doc_builder/models.py:30
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:44
+msgid "Shartnomalar"
+msgstr "Shártnamalar"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1376
+msgid "Shartnomaviy nizo"
+msgstr "Shártnamalıq nızas"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:159
+msgid "Shaxsiy maʼlumotlar tahlilga yuborilishidan oldin niqoblanadi"
+msgstr "Жеке мағлыўматлар таллаўға жиберилмей турып жасырылады"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:177
+msgid ""
+"Shaxsiy maʼlumotlar tahlilga yuborilishidan oldin niqoblanadi; fayl va "
+"hisobot serverda shifrlangan holda saqlanadi."
+msgstr ""
+"Жеке мағлыўматлар таллаўға жиберилмей турып жасырылады; файл ҳәм есабат "
+"серверде шифрланған түрде сақланады."
+
+#: apps/accounts/forms.py:67 frontend/apps/mobile/src/app/register.tsx:100
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:235
+msgid "Shaxsiy maʼlumotlarimni qayta ishlashga roziman (OʻRQ-547)"
+msgstr "Шахсый мағлыўматларымды қайта ислеўге ризаман (ӨРҚ-547)"
+
+#: apps/doc_builder/models.py:32
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:46
+msgid "Shaxsiy tarkibga oid hujjatlar"
+msgstr "Jeke quramǵa tiyisli hújjetler"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:106
+msgid "Shifrlangan saqlash"
+msgstr "Шифрланған сақлаў"
+
+#: apps/doc_builder/models.py:39
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:53
+msgid "Shikoyat"
+msgstr "Шағым"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:85
+msgid "Shubhali deb belgilanganlar"
+msgstr "Гүманлы деп белгиленгенлер"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:62
+#: frontend/apps/admin/src/pages/UsersPage.tsx:157
+msgid "Shubhali deb belgilash (anti-fraud)"
+msgstr "Гүманлы деп белгилеў (анти-фрод)"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:21
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:25
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:52
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:64
+msgid "Shubhali faollik"
+msgstr "Гүманлы белсендилик"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:80
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:63
+msgid "Shubhali faollik topilmadi"
+msgstr "Гүманлы белсендилик табылмады"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:530
+msgid "Simulyatsiyada xatolik"
+msgstr "Simulyaciyada qátelik"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1715
+msgid "Simulyatsiyani boshlash"
+msgstr "Simulyaciyanı baslaw"
+
+#: apps/api/views/admin.py:450
+msgid "Sinxronizatsiya allaqachon bajarilmoqda"
+msgstr "Синхронизация әлле қашан орынланбақта"
+
+#: apps/api/views/admin.py:453
+#: frontend/apps/admin/src/components/common.tsx:35
+#: frontend/apps/admin/src/pages/SyncPage.tsx:31
+msgid "Sinxronizatsiya boshlandi"
+msgstr "Синхронизация басланды"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:108
+msgid ""
+"Siz bepul tarifdagi 1 ta ish tahlili limitingizdan foydalangansiz. Yangi "
+"ishlarni tahlil qilish uchun Pro tarifiga oʻting."
+msgstr ""
+"Siz biypul tariftegi 1 is analizi limitińizden paydalanǵansız. Jańa islerdi "
+"analiz qılıw ushın Pro taripine ótiń."
+
+#: frontend/apps/web/src/pages/BillingPage.tsx:91
+msgid "Sizga tavsiya etiladi"
+msgstr "Sizge usınıladı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1267
+msgid "Sizning javobingiz:"
+msgstr "Sizdiń juwabıńız:"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:719
+msgid "Sizning taklif qilayotgan yechimingiz (ixtiyoriy)"
+msgstr "Sizdiń usınıp atırǵan sheshimińiz (ıqtıyarlı)"
+
+#: apps/cases/templates/cases/detail.html:144
+#: frontend/apps/web/src/pages/cases/Report.tsx:119
+msgid ""
+"Skaner sahifalardagi matn avtomatik tanilgan — muhim iqtiboslarni asl varaq "
+"bilan solishtiring."
+msgstr ""
+"Скан варақлардағы текст автоматлық түрде танылған — әҳмийетли цитаталарды "
+"дәслепки варақ пенен салыстырың."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:921
+msgid "Slaydlar soni"
+msgstr "Slaydlar sanı"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:104
+msgid "Soʻnggi amallar"
+msgstr "Ақырғы әмеллер"
+
+#: apps/api/exceptions.py:32
+msgid "Soʻralgan javob formati qoʻllab-quvvatlanmaydi."
+msgstr "Соралған жуўап форматы қоллап-қуўатланбайды."
+
+#: apps/api/views/laws.py:118
+msgid "Soʻrov 1–500 belgi boʻlsin"
+msgstr "Сораў 1–500 белги болсын"
+
+#: apps/api/exceptions.py:26
+msgid "Soʻrov formati notoʻgʻri."
+msgstr "Сораў форматы қәте."
+
+#: apps/api/exceptions.py:41
+msgid "Soʻrovlar juda tez. %(n)s daqiqadan keyin qayta urinib koʻring."
+msgstr "Сораўлар тым тез. %(n)s минуттан соң қайта урынып көриң."
+
+#: apps/api/exceptions.py:43
+msgid "Soʻrovlar juda tez. %(n)s soniyadan keyin qayta urinib koʻring."
+msgstr "Сораўлар тым тез. %(n)s секундтан соң қайта урынып көриң."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1375
+msgid "Sud buyrugʻi"
+msgstr "Sud buyrıǵı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1681
+msgid "Sud majlisini simulyatsiya qilish"
+msgstr "Sud májilisin simulyaciya qılıw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1748
+msgid "Sud nutqi (Nutq loyihasi):"
+msgstr "Sud sózi (Sóz joybarı):"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:571
+msgid "Sud simulyatsiyasi"
+msgstr "Sud simulyaciyası"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:528
+msgid "Sud simulyatsiyasi tayyor"
+msgstr "Sud simulyaciyası tayar"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1338
+msgid "Sud turi"
+msgstr "Sud túri"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1138
+msgid ""
+"Sud, advokatura va OTM imtihonlariga tayyorgarlik uchun mahalliy test "
+"savollari banki"
+msgstr ""
+"Sud, advokatura hám JOO imtixanlarına tayarlıq ushın jergilikli testler "
+"banki"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1694
+msgid ""
+"Sudda koʻrilayotgan ishning toʻliq tafsilotlari va taraflar munosabatini "
+"kiriting..."
+msgstr "Sudta kórilip atırǵan istiń tolıq faktlerin kiritiń..."
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:31
+msgid "Sudga murojaat qilish muddatlari"
+msgstr "Судқа мүрәжат етиў мүддетлери"
+
+#: apps/doc_builder/models.py:34
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:48
+msgid "Sudga oid hujjatlar"
+msgstr "Sudqa tiyisli hújjetler"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:155
+msgid "Sudga taqdim etish uchun"
+msgstr "Судқа усыныў ушын"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1787
+msgid "Sudya (Sud majlisi raisi)"
+msgstr "Sudya (Sud májilisi baslıǵı)"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:88
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:153
+msgid "Summa, soʻm"
+msgstr "Сумма, сум"
+
+#: apps/accounts/models.py:32 frontend/apps/admin/src/pages/UsersPage.tsx:66
+#: frontend/apps/admin/src/pages/UsersPage.tsx:148
+msgid "Superadmin"
+msgstr "Суперадмин"
+
+#: apps/api/serializers_admin.py:44
+msgid "Superadmin rolini faqat Django superuser beradi"
+msgstr "Суперадмин ролин тек Django superuser береди"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:104
+msgid "Suratga olish"
+msgstr "Сүўретке түсириў"
+
+#: apps/doc_builder/models.py:151
+msgid "Sxemada yoʻq maydonlar ishlatilgan: %(fields)s"
+msgstr "Схемада жоқ майданлар қолланылған: %(fields)s"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1245
+msgid "Tabriklaymiz, muvaffaqiyatli topshirdingiz!"
+msgstr "Qutlıqlaymız, tabıslı tapsırdıńız!"
+
+#: apps/student/models.py:12
+msgid "Tadbirkorlik (Iqtisodiy) huquqi"
+msgstr "Kásipkerlik (Ekonomikalıq) huqıqı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1903
+msgid "Tadqiqot obyekti va predmeti:"
+msgstr "İzertlew obyekti hám predmeti:"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:556
+msgid "Tadqiqot rejasi tayyorlandi"
+msgstr "İzertlew rejesi tayarlandı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1877
+msgid "Tadqiqot rejasini tuzish"
+msgstr "İzertlew rejesin dúziw"
+
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:99
+msgid "Tahlil"
+msgstr "Таллаў"
+
+#: apps/rag/templates/rag/chat.html:103
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:261
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:262
+msgid "Tahlil chuqurligi"
+msgstr "Таллаў тереңлиги"
+
+#: apps/cases/services.py:159 apps/cases/services.py:172
+msgid "Tahlil hali tayyor emas"
+msgstr "Таллаў еле таяр емес"
+
+#: apps/cases/services.py:144
+msgid "Tahlil ketayotgan ishni oʻchirib boʻlmaydi"
+msgstr "Таллаў жүрип атырған исти өширип болмайды"
+
+#: apps/cases/models.py:14
+msgid "Tahlil qilinmoqda"
+msgstr "Таллаў жүрмекте"
+
+#: apps/cases/templates/cases/list.html:36
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:172
+msgid ""
+"Tahlil tugagach fayllarni serverdan oʻchirish (hisobot qoladi, lekin "
+"varaqlarni koʻrib boʻlmaydi)"
+msgstr ""
+"Таллаў питкеннен кейин файлларды серверден өшириў (есабат қалады, бирақ "
+"варақларды көриў мүмкин болмайды)"
+
+#: apps/cases/worker.py:36
+msgid ""
+"Tahlil vaqtida texnik xato yuz berdi. Qayta urinib koʻring; takrorlansa — "
+"administratorga murojaat qiling."
+msgstr ""
+"Анализ ўақтында техникалық қәте жүз берди. Қайта урынып көриң; тәкирарланса,"
+" администраторға хабарласың."
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:171
+msgid "Tahlildan soʻng fayllarni oʻchirish"
+msgstr "Таллаўдан кейин файлларды өшириў"
+
+#: apps/cases/templates/cases/list.html:34
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:186
+msgid "Tahlilga yuborish"
+msgstr "Таллаўға жибериў"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:178
+msgid "Tahlilni boshlash (%(n)s varaq)"
+msgstr "Таллаўды баслаў (%(n)s бет)"
+
+#: apps/cases/templates/cases/detail.html:78
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:112
+msgid "Tahrir"
+msgstr "Тахрир"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:155
+msgid "Tahrirlanadigan rasmiy hujjat"
+msgstr "Өзгертилетуғын рәсмий ҳүжжет"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1404
+msgid "Takroriy nikohdan ajratish"
+msgstr "Qaytalanba nekeni biykarlaw"
+
+#: apps/accounts/models.py:29
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:155
+msgid "Talaba"
+msgstr "Student"
+
+#: apps/billing/models.py:16
+msgid "Talaba (oylik)"
+msgstr "Student (aylıq)"
+
+#: frontend/apps/web/src/pages/ProfilePage.tsx:98
+msgid "Talaba guvohnomasi / ID"
+msgstr "Studentlik gúwalıǵı / ID"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:754
+msgid "Talaba javobiga taqriz va baho"
+msgstr "Student juwabına recenziya hám baha"
+
+#: apps/student/models.py:59
+msgid "Talaba kazus yechimi"
+msgstr "Student kazus sheshimi"
+
+#: apps/student/models.py:60
+msgid "Talaba kazus yechimlari"
+msgstr "Student kazus sheshimleri"
+
+#: apps/student/models.py:50
+msgid "Talaba taklif qilgan yechim"
+msgstr "Student usınǵan sheshim"
+
+#: apps/student/apps.py:8
+msgid "Talabalar Ekotizimi"
+msgstr "Studentler Ekotizimi"
+
+#: frontend/apps/web/src/pages/BillingPage.tsx:94
+msgid "Talabalar uchun"
+msgstr "Studentler ushın"
+
+#: apps/accounts/forms.py:61
+msgid "Talabalik guvohnomasi / HEMIS ID"
+msgstr "Studentlik gúwalıǵı / HEMIS ID"
+
+#: apps/accounts/forms.py:26 apps/doc_builder/rendering.py:23
+#: apps/i18n/errors.py:36
+msgid "Tanlangan qiymat ruxsat etilmagan."
+msgstr "Таңланған мәниске рухсат етилмеген."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:901
+msgid "Taqdimot mavzusi va parametrlari"
+msgstr "Prezentaciya teması hám parametrleri"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:373
+msgid "Taqdimot rejasi tayyor"
+msgstr "Prezentaciya rejesi tayar"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:375
+msgid "Taqdimot tayyorlashda xatolik"
+msgstr "Prezentaciya tayarlawda qátelik"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:401
+msgid "Taqdimot yuklab olindi"
+msgstr "Prezentaciya júklep alındı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1020
+msgid ""
+"Taqdimotlar OTM seminar va konferensiyalari uchun toʻliq moslashtirilgan"
+msgstr ""
+"Prezentaciyalar JOO seminar hám konferenciyaları ushın tolıq "
+"beyimlestirilgen"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:412
+msgid "Taqqoslash uchun matn kiritilishi kerak"
+msgstr "Salıstırıw ushın tekst kiritiliwi tiyis"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:426
+msgid "Taqqoslashda xatolik"
+msgstr "Salıstırıwda qátelik"
+
+#: apps/student/models.py:53
+msgid "Taqriz va kamchiliklar"
+msgstr "Recenziya hám kemshilikler"
+
+#: apps/accounts/templates/accounts/_nav.html:1
+#: apps/doc_builder/templates/doc_builder/fill.html:48
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:75
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:152
+#: frontend/apps/admin/src/pages/UsersPage.tsx:86
+msgid "Tarif"
+msgstr "Тариф"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:115
+msgid ""
+"Tarif faolsiz holda yaratiladi — limitlarni toʻldirib, keyin faollashtiring."
+msgstr ""
+"Тариф активсиз ҳалда жаратылады — шегараларды толтырып, кейин активлестириң."
+
+#: apps/api/serializers_admin.py:97
+msgid "Tarif kodini oʻzgartirib boʻlmaydi"
+msgstr "Тариф кодын өзгертип болмайды"
+
+#: frontend/apps/admin/src/components/common.tsx:31
+msgid "Tarif oʻzgartirildi"
+msgstr "Тариф өзгертилди"
+
+#: apps/billing/templates/billing/plans.html:6
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:32
+#: frontend/apps/web/src/pages/BillingPage.tsx:42
+msgid "Tarif va limitlar"
+msgstr "Тариф ҳәм шегаралар"
+
+#: frontend/apps/admin/src/components/common.tsx:30
+msgid "Tarif yaratildi"
+msgstr "Тариф жаратылды"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:75
+msgid "Tarifingiz (%(plan)s): %(pages)s varaqgacha, %(mb)s MB"
+msgstr "Tarifińiz (%(plan)s): %(pages)s betke shekem, %(mb)s MB"
+
+#: apps/billing/templates/billing/plans.html:40
+#: frontend/apps/admin/src/components/AdminShell.tsx:18
+#: frontend/apps/admin/src/pages/PlansPage.tsx:140
+#: frontend/apps/mobile/src/app/(tabs)/billing.tsx:53
+#: frontend/apps/web/src/pages/BillingPage.tsx:69
+msgid "Tariflar"
+msgstr "Тарифлер"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:119
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:297
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:419
+msgid "Tarifni yangilash"
+msgstr "Tarifti jańalaw"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:22
+msgid "Tartib"
+msgstr "Тәртип"
+
+#: apps/cases/templates/cases/detail.html:84
+msgid "Tasdiqlash"
+msgstr "Тастыйықлаў"
+
+#: apps/api/views/cases.py:131 apps/cases/views.py:142
+msgid "Tasdiqlash uchun belgini qoʻying"
+msgstr "Тастыйықлаў ушын белги қойың"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:218
+msgid "Tasdiqlash va eʼlon qilish"
+msgstr "Тастыйықлаў ҳәм жәриялаў"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:163
+msgid "Tasdiqlayman va hujjatni yuklab olaman"
+msgstr "Тастыйықлайман ҳәм ҳүжжетти жүклеп аламан"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1914
+msgid "Tavsiya etiladigan reja"
+msgstr "Usınılatuǵın reje"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:783
+msgid "Tavsiyalar:"
+msgstr "Usınıslar:"
+
+#: apps/cases/models.py:15 apps/rag/templates/rag/chat.html:214
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:132
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:161
+msgid "Tayyor"
+msgstr "Таяр"
+
+#: apps/student/models.py:29
+msgid "Tegishli qonun moddalari"
+msgstr "Tiyisli nızam statyaları"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:861
+msgid "Tegishli qonun moddalari (Lex.uz havolalari)"
+msgstr "Tiyisli nızam statyaları (Lex.uz siltemeleri)"
+
+#: apps/cases/templates/cases/detail.html:207
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:89
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:95
+msgid "Tekshiruvdan oʻtmagan baholar:"
+msgstr "Тексериўден өтпеген баҳалар:"
+
+#: apps/accounts/forms.py:30 apps/accounts/forms.py:49
+#: apps/accounts/templates/accounts/login.html:10
+#: apps/accounts/templates/accounts/register.html:8
+#: frontend/apps/admin/src/pages/LoginPage.tsx:52
+msgid "Telefon"
+msgstr "Телефон"
+
+#: frontend/apps/mobile/src/components/Offline.tsx:32
+msgid ""
+"Telefon kompyuterga ulanganini (USB) va kompyuterda MEZON serveri "
+"ishlayotganini tekshiring. Kirish maʼlumotlaringiz saqlangan."
+msgstr ""
+"Телефон компьютерге (USB) жалғанғанын ҳәм компьютерде MEZON сервери ислеп "
+"турғанын тексериң. Кириў мағлыўматларыңыз сақланған."
+
+#: apps/accounts/models.py:23
+msgid "Telefon raqami +998 XX XXX XX XX koʻrinishida boʻlsin"
+msgstr "Телефон номери +998 XX XXX XX XX көринисинде болсын"
+
+#: apps/accounts/forms.py:17
+msgid "Telefon raqami juda uzun."
+msgstr "Телефон номери жүдә узын."
+
+#: apps/accounts/forms.py:44
+msgid "Telefon raqami yoki parol notoʻgʻri"
+msgstr "Телефон номери яки пароль дурыс емес"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:63
+msgid "Telefon raqamingiz bilan bir necha soniyada hisob oching."
+msgstr "Телефон номериңиз бенен бир неше секундта аккаунт ашың."
+
+#: apps/accounts/templates/accounts/login.html:5
+#: frontend/apps/mobile/src/app/login.tsx:73
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:86
+msgid "Telefon raqamingiz va parolingiz bilan kiring."
+msgstr "Телефон номериңиз ҳәм пароль менен кириң."
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:58
+#: frontend/apps/admin/src/pages/UsersPage.tsx:59
+msgid "Telefon, F.I.Sh. yoki guvohnoma"
+msgstr "Телефон, А.Ж.Ә. яки гүўалықнама"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:452
+msgid "Test natijalari hisoblandi"
+msgstr "Test nátiyjeleri esaplandı"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:454
+msgid "Testni topshirishda xatolik"
+msgstr "Test tapsırıwda qátelik"
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:160
+msgid "Tez"
+msgstr "Тез"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:240
+msgid "Til"
+msgstr "Тил"
+
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:54
+#: frontend/packages/web-kit/src/lib/theme.tsx:92
+msgid "Tizim"
+msgstr "Система"
+
+#: apps/accounts/templates/accounts/_form_page.html:36
+#: frontend/apps/mobile/src/app/login.tsx:126
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:33
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:48
+#: frontend/apps/web/src/pages/LandingPage.tsx:187
+msgid "Tizim yuridik maslahat emas — advokat uchun yordamchi vosita."
+msgstr "Система юридикалық кеңес бермейди — ол адвокат ушын жәрдемши қурал."
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:275
+msgid "Toifalar"
+msgstr "Kategoriyalar"
+
+#: apps/api/exceptions.py:20 apps/api/exceptions.py:36
+#: frontend/apps/admin/src/pages/UsersPage.tsx:219
+#: frontend/apps/mobile/src/app/case/[id].tsx:134
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:63
+msgid "Topilmadi"
+msgstr "Табылмады"
+
+#: apps/cases/templates/cases/detail.html:173
+#: apps/cases/templates/cases/detail.html:174
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:69
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:145
+#: frontend/apps/admin/src/pages/UsersPage.tsx:79
+msgid "Topilmadi."
+msgstr "Табылмады."
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:262
+msgid "Tozalash"
+msgstr "Tazalaw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1271
+msgid "Toʻgʻri javob:"
+msgstr "Durıs juwap:"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1248
+msgid "Toʻgʻri javoblar:"
+msgstr "Durıs juwaplar:"
+
+#: apps/student/models.py:71
+msgid "Toʻgʻri variant"
+msgstr "Durıs variant"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:176
+msgid "Toʻlandi"
+msgstr "Төленди"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:133
+msgid "Toʻlangan"
+msgstr "Төленген"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:529
+msgid "Toʻldirish"
+msgstr "Tolıqtırıw"
+
+#: frontend/apps/admin/src/components/common.tsx:34
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:122
+msgid "Toʻlov bekor qilindi"
+msgstr "Төлем бийкар етилди"
+
+#: frontend/apps/admin/src/components/common.tsx:33
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:122
+msgid "Toʻlov tasdiqlandi"
+msgstr "Төлем тастыйықланды"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:175
+msgid "Toʻlov tushganini tasdiqlaysizmi? Obuna darhol yoqiladi."
+msgstr "Төлем түскенин тастыйықлайсыз ба? Жазылыў дәрҳал қосылады."
+
+#: frontend/apps/admin/src/components/common.tsx:32
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:42
+msgid "Toʻlov yaratildi"
+msgstr "Төлем жаратылды"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:19
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:130
+#: frontend/apps/admin/src/pages/UsersPage.tsx:314
+msgid "Toʻlovlar"
+msgstr "Төлемлер"
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:137
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:166
+msgid "Toʻxtatildi"
+msgstr "Тоқтатылды"
+
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:229
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:301
+msgid "Toʻxtatish"
+msgstr "Тоқтатыў"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:234
+msgid "Turi"
+msgstr "Түри"
+
+#: apps/cases/templates/cases/detail.html:125
+#: frontend/apps/web/src/pages/cases/Report.tsx:55
+msgid "Tuzatish:"
+msgstr "Дурыслаў:"
+
+#: frontend/apps/web/src/pages/auth/AuthPages.tsx:196
+#: frontend/apps/web/src/pages/ProfilePage.tsx:75
+msgid "Universitet / OTM"
+msgstr "Universitet / JOO"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:109
+msgid ""
+"Ushbu davr uchun ish tahlili limitingiz tugadi. Yangi ishlarni tahlil qilish"
+" uchun tarifingizni yangilang."
+msgstr ""
+"Bul dáwir ushın is analizi limitińiz tawısıldı. Jańa islerdi analiz qılıw "
+"ushın tarifińizdi jańalań."
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1170
+msgid "Ushbu soha boʻyicha test savollari topilmadi"
+msgstr "Bul taraw boyınsha test sorawları tabılmadı"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:154
+msgid "Usul"
+msgstr "Усыл"
+
+#: apps/cases/templates/cases/detail.html:177
+#: apps/cases/templates/cases/list.html:44
+#: frontend/apps/web/src/components/legal/PdfViewer.tsx:58
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:227
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:87
+msgid "Varaq"
+msgstr "Варақ"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:84
+msgid ""
+"Varaqlarni kamera bilan ketma-ket suratga oling yoki galereya / fayllardan "
+"tanlang — hammasi bitta ishga birlashtiriladi."
+msgstr ""
+"Бетлерди камера менен избе-из сүўретке түсириң яки галерея / файллардан "
+"таңлаң — барлығы бир иске бирлестириледи."
+
+#: apps/student/models.py:70
+msgid "Variantlar"
+msgstr "Variantlar"
+
+#: apps/rag/templates/rag/chat.html:101
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:254
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:255
+msgid "Voqea sanasi (ixtiyoriy): qonun shu sanadagi tahrirda olinadi"
+msgstr "Ўақыя санеси (мәжбүрий емес): нызам сол санедеги тахрирде алынады"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:51
+msgid "XAVF: OʻRTA"
+msgstr "ҚӘЎИП: ОРТА"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:51
+msgid "XAVF: YUQORI"
+msgstr "ҚӘЎИП: ЖОҚАРЫ"
+
+#: apps/cases/models.py:16 frontend/apps/mobile/src/app/(tabs)/cases.tsx:50
+#: frontend/apps/mobile/src/lib/errors.ts:18
+#: frontend/apps/mobile/src/lib/errors.ts:20
+msgid "Xato"
+msgstr "Қәте"
+
+#: apps/cases/templates/cases/detail.html:224
+#: frontend/apps/mobile/src/app/case/[id].tsx:152
+#: frontend/apps/web/src/pages/cases/CaseDetailPage.tsx:128
+msgid "Xato:"
+msgstr "Қәте:"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:775
+msgid "Xatolar va kamchiliklar:"
+msgstr "Qáteler hám kemshilikler:"
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:79
+msgid "Xavfsizlik"
+msgstr "Қәўипсизлик"
+
+#: apps/cases/templates/cases/detail.html:170
+#: frontend/apps/mobile/src/app/case/[id].tsx:77
+#: frontend/apps/web/src/pages/cases/Report.tsx:128
+msgid "Xronologiya"
+msgstr "Хронология"
+
+#: apps/cases/templates/cases/detail.html:155
+#: frontend/apps/mobile/src/app/case/[id].tsx:67
+#: frontend/apps/web/src/pages/cases/Report.tsx:92
+msgid "Xulosa."
+msgstr "Жуўмақ."
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:547
+msgid "Yana %(n)s ta koʻrsatish"
+msgstr "Jáne %(n)s kórsetiw"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1245
+msgid "Yana ozgina tayyorgarlik talab etiladi"
+msgstr "Jáne azǵana tayarlıq talap etiledi"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:641
+msgid "Yangi (Shaxsiy) kazus kiritish"
+msgstr "Jańa (Jeke) kazus kiritiw"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:76
+msgid "Yangi hujjatlar"
+msgstr "Жаңа ҳүжжетлер"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:71
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:206
+msgid "Yangi shablon"
+msgstr "Жаңа үлги"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1059
+msgid "Yangi tahrir (B variant)"
+msgstr "Jańa redakciya (B variant)"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:114
+#: frontend/apps/admin/src/pages/PlansPage.tsx:141
+msgid "Yangi tarif"
+msgstr "Жаңа тариф"
+
+#: frontend/apps/admin/src/pages/PaymentsPage.tsx:99
+#: frontend/apps/admin/src/pages/PlansPage.tsx:127
+msgid "Yaratish"
+msgstr "Жаратыў"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:340
+msgid "Yopish"
+msgstr "Jabıw"
+
+#: frontend/apps/mobile/src/app/(tabs)/profile.tsx:52
+#: frontend/packages/web-kit/src/lib/theme.tsx:90
+msgid "Yorugʻ"
+msgstr "Жақты"
+
+#: apps/rag/templates/rag/chat.html:106
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:244
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:305
+msgid "Yuborish"
+msgstr "Жибериў"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:391
+msgid "Yuklab olish kvotasi: %(rem)s/%(lim)s ta qoldi"
+msgstr "Júklep alıw kvotası: %(rem)s/%(lim)s qaldı"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:406
+msgid "Yuklab olish limiti tugagan."
+msgstr "Júklep alıw limiti tawısılǵan."
+
+#: apps/student/models.py:101
+msgid "Yuridik atama"
+msgstr "Yuridikalıq termin"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1573
+msgid "Yuridik atamalar va Rim huquqi"
+msgstr "Huqıqıy terminler hám Rim huqıqı"
+
+#: apps/student/models.py:102
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:570
+msgid "Yuridik lugʻat"
+msgstr "Huqıqıy sózlik"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1035
+msgid "Yuridik matnlarni qiyosiy taqqoslash (Diff)"
+msgstr "Yuridikalıq tekstlerdi salıstırıw (Diff)"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:907
+msgid "Yuridik mavzu yoki kazus"
+msgstr "Huqıqıy tema yamasa kazus"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:566
+msgid "Yuridik taqdimotlar"
+msgstr "Huqıqıy prezentaciyalar"
+
+#: apps/cases/templates/cases/detail.html:74
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:83
+msgid "Yuridik tasdiqlash"
+msgstr "Юридикалық тастыйықлаў"
+
+#: apps/student/models.py:80
+msgid "Yuridik test savoli"
+msgstr "Yuridikalıq test sorawı"
+
+#: apps/student/models.py:81
+msgid "Yuridik test savollari"
+msgstr "Yuridikalıq test sorawları"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1135
+msgid "Yuridik test va davlat imtihonlari trenajyori"
+msgstr "Yuridikalıq test hám mámleketlik imtixanlar trenajyorı"
+
+#: apps/accounts/models.py:31 frontend/apps/admin/src/pages/UsersPage.tsx:65
+#: frontend/apps/admin/src/pages/UsersPage.tsx:147
+msgid "Yurist-moderator"
+msgstr "Юрист-модератор"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:70
+msgid "Yurist-moderator shablonni yozadi, sinab koʻradi va tasdiqlaydi"
+msgstr "Юрист-модератор үлгини жазады, сынап көреди ҳәм тастыйықлайды"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:172
+msgid ""
+"Zero-retention: server faqat hisobotni saqlaydi, asl fayllar oʻchiriladi."
+msgstr ""
+"Zero-retention: сервер тек есабатты сақлайды, дәслепки файллар өшириледи."
+
+#: apps/cases/templates/cases/detail.html:169
+#: frontend/apps/mobile/src/app/case/[id].tsx:77
+#: frontend/apps/web/src/pages/cases/Report.tsx:127
+msgid "Ziddiyatlar"
+msgstr "Қарама-қарсылықлар"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:58
+msgid "Ziddiyatlar va tekshiruvdan oʻtmagan baholarni koʻrib chiqdim."
+msgstr "Қарама-қарсылықлар ҳәм тексериўден өтпеген баҳаларды көрип шықтым."
+
+#: apps/rag/verifier.py:100
+msgid "[%(key)s] %(label)s: %(note)s"
+msgstr "[%(key)s] %(label)s: %(note)s"
+
+#: apps/rag/verifier.py:181
+msgid ""
+"[%(key)s] %(label)s: iqtibos olingan qismda istisno bor, javobda eʼtiborga "
+"olinmagan — «%(sentence)s»"
+msgstr ""
+"[%(key)s] %(label)s: цитата алынған бөлимде истисна бар, жуўапта есапқа "
+"алынбаған — «%(sentence)s»"
+
+#: apps/rag/verifier.py:189
+msgid ""
+"[%(key)s] %(label)s: moddada «Izoh» bor — atamalar taʼrifini tekshiring"
+msgstr ""
+"[%(key)s] %(label)s: статьяда «Изоҳ» бар — терминлер анықламасын тексериң"
+
+#: apps/rag/verifier.py:94
+msgid "[%(key)s] %(title)s — hujjat kuchda emas (%(status)s)"
+msgstr "[%(key)s] %(title)s — ҳүжжет күшинде емес (%(status)s)"
+
+#: apps/rag/answer.py:119
+msgid "[%(key)s] — bunday manba berilmagan"
+msgstr "[%(key)s] — бундай дәрек берилмеген"
+
+#: apps/cases/templates/cases/detail.html:201
+#: frontend/apps/mobile/src/app/case/[id].tsx:159
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:212
+msgid "avval yuridik tasdiq talab qilinadi"
+msgstr "алдын юридикалық тастыйықлаў талап етиледи"
+
+#: apps/cases/templates/cases/detail.html:210
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:102
+msgid "barcha huquqiy baholar tekshiruvdan oʻtgan"
+msgstr "барлық ҳуқықый баҳалар тексериўден өткен"
+
+#: apps/cases/templates/cases/detail.html:142
+#: frontend/apps/web/src/pages/cases/Report.tsx:113
+msgid "barchasi yaxshi oʻqildi"
+msgstr "барлығы жақсы оқылған"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:61
+#: frontend/apps/admin/src/pages/UsersPage.tsx:99
+#: frontend/apps/admin/src/pages/UsersPage.tsx:231
+msgid "bloklangan"
+msgstr "блокланған"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:31
+msgid "bugun"
+msgstr "бүгин"
+
+#: apps/rag/templates/rag/chat.html:104
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:268
+msgid "chuqur"
+msgstr "терең"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:89
+msgid "eʼlon qilingan"
+msgstr "жәрияланған"
+
+#: frontend/apps/admin/src/pages/UsersPage.tsx:264
+msgid "faol"
+msgstr "актив"
+
+#: apps/rag/templates/rag/chat.html:6
+msgid "huquqiy yordamchi"
+msgstr "ҳуқықый жәрдемши"
+
+#: apps/cases/templates/cases/detail.html:179
+#: frontend/apps/web/src/pages/cases/Report.tsx:165
+msgid "iqtibos topilmadi"
+msgstr "цитата табылмады"
+
+#: apps/cases/templates/cases/list.html:6
+msgid "ishlar"
+msgstr "ислер"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:23
+#: frontend/apps/admin/src/pages/PlansPage.tsx:24
+#: frontend/apps/admin/src/pages/PlansPage.tsx:25
+msgid "jami"
+msgstr "жәми"
+
+#: apps/cases/templates/cases/detail.html:188
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:22
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:88
+msgid "kuchda"
+msgstr "күшинде"
+
+#: apps/cases/templates/cases/detail.html:189
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:26
+msgid "kuchga kirmagan"
+msgstr "күшке кирмеген"
+
+#: apps/cases/templates/cases/detail.html:188
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:24
+msgid "kuchini yoʻqotgan"
+msgstr "күшин жойтқан"
+
+#: frontend/apps/admin/src/components/CostChart.tsx:74
+#: frontend/apps/admin/src/pages/CostsPage.tsx:28
+#: frontend/apps/admin/src/pages/CostsPage.tsx:39
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:43
+#: frontend/apps/admin/src/pages/UsersPage.tsx:193
+msgid "kun"
+msgstr "күн"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:23
+#: frontend/apps/admin/src/pages/PlansPage.tsx:24
+#: frontend/apps/admin/src/pages/PlansPage.tsx:25
+msgid "kuniga"
+msgstr "күнине"
+
+#: frontend/apps/admin/src/pages/SyncPage.tsx:51
+msgid ""
+"lex.uz dan yuklash va qayta indekslash boshlansinmi? Bir necha daqiqa davom "
+"etadi."
+msgstr ""
+"lex.uz дан жүклеў ҳәм қайта индекслеў баслансын ба? Бир неше минут даўам "
+"етеди."
+
+#: frontend/apps/web/src/pages/LandingPage.tsx:105
+msgid "lex.uz manbali javoblar"
+msgstr "lex.uz дәреклеринен жуўаплар"
+
+#: frontend/apps/admin/src/components/AdminShell.tsx:23
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:70
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:86
+#: frontend/apps/admin/src/pages/SyncPage.tsx:40
+msgid "lex.uz sinxronizatsiyasi"
+msgstr "lex.uz синхронизациясы"
+
+#: apps/rag/templates/rag/chat.html:77
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:198
+msgid "lex.uz yadro korpusi · iqtiboslar avtomatik tekshiriladi"
+msgstr "lex.uz өзек корпусы · цитаталар автоматлық түрде тексериледи"
+
+#: apps/rag/templates/rag/chat.html:209
+msgid "manbalar:"
+msgstr "дәреклер:"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:367
+msgid "mavjud emas"
+msgstr "qoljetimsiz"
+
+#: apps/doc_builder/templates/doc_builder/fill.html:43
+#: apps/doc_builder/templates/doc_builder/list.html:33
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:210
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:320
+msgid "moderator tasdiqlagan · v%(v)s"
+msgstr "модератор тастыйықлаған · v%(v)s"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:523
+msgid "namuna"
+msgstr "úlgi"
+
+#: apps/doc_builder/templates/doc_builder/list.html:34
+msgid "namuna · moderator tasdiqlamagan"
+msgstr "үлги · модератор тастыйықламаған"
+
+#: apps/doc_builder/templates/doc_builder/fill.html:44
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:323
+msgid "namuna · moderator tasdiqlamagan — matnni tekshirib foydalaning"
+msgstr "үлги · модератор тастыйықламаған — қолланыўдан алдын текстти тексериң"
+
+#: apps/billing/templates/billing/plans.html:45
+#: frontend/apps/admin/src/pages/PlansPage.tsx:61
+#: frontend/apps/web/src/pages/BillingPage.tsx:109
+msgid "narx belgilanmagan"
+msgstr "баҳа белгиленбеген"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:37
+msgid "navbatda"
+msgstr "гезекте"
+
+#: apps/cases/templates/cases/detail.html:161
+msgid "niqoblandi:"
+msgstr "жасырылды:"
+
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:28
+msgid "nomaʼlum"
+msgstr "белгисиз"
+
+#: apps/rag/views.py:296
+msgid "on_date YYYY-MM-DD koʻrinishida boʻlsin"
+msgstr "on_date ЖЖЖЖ-АА-КК көринисинде болсын"
+
+#: frontend/apps/admin/src/pages/PlansPage.tsx:23
+msgid "oyiga"
+msgstr "айына"
+
+#: apps/billing/templates/billing/plans.html:48
+#: frontend/apps/web/src/pages/BillingPage.tsx:17
+msgid "oyiga %(n)s tagacha"
+msgstr "айына %(n)s ге шекем"
+
+#: apps/cases/templates/cases/detail.html:99
+#: apps/rag/templates/rag/chat.html:104
+#: frontend/apps/web/src/pages/cases/Report.tsx:30
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:267
+msgid "oʻrta"
+msgstr "орташа"
+
+#: apps/rag/templates/rag/chat.html:199
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:48
+msgid "oʻsha sanadagi tahrir"
+msgstr "сол санедеги тахрир"
+
+#: apps/cases/templates/cases/detail.html:99
+#: frontend/apps/web/src/pages/cases/Report.tsx:30
+msgid "past"
+msgstr "төмен"
+
+#: apps/cases/templates/cases/detail.html:123
+#: frontend/apps/web/src/pages/cases/Report.tsx:51
+msgid "qayta baholangan"
+msgstr "қайта баҳаланған"
+
+#: apps/rag/templates/rag/chat.html:216
+msgid "qidiruv %(s)s s · birinchi soʻz %(f)s s · javob %(a)s s"
+msgstr "излеў %(s)s с · биринши сөз %(f)s с · жуўап %(a)s с"
+
+#: frontend/apps/web/src/pages/cases/CasesPage.tsx:92
+msgid "qolgan ishlar: %(n)s ta"
+msgstr "qalǵan isler: %(n)s"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:89
+msgid "qoralama"
+msgstr "қаралама"
+
+#: frontend/apps/web/src/pages/cases/Report.tsx:108
+msgid "qoʻlyozma mavjud"
+msgstr "қолжазба бар"
+
+#: apps/rag/verifier.py:100
+msgid "sanadagi tahrir aniqlanmadi"
+msgstr "сол санедеги тахрир анықланбады"
+
+#: apps/rag/templates/rag/chat.html:200
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:49
+msgid "sanadagi tahrir nomaʼlum"
+msgstr "сол санедеги тахрир белгисиз"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:35
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:37
+msgid "shu oy"
+msgstr "усы ай"
+
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:53
+#: frontend/apps/admin/src/pages/AntiFraudPage.tsx:60
+#: frontend/apps/admin/src/pages/UsersPage.tsx:100
+#: frontend/apps/admin/src/pages/UsersPage.tsx:232
+msgid "shubhali"
+msgstr "гүманлы"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:276
+msgid "sinov qiymatlari"
+msgstr "сынаў мәнислери"
+
+#: apps/billing/templates/billing/plans.html:45
+#: frontend/apps/admin/src/pages/PlansPage.tsx:61
+#: frontend/apps/web/src/pages/BillingPage.tsx:104
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1432
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1438
+msgid "soʻm"
+msgstr "сум"
+
+#: frontend/apps/admin/src/pages/CostsPage.tsx:41
+msgid "soʻrov"
+msgstr "сораў"
+
+#: frontend/apps/web/src/pages/templates/TemplateFillPage.tsx:396
+msgid "suv belgisi bilan"
+msgstr "suw belgisi menen"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:936
+msgid "ta slayd"
+msgstr "slayd"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1096
+msgid "ta soʻz oʻchirilgan"
+msgstr "sóz óshirilgen"
+
+#: frontend/apps/web/src/pages/student/StudentPage.tsx:1093
+msgid "ta soʻz qoʻshilgan"
+msgstr "sóz qosılǵan"
+
+#: apps/rag/templates/rag/chat.html:198
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:45
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:44
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:126
+#: frontend/apps/web/src/pages/laws/LawsPage.tsx:178
+msgid "tahrir"
+msgstr "тахрир"
+
+#: apps/billing/templates/billing/plans.html:50
+#: frontend/apps/web/src/pages/BillingPage.tsx:27
+msgid "tarif belgisi bilan"
+msgstr "тариф белгиси менен"
+
+#: frontend/apps/web/src/pages/templates/TemplatesPage.tsx:519
+msgid "tasdiqlangan"
+msgstr "tastıyıqlanǵan"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:90
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:211
+msgid "tasdiqlanmagan"
+msgstr "тастыйықланбаған"
+
+#: apps/rag/templates/rag/chat.html:209
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:65
+msgid "tekshirilgan iqtiboslar:"
+msgstr "тексерилген цитаталар:"
+
+#: apps/rag/templates/rag/chat.html:104
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:266
+msgid "tez"
+msgstr "тез"
+
+#: frontend/apps/mobile/src/app/(tabs)/cases.tsx:215
+msgid "varaq"
+msgstr "бет"
+
+#: frontend/apps/admin/src/pages/DashboardPage.tsx:37
+msgid "xato"
+msgstr "қәте"
+
+#: apps/cases/templates/cases/detail.html:142
+#: frontend/apps/web/src/pages/cases/Report.tsx:111
+msgid "yomon oʻqilgan:"
+msgstr "жаман оқылған:"
+
+#: apps/cases/templates/cases/detail.html:99
+#: frontend/apps/web/src/pages/cases/Report.tsx:30
+msgid "yuqori"
+msgstr "жоқары"
+
+#: apps/rag/answer.py:138
+msgid "«%(quote)s» ko'rsatilgan [%(key)s] manbada emas, boshqa manbada"
+msgstr "«%(quote)s» көрсетилген [%(key)s] дәреклеме емес, басқа дәреклемеде"
+
+#: apps/rag/answer.py:133
+msgid "«%(quote)s» manbalarda aynan topilmadi"
+msgstr "«%(quote)s» дәреклерде сөзбе-сөз табылмады"
+
+#: frontend/apps/admin/src/pages/TemplatesPage.tsx:284
+msgid ""
+"“Koʻrib chiqish” — sxemadagi maydonlar sinov qiymatlari bilan toʻldiriladi."
+msgstr ""
+"«Көрип шығыў» — схемадағы майданлар сынаў мәнислери менен толтырылады."
+
+#: apps/rag/templates/rag/chat.html:208
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:85
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:63
+msgid "⚠ Xato topildi"
+msgstr "⚠ Қәте табылды"
+
+#: apps/cases/templates/cases/detail.html:122
+#: frontend/apps/mobile/src/app/case/[id].tsx:47
+#: frontend/apps/web/src/pages/cases/Report.tsx:50
+msgid "⚠ tekshiruvdan oʻtmagan"
+msgstr "⚠ тексериўден өтпеген"
+
+#: apps/rag/templates/rag/chat.html:208
+#: frontend/apps/mobile/src/app/(tabs)/index.tsx:85
+#: frontend/apps/web/src/pages/chat/ChatPage.tsx:63
+#: frontend/apps/web/src/pages/LandingPage.tsx:37
+msgid "✓ Tekshiruvdan oʻtdi"
+msgstr "✓ Тексериўден өтти"
+
+#: apps/cases/templates/cases/detail.html:122
+#: frontend/apps/mobile/src/app/case/[id].tsx:47
+#: frontend/apps/web/src/pages/cases/Report.tsx:50
+msgid "✓ manbalar tekshirildi"
+msgstr "✓ дәреклер тексерилди"
+
+#: apps/cases/templates/cases/detail.html:195
+#: frontend/apps/mobile/src/app/case/[id].tsx:159
+#: frontend/apps/web/src/pages/cases/ConfirmExport.tsx:196
+msgid "✓ tasdiqlangan:"
+msgstr "✓ тастыйықланған:"
+
+#~ msgid ""
+#~ "%(name)s: hujjat ichidagi rasmlar oʻqilmaydi — kerak boʻlsa alohida JPG/PNG "
+#~ "sifatida yuklang"
+#~ msgstr ""
+#~ "%(name)s: ҳүжжет ишиндеги сүўретлер оқылмайды — керек болса бөлек JPG/PNG "
+#~ "ретинде жүкләң"
+
+#~ msgid "..."
+#~ msgstr ""
+
+#~ msgid "AI xarajat radari"
+#~ msgstr "AI қәрежет радары"
+
+#~ msgid ""
+#~ "API xarajat chegarasi tugadi (%(detail)s). Serverni qayta ishga tushiring "
+#~ "yoki LLM_BUDGET_USD ni oshiring."
+#~ msgstr ""
+#~ "API шығынлар шегарасы питти (%(detail)s). Серверди қайта иске түсириң яки "
+#~ "LLM_BUDGET_USD ти асырыңыз."
+
+#~ msgid "Advokat va yuristlar uchun"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Agar bekor qilish asossiz boʻlsa, siz 1 oy ichida sudga yoki mehnat nizolari"
+#~ " komissiyasiga murojaat qilish huquqiga egasiz…"
+#~ msgstr ""
+#~ "Егер бийкар етиў тийкарсыз болса, сиз 1 ай ишинде сотқа яки мийнет споры "
+#~ "комиссиясына мүрәжат етиў ҳуқыққа ийесиз…"
+
+#~ msgid "Anti-fraud"
+#~ msgstr "Анти-фрод"
+
+#~ msgid "Bepul boshlash"
+#~ msgstr ""
+
+#~ msgid "Claude API sarfi: ish tahlili va savol-javob (UsageLog)"
+#~ msgstr "Claude API қәрежети: ис таллаўы ҳәм сораў-жуўап (UsageLog)"
+
+#~ msgid ""
+#~ "Fayllar va hisobotlar serverda shifrlangan holda saqlanadi, shaxsiy "
+#~ "maʼlumotlar tahlildan oldin niqoblanadi."
+#~ msgstr ""
+
+#~ msgid "Har bir iqtibos lex.uz dagi rasmiy matn bilan solishtiriladi"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Har bir javob lex.uz dagi amaldagi moddaga tayanadi — iqtibos avtomatik "
+#~ "manba bilan solishtiriladi."
+#~ msgstr ""
+
+#~ msgid "Himoyalangan rejim"
+#~ msgstr "Қорғалған режим"
+
+#~ msgid "Hisobga kirish"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Javob lex.uz dagi amaldagi moddalarga tayanadi, ish hujjatlari OCR orqali "
+#~ "tahlil qilinadi, hujjatlar shablon asosida tayyorlanadi — barchasi bitta "
+#~ "joyda."
+#~ msgstr ""
+
+#~ msgid "Maxfiylik va xavfsizlik"
+#~ msgstr ""
+
+#~ msgid "Mehnat nizolarini hal etish"
+#~ msgstr "Мийнет споларын шешиў"
+
+#~ msgid ""
+#~ "Men Oʻzbekiston qonunchiligi boʻyicha advokatlarga yordam beruvchi yuridik "
+#~ "yordamchiman. Huquqiy savol bering — masalan, qaysi modda qanday jazo "
+#~ "belgilaydi yoki shartnoma, mehnat, oila, soliq masalalari."
+#~ msgstr ""
+#~ "Мен Өзбекстан нызамшылығы бойынша адвокатларға жәрдем беретуғын юридикалық "
+#~ "жәрдемшимен. Ҳуқықый сораў бериң — мысалы, қайсы статья қандай жазаны "
+#~ "белгилейди яки шәртнама, мийнет, шаңарақ, салық мәселелери."
+
+#~ msgid ""
+#~ "PDF, DOCX, JPG yoki PNG — bir nechta faylni birga yuklash mumkin. Jami "
+#~ "%(pages)s varaqgacha, %(mb)s MB gacha."
+#~ msgstr ""
+#~ "PDF, DOCX, JPG ямаса PNG — бир неше файлды бирге жүклеў мүмкин. Жәми "
+#~ "%(pages)s бетке шекем, %(mb)s МБ шекем."
+
+#~ msgid "Qayta"
+#~ msgstr "Қайта"
+
+#~ msgid "Shablon qidirish…"
+#~ msgstr "Үлги излеў…"
+
+#~ msgid ""
+#~ "Shubhali faollik radari: bitta IP manzildan roʻyxatdan oʻtgan yoki kirgan "
+#~ "koʻp akkaunt"
+#~ msgstr ""
+#~ "Гүманлы белсендилик радары: бир IP мәнзилден дизимнен өткен яки кирген көп "
+#~ "аккаунт"
+
+#~ msgid "Tizim xavfsizligi va AI hisoblash resurslari nazorati"
+#~ msgstr "Система қәўипсизлиги ҳәм AI есаплаў ресурсларын қадағалаў"
+
+#~ msgid "Yuklash va tahlilni boshlash (%(n)s ta fayl)"
+#~ msgstr "Жүклеў ҳәм таллаўды баслаў (%(n)s файл)"
+
+#~ msgid "signal"
+#~ msgstr "сигнал"

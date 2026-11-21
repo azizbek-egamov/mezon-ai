@@ -1,0 +1,16 @@
+# MEZON AI — lokal Qdrant server (dev). Faqat shu kompyuterdan kirish mumkin (127.0.0.1).
+# Ishga tushirish: qdrant.exe --config-path E:/mezon/qdrant_server/config.yaml  (yoki .claude/launch.json "qdrant")
+log_level: WARN
+
+service:
+  host: 127.0.0.1
+  http_port: 6333
+  grpc_port: 6334
+
+storage:
+  storage_path: E:/mezon/mezon_backend/data/qdrant_server
+  snapshots_path: E:/mezon/mezon_backend/data/qdrant_server/snapshots
+  # Payload (modda matni) RAM da emas, diskda — kolleksiya parametrlari ham on_disk (apps/rag/store.py).
+  on_disk_payload: true
+
+telemetry_disabled: true

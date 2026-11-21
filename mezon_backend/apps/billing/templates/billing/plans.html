@@ -1,0 +1,59 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ ui_language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% trans "Tarif va limitlar" %} — MEZON AI</title>
+{% include "cases/_style.html" %}
+<style>
+  main { max-width: 980px; margin: 0 auto; padding: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; }
+  .plan.current { border-color: var(--blue); }
+  .plan h3 { margin: 0 0 4px; font-size: 16px; }
+  .plan ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 13px; }
+  .meter { height: 6px; background: var(--slate2); border-radius: 3px; overflow: hidden; margin-top: 4px; }
+  .meter > div { height: 100%; background: var(--blue); }
+  .meter > div.full { background: var(--red); }
+  h2 { font-size: 16px; margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>MEZON AI</h1>
+  {% include "accounts/_nav.html" with active="billing" %}
+  {% include "accounts/_userbar.html" %}
+</header>
+<main>
+  <div class="card" style="margin-bottom: 20px">
+    <h2>{% trans "Joriy tarifingiz" %}: <span class="pill ok">{{ plan.display_name }}</span></h2>
+    {% if exempt %}<p class="muted">{% trans "Cheklovlarsiz rejim (xodim akkaunti yoki kvotalar oʻchirilgan)." %}</p>
+    {% elif subscription and subscription.expires_at %}<p class="muted">{% blocktrans trimmed with d=subscription.expires_at|date:"d.m.Y" %}Obuna {{ d }} gacha amal qiladi.{% endblocktrans %}</p>{% endif %}
+    <p class="muted">{% blocktrans trimmed with n=max_pages %}Bitta ish hajmi: {{ n }} varaqgacha.{% endblocktrans %}</p>
+    {% for r in rows %}
+    <div style="margin-top: 10px">
+      <div style="display: flex; justify-content: space-between"><span>{{ r.label }}</span><span class="mono">{{ r.used }} / {{ r.limit }}</span></div>
+      <div class="meter"><div style="width: {% widthratio r.used r.limit 100 %}%" {% if r.used >= r.limit %}class="full"{% endif %}></div></div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h2>{% trans "Tariflar" %}</h2>
+  <div class="grid">
+    {% for p in plans %}
+    <div class="card plan{% if p.code == plan.code %} current{% endif %}">
+      <h3>{{ p.display_name }}</h3>
+      <div class="mono">{% if p.price_uzs %}{{ p.price_uzs|floatformat:"0" }} {% trans "soʻm" %}{% elif p.code == "FREE" %}0{% else %}<span class="muted">{% trans "narx belgilanmagan" %}</span>{% endif %}</div>
+      <ul>
+        <li>{% blocktrans trimmed with n=p.max_pages_per_case %}Bitta ish — {{ n }} varaqgacha{% endblocktrans %}</li>
+        <li>{% if p.lifetime_case_limit %}{% blocktrans trimmed with n=p.lifetime_case_limit %}Ish tahlili — jami {{ n }} marta{% endblocktrans %}{% elif p.daily_case_limit %}{% blocktrans trimmed with n=p.daily_case_limit %}Ish tahlili — kuniga {{ n }} tagacha{% endblocktrans %}{% if p.monthly_case_limit %}, {% blocktrans trimmed with n=p.monthly_case_limit %}oyiga {{ n }} tagacha{% endblocktrans %}{% endif %}{% else %}{% trans "Ish tahlili — cheklovsiz" %}{% endif %}</li>
+        <li>{% if p.lifetime_chat_limit %}{% blocktrans trimmed with n=p.lifetime_chat_limit %}Savol-javob — jami {{ n }} ta savol{% endblocktrans %}{% elif p.daily_chat_limit %}{% blocktrans trimmed with n=p.daily_chat_limit %}Savol-javob — kuniga {{ n }} tagacha{% endblocktrans %}{% else %}{% trans "Savol-javob — cheklovsiz" %}{% endif %}</li>
+        <li>{% if p.lifetime_template_limit %}{% blocktrans trimmed with n=p.lifetime_template_limit %}Hujjat yuklab olish — jami {{ n }} ta{% endblocktrans %}{% elif p.daily_template_limit %}{% blocktrans trimmed with n=p.daily_template_limit %}Hujjat yuklab olish — kuniga {{ n }} ta{% endblocktrans %}{% else %}{% trans "Hujjatlar — cheklovsiz" %}{% endif %}{% if p.watermark %} · {% trans "tarif belgisi bilan" %}{% endif %}</li>
+        {% if p.priority_queue %}<li>{% trans "Ish tahlili navbatida oldinda" %}</li>{% endif %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="muted" style="margin-top: 16px">{% trans "Obunani Payme va Click orqali rasmiylashtirish tez orada qoʻshiladi. Hozircha tarifni oʻzgartirish uchun administrator bilan bogʻlaning." %}</p>
+</main>
+</body>
+</html>

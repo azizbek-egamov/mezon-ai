@@ -1,0 +1,32 @@
+[
+ {
+  "code": "uz-Latn",
+  "django_code": "uz-latn",
+  "name": "Oʻzbekcha"
+ },
+ {
+  "code": "uz-Latn-2026",
+  "django_code": "uz-latn-2026",
+  "name": "Özbekça (2026)"
+ },
+ {
+  "code": "uz-Cyrl",
+  "django_code": "uz-cyrl",
+  "name": "Ўзбекча"
+ },
+ {
+  "code": "ru",
+  "django_code": "ru",
+  "name": "Русский"
+ },
+ {
+  "code": "kaa",
+  "django_code": "kaa",
+  "name": "Қарақалпақша"
+ },
+ {
+  "code": "en",
+  "django_code": "en",
+  "name": "English"
+ }
+]

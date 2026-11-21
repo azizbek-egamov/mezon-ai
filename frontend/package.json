@@ -1,0 +1,24 @@
+{
+  "name": "mezon-frontend",
+  "private": true,
+  "description": "MEZON AI frontend monorepo: veb (apps/web), admin (apps/admin), mobil (apps/mobile) va umumiy paketlar",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w @mezon/web",
+    "dev:web:nollm": "npm run dev:nollm -w @mezon/web",
+    "build:web": "npm run build -w @mezon/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "api:generate": "npm run generate -w @mezon/api-client"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "overrides": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
+}

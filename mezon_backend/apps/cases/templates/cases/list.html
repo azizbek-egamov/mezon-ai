@@ -1,0 +1,64 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ ui_language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEZON AI — {% trans "ishlar" %}</title>
+{% include "cases/_style.html" %}
+<style>
+  main { max-width: 980px; margin: 0 auto; padding: 24px; }
+  form.upload { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .status { white-space: nowrap; }
+  .err { color: var(--red); margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>MEZON AI</h1>
+  {% include "accounts/_nav.html" with active="cases" %}
+  {% include "accounts/_userbar.html" %}
+</header>
+<main>
+  <div class="card" style="margin-bottom: 20px">
+    <h2 style="margin: 0 0 6px; font-size: 16px">{% trans "Ish hujjatini yuklash" %}</h2>
+    <p class="muted" style="margin: 0 0 12px">{% blocktrans trimmed with pages=max_pages mb=max_mb %}PDF, DOCX, JPG yoki PNG — bir nechta faylni birga tanlash mumkin (varaqlar ketma-ket sanaladi). Jami {{ pages }} varaqgacha, {{ mb }} MB gacha; skaner va rasmlar OCR qilinadi. Shaxsiy maʼlumotlar (F.I.Sh., JSHSHIR, telefon, pasport) tahlilga yuborilishidan oldin niqoblanadi; fayl va hisobot serverda shifrlangan holda saqlanadi va faqat sizga koʻrinadi.{% endblocktrans %}</p>
+    {% if error %}<div class="err">{{ error }}</div>{% endif %}
+    <form class="upload" method="post" action="{% url 'case_upload' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="text" name="title" placeholder="{% trans "Ish nomi (ixtiyoriy)" %}" style="flex: 1; min-width: 220px">
+      <select name="category" title="{% trans "Ish turi" %}" style="background: var(--base); color: var(--text); border: 1px solid var(--border); border-radius: 4px; padding: 7px 9px; font: 14px var(--sans)">
+        {% for code, label in case_types %}<option value="{{ code }}">{{ label }}</option>{% endfor %}
+      </select>
+      <input type="file" name="files" multiple required
+             accept=".pdf,.docx,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+      <button type="submit">{% trans "Tahlilga yuborish" %}</button>
+      <label class="muted" style="flex-basis: 100%; font-size: 13px">
+        <input type="checkbox" name="zero_retention" value="1"> {% trans "Tahlil tugagach fayllarni serverdan oʻchirish (hisobot qoladi, lekin varaqlarni koʻrib boʻlmaydi)" %}</label>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2 style="margin: 0 0 10px; font-size: 16px">{% trans "Ishlar" %}</h2>
+    {% if runs %}
+    <table>
+      <tr><th>{% trans "Ish" %}</th><th>{% trans "Ish turi" %}</th><th>{% trans "Varaq" %}</th><th>{% trans "Holat" %}</th><th>{% trans "Narx" %}</th><th>{% trans "Sana" %}</th></tr>
+      {% for r in runs %}
+      <tr>
+        <td><a href="{% url 'case_detail' r.id %}">{{ r.title }}</a></td>
+        <td class="muted">{{ r.get_category_display }}</td>
+        <td class="mono">{{ r.pages }}</td>
+        <td class="status">
+          {% if r.status == "DONE" %}<span class="pill ok">{{ r.get_status_display }}</span>
+          {% elif r.status == "FAILED" %}<span class="pill bad">{{ r.get_status_display }}</span>
+          {% else %}<span class="pill info">{{ r.get_status_display }} · {{ r.progress }}%</span>{% endif %}
+        </td>
+        <td class="mono">${{ r.cost_usd }}</td>
+        <td class="mono muted">{{ r.created_at|date:"d.m.Y H:i" }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}<p class="muted">{% trans "Hali ish yuklanmagan." %}</p>{% endif %}
+  </div>
+</main>
+</body>
+</html>

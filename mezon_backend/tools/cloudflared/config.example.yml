@@ -1,0 +1,18 @@
+# Cloudflare named tunnel (production). Nusxa oling: config.yml (git ga kirmaydi) va <...> larni to'ldiring.
+# Tayyorlash (bir marta, README "Production tarmoq"):
+#   E:\cloudflared\cloudflared.exe tunnel login                       # brauzerda Cloudflare akkaunti, domen tanlanadi
+#   E:\cloudflared\cloudflared.exe tunnel create mezon                # <TUNNEL_ID> va credentials JSON beradi
+#   E:\cloudflared\cloudflared.exe tunnel route dns mezon <DOMEN>     # masalan, mezon.example.uz -> tunnel
+# Ishga tushirish: tools\prod.ps1 start (config.yml bo'lsa tunnelni o'zi ochadi).
+tunnel: <TUNNEL_ID>
+credentials-file: C:\Users\<FOYDALANUVCHI>\.cloudflared\<TUNNEL_ID>.json
+
+ingress:
+  # Veb-sayt (/), admin panel (/panel/), API (/api/v1/) — hammasi bitta domen, bitta server (tools/serve.py)
+  - hostname: <DOMEN>
+    service: http://127.0.0.1:8010
+    originRequest:
+      connectTimeout: 10s
+      # SSE chat javoblari uzun bo'lishi mumkin
+      keepAliveTimeout: 300s
+  - service: http_status:404

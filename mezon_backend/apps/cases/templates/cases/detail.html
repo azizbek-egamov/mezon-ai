@@ -1,0 +1,234 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ ui_language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ run.title }} — MEZON AI</title>
+{% include "cases/_style.html" %}
+<style>
+  .layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); height: calc(100vh - 53px); }
+  .pdf { border-right: 1px solid var(--border); }
+  .pdf iframe { width: 100%; height: 100%; border: 0; background: #2a2f3a; }
+  .side { overflow-y: auto; padding: 18px 22px 60px; }
+  .title { font-size: 17px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .bar { height: 6px; background: var(--slate2); border-radius: 3px; overflow: hidden; margin: 10px 0 6px; }
+  .bar > div { height: 100%; background: var(--blue); transition: width .5s; }
+  .stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+  .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin: 16px 0 12px; }
+  .tabs button { background: none; color: var(--muted); border: none; border-bottom: 2px solid transparent; border-radius: 0;
+                 padding: 8px 12px; font: 600 13px var(--sans); }
+  .tabs button.active { color: var(--text); border-bottom-color: var(--blue); }
+  .finding { background: var(--slate1); border: 1px solid var(--border); border-left: 3px solid var(--blue);
+             border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+  .finding.high { border-left-color: var(--red); } .finding.medium { border-left-color: var(--amber); }
+  .finding h3 { margin: 0 0 6px; font-size: 14px; }
+  .legal { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); }
+  .page { font: 600 11px var(--mono); color: var(--gold); border: 1px solid var(--border); border-radius: 4px;
+          padding: 0 5px; margin-right: 3px; cursor: pointer; background: none; }
+  .page:hover { border-color: var(--gold); }
+  .cite { font: 600 11px var(--mono); color: var(--gold); text-decoration: none; border: 1px solid var(--border);
+          border-radius: 4px; padding: 0 4px; }
+  .quote { color: #CFE0FF; background: rgba(59,130,246,0.08); border-radius: 3px; padding: 0 2px; }
+  .issue { font: 12px var(--mono); margin-top: 4px; } .issue.error { color: var(--red); } .issue.warning { color: var(--amber); } .issue.info { color: var(--muted); }
+  .row { display: grid; grid-template-columns: 150px 50px 1fr; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .err { color: var(--red); }
+  .export { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 0 0 12px; }
+  .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center;
+           justify-content: center; z-index: 10; }
+  .modal[hidden] { display: none; }
+  .modal .box { background: var(--slate1); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px;
+                width: min(860px, 94vw); max-height: 88vh; overflow-y: auto; }
+  .modal h2 { margin: 0 0 6px; font-size: 17px; }
+  .modal td, .modal th { font-size: 12px; }
+  @media (max-width: 1000px) { .layout { grid-template-columns: 1fr; height: auto; } .pdf { height: 60vh; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>MEZON AI</h1>
+  {% include "accounts/_nav.html" with active="cases" %}
+  {% include "accounts/_userbar.html" %}
+</header>
+<div class="layout">
+  <div class="pdf">{% if run.pdf_path %}<iframe id="pdf" src="{% url 'case_pdf' run.id %}#page=1" title="{% trans "Ish hujjati" %}"></iframe>
+    {% else %}<div class="muted" style="padding: 24px">{% blocktrans trimmed %}PDF tahlildan keyin serverdan oʻchirilgan (siz tanlagan rejim). Varaq raqamlari hisobotda qoladi.{% endblocktrans %}</div>{% endif %}</div>
+  <div class="side">
+    <div style="display: flex; gap: 10px; align-items: start">
+      <div class="title" style="flex: 1">{{ run.title }}</div>
+      <form method="post" action="{% url 'case_delete' run.id %}"
+            onsubmit="return confirm(gettext('Ish, PDF va hisobot butunlay oʻchiriladi. Davom etasizmi?'))">{% csrf_token %}
+        <button type="submit" style="background: none; border: 1px solid var(--border); color: var(--red);
+                padding: 4px 10px; font-size: 12px">{% trans "Ishni oʻchirish" %}</button></form>
+    </div>
+    {% if run.sources|length > 1 %}<div class="muted" style="font-size: 13px">{% trans "Fayllar:" %}
+      {% for s in run.sources %}<span class="mono">{{ s.name }}</span> ({{ s.first_page }}{% if s.last_page != s.first_page %}–{{ s.last_page }}{% endif %}-v){% if not forloop.last %}, {% endif %}{% endfor %}</div>{% endif %}
+    <div class="muted mono" id="stage">…</div>
+    <div class="bar"><div id="bar" style="width: 0%"></div></div>
+    <div id="report"></div>
+  </div>
+</div>
+
+<!-- TZ §12: "Yuridik tasdiqlash oynasi" — advokat tasdig'isiz rasmiy fayl yaratilmaydi -->
+<div class="modal" id="confirm" hidden>
+  <div class="box">
+    <h2>{% trans "Yuridik tasdiqlash" %}</h2>
+    <p class="muted">{% blocktrans trimmed %}Rasmiy hisobotni yaratishdan oldin xulosada ishlatilgan qonun moddalari va tekshiruvdan oʻtmagan baholarni koʻrib chiqing.{% endblocktrans %}</p>
+    <div id="confirm-unverified"></div>
+    <h3 style="font-size: 14px; margin: 14px 0 6px">{% trans "Keltirilgan qonun moddalari" %}</h3>
+    <table><thead><tr><th>{% trans "Hujjat" %}</th><th>{% trans "Modda" %}</th><th>{% trans "Tahrir" %}</th><th>{% trans "Holati" %}</th></tr></thead>
+      <tbody id="confirm-articles"></tbody></table>
+    <form method="post" action="{% url 'case_confirm' run.id %}" style="margin-top: 16px">{% csrf_token %}
+      <label style="display: block; margin-bottom: 12px">
+        <input type="checkbox" name="acknowledged" value="1" required>
+        {% blocktrans trimmed %}Asosiy dalillar va qonun moddalari bilan tanishdim. Hujjat yuridik maslahat emasligini va yakuniy pozitsiyani oʻzim belgilashimni tushunaman.{% endblocktrans %}</label>
+      <button type="submit">{% trans "Tasdiqlash" %}</button>
+      <button type="button" onclick="$('#confirm').hidden = true"
+              style="background: none; border: 1px solid var(--border); color: var(--text)">{% trans "Bekor qilish" %}</button>
+    </form>
+  </div>
+</div>
+
+<script src="{% url 'jsi18n' %}?l={{ ui_language }}"></script>
+<script>
+const RUN = "{{ run.id }}";
+const $ = (s, el = document) => el.querySelector(s);
+const fmt = (s, o) => interpolate(s, o, true);
+const esc = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const VERDICT = { qonun_buzilishi: [gettext("Qonun buzilishi"), "bad"], buzilish_ehtimoli: [gettext("Buzilish ehtimoli"), "warn"],
+                  huquqiy_ahamiyatli: [gettext("Huquqiy ahamiyatli"), "info"], asossiz: [gettext("Asossiz"), ""] };
+const IMPORTANCE = { high: gettext("yuqori"), medium: gettext("oʻrta"), low: gettext("past") };
+
+// Faqat #page o'zgarsa, ichki PDF ko'ruvchi qayta yuklanmaydi — so'rov parametri bilan majburan qayta ochamiz.
+function goPage(n) { if (!$("#pdf")) return; $("#pdf").src = `{% url 'case_pdf' run.id %}?p=${n}&t=${Date.now()}#page=${n}`; }
+const pages = list => (list || []).map(p => `<button class="page" onclick="goPage(${p})">${fmt(gettext("%(n)s-v"), {n: p})}</button>`).join("");
+
+function legalText(text, sources) {
+  let s = esc(text).replace(/«([^»]+)»/g, '<span class="quote">«$1»</span>');
+  const byKey = Object.fromEntries((sources || []).map(x => [x.key, x]));
+  return s.replace(/\[(M\d+)\]/g, (_, k) => byKey[k]
+    ? `<a class="cite" href="${esc(byKey[k].lex_url)}" target="_blank" rel="noopener" title="${esc(byKey[k].doc_title + " — " + byKey[k].label)}">${k}</a>`
+    : `<span class="cite" style="color: var(--red)">${k}</span>`);
+}
+
+function renderFinding(f) {
+  const L = f.legal || {};
+  let legal = "";
+  if (L.skipped) legal = `<div class="legal muted">${gettext("Huquqiy asoslash oʻtkazib yuborildi (muhimligi past).")}</div>`;
+  else if (L.verdict) {
+    const [label, cls] = VERDICT[L.verdict] || [L.verdict, ""];
+    const v = L.verification || {};
+    legal = `<div class="legal">
+      <span class="pill ${cls}">${label}</span>
+      <span class="pill ${v.ok ? "ok" : "bad"}">${v.ok ? gettext("✓ manbalar tekshirildi") : gettext("⚠ tekshiruvdan oʻtmagan")}</span>
+      <span class="muted mono" style="font-size: 11px">${esc(L.model || "")}${L.retried ? " · " + gettext("qayta baholangan") : ""}</span>
+      <p>${legalText(L.assessment, L.sources)}</p>
+      ${L.correction_needed && L.corrections ? `<p><b>${gettext("Tuzatish:")}</b> ${legalText(L.corrections, L.sources)}</p>` : ""}
+      ${L.defense_action ? `<p><b>${gettext("Himoyachi uchun:")}</b> ${esc(L.defense_action)}</p>` : ""}
+      ${(v.issues || []).map(i => `<div class="issue ${i.severity}">${i.severity === "error" ? "✗" : i.severity === "info" ? "ℹ" : "!"} ${esc(i.detail)}</div>`).join("")}
+    </div>`;
+  } else if (L.error) legal = `<div class="legal err">${gettext("Huquqiy baho olinmadi:")} ${esc(L.error)}</div>`;
+  return `<div class="finding ${f.importance}">
+    <h3>${esc(f.topic)} <span class="pill">${IMPORTANCE[f.importance] || f.importance}</span></h3>
+    <div>${pages(f.pages)}</div>
+    <p>${esc(f.explanation)}</p>${legal}</div>`;
+}
+
+function ocrNote(ocrPages) {
+  if (!ocrPages || !ocrPages.length) return "";
+  const low = ocrPages.filter(p => p.low_quality).map(p => p.page);
+  const warned = ocrPages.filter(p => p.warning);
+  return `<div class="card" style="margin-bottom: 10px">
+    <span class="pill info">${fmt(gettext("OCR: %(n)s ta skaner varaq"), {n: ocrPages.length})}</span>
+    ${low.length ? `<span class="pill bad">${gettext("yomon oʻqilgan:")} ${pages(low)}</span>` : `<span class="pill ok">${gettext("barchasi yaxshi oʻqildi")}</span>`}
+    ${warned.map(p => `<div class="issue warning">! ${fmt(gettext("%(n)s-varaq:"), {n: p.page})} ${esc(p.warning)}</div>`).join("")}
+    <div class="muted" style="font-size: 12px; margin-top: 4px">${gettext("Skaner sahifalardagi matn avtomatik tanilgan — muhim iqtiboslarni asl varaq bilan solishtiring.")}</div>
+  </div>`;
+}
+
+function renderReport(r) {
+  const factsById = Object.fromEntries(r.facts.map(f => [f.id, f]));
+  const verified = r.facts.filter(f => f.verified).length;
+  const contradictions = r.findings.filter(f => f.kind === "contradiction");
+  const procedural = r.findings.filter(f => f.kind === "procedural");
+  const pii = Object.entries(r.pii_counts || {}).map(([k, v]) => `${k}: ${v}`).join(", ");
+  $("#report").innerHTML = `
+    <div class="card"><b>${gettext("Xulosa.")}</b> ${esc(r.summary)}</div>
+    <div class="stats">
+      <span class="pill">${fmt(gettext("%(n)s varaq"), {n: r.pages})}</span>
+      <span class="pill">${fmt(gettext("%(n)s fakt · %(v)s iqtibos tasdiqlandi"), {n: r.facts.length, v: verified})}</span>
+      <span class="pill bad">${fmt(gettext("%(n)s ziddiyat"), {n: contradictions.length})}</span>
+      <span class="pill warn">${fmt(gettext("%(n)s protsessual muammo"), {n: procedural.length})}</span>
+      <span class="pill">${gettext("niqoblandi:")} ${esc(pii) || "—"}</span>
+      <span class="pill">$${(r.cost_usd ?? 0).toFixed(3)} · ${Math.round(r.seconds || 0)} s</span>
+    </div>
+    <div class="export" id="export"></div>
+    ${ocrNote(r.ocr_pages)}
+    ${(r.errors || []).map(e => `<div class="err">✗ ${esc(e)}</div>`).join("")}
+    <div class="tabs">
+      <button data-tab="proc" class="active">${gettext("Protsessual muammolar")}</button>
+      <button data-tab="contr">${gettext("Ziddiyatlar")}</button>
+      <button data-tab="time">${gettext("Xronologiya")}</button>
+      <button data-tab="facts">${gettext("Faktlar")}</button>
+    </div>
+    <div data-pane="proc">${procedural.map(renderFinding).join("") || `<p class="muted">${gettext("Topilmadi.")}</p>`}</div>
+    <div data-pane="contr" hidden>${contradictions.map(renderFinding).join("") || `<p class="muted">${gettext("Topilmadi.")}</p>`}</div>
+    <div data-pane="time" hidden>${r.timeline.map(id => factsById[id]).filter(Boolean).map(f =>
+      `<div class="row"><span class="mono">${esc(f.date)} ${esc(f.time)}</span><span>${pages([f.verified_page || f.page])}</span><span>${esc(f.summary)}</span></div>`).join("")}</div>
+    <div data-pane="facts" hidden><table><tr><th>${gettext("Varaq")}</th><th>${gettext("Manba")}</th><th>${gettext("Fakt va iqtibos")}</th></tr>${r.facts.map(f =>
+      `<tr><td>${pages([f.verified_page || f.page])}</td><td class="muted">${esc(f.source)}</td>
+       <td>${esc(f.summary)}<br><span class="quote">«${esc(f.quote)}»</span> ${f.verified ? "" : `<span class="pill bad">${gettext("iqtibos topilmadi")}</span>`}</td></tr>`).join("")}</table></div>`;
+  document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+    document.querySelectorAll(".tabs button").forEach(x => x.classList.toggle("active", x === b));
+    document.querySelectorAll("[data-pane]").forEach(p => p.hidden = p.dataset.pane !== b.dataset.tab);
+  });
+}
+
+const STATUS_PILL = { kuchda: "ok", "kuchini yoʻqotgan": "bad", "kuchga kirmagan": "bad" };
+// Server holat matnlari (confirmation API) ‒ kalit sifatida o'zbekcha; ko'rsatishda tarjima qilinadi
+const STATUS_LABEL = { kuchda: gettext("kuchda"), "kuchini yoʻqotgan": gettext("kuchini yoʻqotgan"),
+                       "kuchga kirmagan": gettext("kuchga kirmagan") };
+
+async function renderExport() {
+  const c = await (await fetch(`/api/cases/${RUN}/confirmation`)).json();
+  if (c.confirmed_at) {
+    const at = new Date(c.confirmed_at).toLocaleString("{{ ui_language }}");
+    $("#export").innerHTML = `<span class="pill ok">${gettext("✓ tasdiqlangan:")} ${esc(at)}</span>
+      <a class="btn" href="{% url 'case_export' run.id 'docx' %}">${gettext("DOCX yuklab olish")}</a>
+      <a class="btn" href="{% url 'case_export' run.id 'pdf' %}">${gettext("PDF yuklab olish")}</a>`;
+    return;
+  }
+  $("#export").innerHTML = `<button type="button" id="open-confirm">${gettext("Rasmiy hisobot (DOCX / PDF)…")}</button>
+    <span class="muted" style="font-size: 12px">${gettext("avval yuridik tasdiq talab qilinadi")}</span>`;
+  $("#confirm-articles").innerHTML = c.articles.map(a => `<tr>
+      <td>${esc(a.doc_title)}</td><td><a href="${esc(a.lex_url)}" target="_blank" rel="noopener">${esc(a.label)}</a></td>
+      <td class="mono">${esc(a.edition)}</td><td><span class="pill ${STATUS_PILL[a.status] || "warn"}">${esc(STATUS_LABEL[a.status] || a.status)}</span></td></tr>`
+    ).join("") || `<tr><td colspan="4" class="muted">${gettext("Modda keltirilmagan")}</td></tr>`;
+  $("#confirm-unverified").innerHTML = c.unverified.length
+    ? `<div class="card" style="border-color: var(--red)"><b class="err">${gettext("Tekshiruvdan oʻtmagan baholar:")} ${c.unverified.length}</b>
+        ${c.unverified.map(u => `<div class="issue error">✗ ${esc(u.topic)} — ${esc(u.reason)}</div>`).join("")}
+        <div class="muted" style="font-size: 12px; margin-top: 6px">${gettext("Hujjatda ular “TASDIQLANMAGAN” deb belgilanadi.")}</div></div>`
+    : `<span class="pill ok">${gettext("barcha huquqiy baholar tekshiruvdan oʻtgan")}</span>`;
+  $("#open-confirm").onclick = () => { $("#confirm").hidden = false; };
+}
+
+async function poll() {
+  const s = await (await fetch(`/api/cases/${RUN}`)).json();
+  $("#bar").style.width = s.progress + "%";
+  $("#stage").textContent = `${s.status_label} · ${s.stage || ""}`;
+  if (s.status === "DONE") {
+    renderReport(await (await fetch(`/api/cases/${RUN}/report`)).json());
+    renderExport();
+    return;
+  }
+  if (s.status === "FAILED") {
+    $("#report").innerHTML = `<div class="err">${gettext("Xato:")} ${esc(s.error)}</div>
+      <form method="post" action="{% url 'case_retry' run.id %}" style="margin-top: 10px">{% csrf_token %}
+        <button type="submit">${gettext("Qayta urinish")}</button></form>`;
+    return;
+  }
+  setTimeout(poll, 2000);
+}
+poll();
+</script>
+</body>
+</html>

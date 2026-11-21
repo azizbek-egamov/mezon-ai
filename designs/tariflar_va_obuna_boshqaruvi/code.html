@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="uz"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#adc6ff", "secondary-fixed-dim": "#e7c35a", "tertiary": "#4edea3", "inverse-on-surface": "#2c3039", "error-container": "#93000a", "surface-tint": "#adc6ff", "on-primary-container": "#00285d", "on-secondary-fixed": "#241a00", "surface": "#0f131c", "on-secondary-fixed-variant": "#584400", "inverse-surface": "#dfe2ee", "secondary-fixed": "#ffe08b", "on-primary-fixed": "#001a42", "error": "#ffb4ab", "surface-container-highest": "#31353e", "on-surface-variant": "#c2c6d6", "on-tertiary-fixed": "#002113", "surface-container-high": "#262a33", "on-error-container": "#ffdad6", "on-primary": "#002e6a", "secondary": "#e7c35a", "outline-variant": "#424754", "surface-container-low": "#181c24", "tertiary-fixed": "#6ffbbe", "on-tertiary-container": "#00311f", "surface-variant": "#31353e", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#004395", "outline": "#8c909f", "background": "#0f131c", "tertiary-container": "#00a572", "on-tertiary": "#003824", "primary-container": "#4d8eff", "on-background": "#dfe2ee", "secondary-container": "#896c00", "on-secondary-container": "#fff3dc", "primary-fixed-dim": "#adc6ff", "surface-container-lowest": "#0a0e16", "surface-bright": "#353942", "surface-container": "#1c2028", "tertiary-fixed-dim": "#4edea3", "on-secondary": "#3d2f00", "on-surface": "#dfe2ee", "inverse-primary": "#005ac2", "surface-dim": "#0f131c", "primary-fixed": "#d8e2ff", "on-error": "#690005" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-desktop": "2rem", "space-md": "0.75rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "1rem", "space-lg": "1.25rem", "gutter": "1rem" }, fontFamily: { "body-md": ["Plus Jakarta Sans"], "legal-cite": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-ui": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-code": ["JetBrains Mono"] }, fontSize: { "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "legal-cite": ["13px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }], "label-ui": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-code": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>body { min-height: max(884px, 100dvh); }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 shrink-0"><img alt="MEZON AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-IC0Ih7ik25ZywsU90LwN8X2GgvA7pcw0awLV8FZ2Z3trQju5nJky-E-BpeZleoNegbtF09UM9Sw6VeEIMcAE0TVuKn6FKdWMMZWFOiEme8u1Q4fjXeMIXrlr4o6gobHdibyD3MinImCmZ64z2m7MN3e6Bkq7RwVMHcWxEiaSXJOQLKaJf0rIKgZTvbZuh9_eT1i5zshh9V6I887uNos9-GYn-_j21laL2xY8dP3gJdrgB3l2CUUU"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight font-bold text-on-surface leading-none">MEZON AI</span><span class="font-label-code text-label-code text-primary bg-primary/10 px-1.5 py-0.5 rounded">UZ</span></div><span class="font-label-code text-label-code text-on-surface-variant truncate">Tariflar Va Obuna Boshqaruvi</span></div></div><div class="hidden xs:flex sm:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high/80 backdrop-blur-md"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-code text-label-code text-tertiary font-semibold tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">lock</span>256-BIT</span><span class="font-label-code text-label-code text-on-surface-variant text-[10px] pl-1">#42/2026</span></div><div class="flex items-center gap-space-sm shrink-0"><button class="flex xs:hidden items-center text-tertiary bg-surface-container px-2 py-1 rounded font-label-code text-label-code"><span class="material-symbols-outlined text-[14px]">lock</span></button><img alt="Advokat Profili" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40 shadow-[0_0_8px_rgba(77,142,255,0.2)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJmjuH8BbAS_arKsEO-85iRX9Jpl1S5Sjh4-NBxMQZwBt9LLHR-zjaRJG0ODWZo1YfwcI-HpOITndrN77-_3xJjxE9KX-b02nEvd2fXL70yT0J6PN835rWhHJzHGshvyC-5wPuwG4RhL16mLnf5Jr9QtERUvAjpC-RdVuRQ_jgzjwOximPSr6vovmvuvQt560ACrsYSSw_n8yIo8yzowDpdh4nkDVWF9IPXn946gSdDUejWqhI2iKM"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 px-margin bg-surface"><div class="flex flex-col w-full pb-8 space-y-space-md">
+<!-- Active Quota Hero Banner (Z2 Surface) -->
+<section class="bg-surface-container-high rounded-xl p-space-md shadow-md relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-primary/15 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-code text-label-code text-primary tracking-wider uppercase">Joriy Reja</span>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Pro Advokat (Oylik)</h2>
+</div>
+</div>
+<span class="font-label-code text-label-code text-tertiary bg-tertiary/10 px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+        Faol
+      </span>
+</div>
+<!-- Usage Progress -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm space-y-2 mb-space-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">analytics</span>
+          Bugungi kvota
+        </span>
+<span class="font-label-code text-label-code text-on-surface">
+<strong class="text-primary font-bold">4</strong> / 10 ish ishlatildi
+        </span>
+</div>
+<!-- Progress Bar Track -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden relative">
+<div class="h-full rounded-full bg-gradient-to-r from-primary via-primary-container to-tertiary w-[40%] transition-all duration-700 shadow-[0_0_10px_rgba(77,142,255,0.7)]"></div>
+</div>
+<div class="flex items-center justify-between font-label-code text-[10px] text-outline">
+<span>6 ta qoldi (yangilanish: 00:00)</span>
+<span>40% iste'mol</span>
+</div>
+</div>
+<!-- Expiry info bar -->
+<div class="flex items-center justify-between text-body-sm font-body-sm bg-surface-container/60 rounded px-space-sm py-1.5">
+<span class="text-on-surface-variant flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+        2026-yil 28-aprelgacha faol
+      </span>
+<span class="font-label-code text-label-code text-secondary font-semibold shrink-0">
+        22 kun qoldi
+      </span>
+</div>
+</section>
+<!-- Billing Period Segmented Switch -->
+<section class="bg-surface-container-lowest p-1 rounded-xl flex items-center relative shadow-inner">
+<button class="flex-1 py-2 rounded-lg font-label-ui text-label-ui transition-all duration-200 text-center bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1" id="monthlyToggleBtn" onclick="setBillingCycle('monthly')">
+<span>Oylik to'lov</span>
+</button>
+<button class="flex-1 py-2 rounded-lg font-label-ui text-label-ui transition-all duration-200 text-center text-on-surface-variant flex items-center justify-center gap-1.5" id="annualToggleBtn" onclick="setBillingCycle('annual')">
+<span>Yillik to'lov</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-code text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider animate-pulse">
+        -20% TEJAMKOR
+      </span>
+</button>
+</section>
+<!-- Plan Tiers Vertical Stack -->
+<div class="flex flex-col space-y-space-md">
+<!-- Card 1: Trial (Exhausted) -->
+<div class="bg-surface-container-low rounded-xl p-space-md opacity-75 relative">
+<div class="flex justify-between items-start mb-space-xs">
+<div>
+<span class="font-label-code text-label-code text-outline uppercase tracking-wider">Start</span>
+<h3 class="font-headline-md text-headline-md text-on-surface-variant">Bepul Sinov (Trial)</h3>
+</div>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-code text-[10px] px-2 py-0.5 rounded uppercase">
+          Tugagan
+        </span>
+</div>
+<div class="mb-space-sm">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface-variant">0 so'm</span>
+<span class="font-body-sm text-body-sm text-outline"> / bir martalik</span>
+</div>
+<ul class="space-y-1.5 mb-space-md font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">check</span>
+<span>1 marta sinov tahlili</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">check</span>
+<span>Maksimal 15 varaq hujjat</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">check</span>
+<span>1 ta standart shablon</span>
+</li>
+<li class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+<span>MEZON AI suv belgisi bilan eksport</span>
+</li>
+</ul>
+<button class="w-full py-2.5 rounded bg-surface-container-highest text-outline font-label-ui text-label-ui flex items-center justify-center gap-1.5 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+        Ishlatilgan (Bajarildi)
+      </button>
+</div>
+<!-- Card 2: Pro Advokat (Active Tier, Highlighted) -->
+<div class="bg-surface-container-high rounded-xl p-space-md relative shadow-xl overflow-hidden shadow-primary/5">
+<!-- Glow Accent Bar -->
+<div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-primary-container to-secondary"></div>
+<div class="flex justify-between items-start mb-space-xs pt-1">
+<div>
+<span class="font-label-code text-label-code text-primary uppercase tracking-wider font-semibold">Tavsiya etiladi</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Pro Advokat</h3>
+</div>
+<span class="bg-secondary text-on-secondary font-label-code text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-wider shadow-sm">
+          ENG MASHHUR
+        </span>
+</div>
+<div class="mb-space-sm flex items-baseline gap-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-primary" id="proPrice">490 000</span>
+<span class="font-body-md text-body-md text-on-surface-variant">so'm</span>
+<span class="font-label-code text-label-code text-outline" id="proCycle">/ oy</span>
+</div>
+<div class="bg-surface-container-lowest/80 rounded-lg p-space-sm mb-space-md space-y-2">
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">bolt</span>
+<span><strong>Kuniga 10 ta</strong> katta ish tahlili</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">description</span>
+<span>Maksimum <strong>150 varaq</strong> har bir ish uchun</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">edit_document</span>
+<span>Cheksiz <strong>200+ shablonlar</strong> &amp; TipTap muharrir</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">balance</span>
+<span><strong>100 ta</strong> lex.uz qonunchilik so'rovlari</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-tertiary">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">verified_user</span>
+<span>Zero-Hallucination Critic v2.6 tekshiruvi</span>
+</div>
+</div>
+<button class="w-full py-3 rounded bg-primary text-on-primary font-label-ui text-label-ui flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">settings</span>
+        Amaldagi Tarif (Boshqarish)
+      </button>
+</div>
+<!-- Card 3: Enterprise / Byuro (Prestige Gold & Obsidian) -->
+<div class="bg-gradient-to-b from-surface-container-high to-surface-container rounded-xl p-space-md relative shadow-lg">
+<div class="flex justify-between items-start mb-space-xs">
+<div>
+<span class="font-label-code text-label-code text-secondary uppercase tracking-wider font-semibold">Korporativ daraja</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Enterprise / Byuro</h3>
+</div>
+<span class="bg-surface-container-highest text-secondary font-label-code text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">diamond</span> VIP
+        </span>
+</div>
+<div class="mb-space-sm flex items-baseline gap-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-secondary" id="entPrice">1 450 000</span>
+<span class="font-body-md text-body-md text-on-surface-variant">so'm</span>
+<span class="font-label-code text-label-code text-outline" id="entCycle">/ oy</span>
+</div>
+<div class="bg-surface-container-lowest/80 rounded-lg p-space-sm mb-space-md space-y-2">
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">library_books</span>
+<span><strong>Kuniga 35 ta</strong> ish (Maks 500 varaq ko'p tomli delolar)</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">groups</span>
+<span><strong>3-5 ta advokat</strong> uchun jamoaviy kirish (Multi-seat)</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">rocket_launch</span>
+<span><strong>Celery VIP Queue:</strong> Navbatsiz 10x tezkor tahlil</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">receipt_long</span>
+<span>Korxona nomidan shartnoma &amp; hisob-faktura (1C integratsiya)</span>
+</div>
+</div>
+<button class="w-full py-3 rounded bg-secondary text-on-secondary font-label-ui text-label-ui flex items-center justify-center gap-2 active:scale-[0.98] transition-transform font-bold">
+<span class="material-symbols-outlined text-[18px]">domain_add</span>
+        Byuro Tarifini Tanlash
+      </button>
+</div>
+</div>
+<!-- Micro Visual Proof & Trust Showcase -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md flex items-center gap-space-sm">
+<img class="w-14 h-14 rounded-lg object-cover shrink-0" data-alt="Official judiciary digital seal and cryptographic shield of Uzbekistan legal certification, sleek cybernetic navy blue and golden emblem with security padlock watermark." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMawL60yh1ay9ayhqylXT_jZwk-VKmhPmZDJTrSXEIokdjieda4F0Rs9UuBqC6RaCvHO0tgR3fcuaD6p370TjIuvh8MKgBEYZ10XHXmtth1_8WxSvlWYGFiooFNGVlQX57qllcvccGqSUMBMqqgvuYJJxJIPDd2hN2AqAcKPCCji1K6MsBkSXbmZ7DeAERPPWl-dtRBJeKxbmX9UJFZIGD9gDjC0RAPtQOxof5kuh-70qBrFIqnC2v"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-code text-label-code text-primary uppercase">Kafolatlangan Maxfiylik</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Barcha tergov va sud hujjatlari O'zbekiston hududidagi serverlarda shifrlangan holda qayta ishlanadi.</p>
+</div>
+</section>
+<!-- Payment Methods & Invoicing Section -->
+<section class="bg-surface-container rounded-xl p-space-md space-y-space-sm">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-md text-headline-md text-on-surface">To'lov Usullari</h4>
+<span class="font-label-code text-label-code text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Xavfsiz
+      </span>
+</div>
+<!-- Supported Provider Tiles -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary font-label-code font-bold text-xs">
+          CLICK
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-ui text-label-ui text-on-surface truncate">Click Up</span>
+<span class="font-label-code text-[10px] text-outline">0% komissiya</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-tertiary/20 flex items-center justify-center text-tertiary font-label-code font-bold text-xs">
+          PAY
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-ui text-label-ui text-on-surface truncate">Payme</span>
+<span class="font-label-code text-[10px] text-outline">Tezkor to'lov</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-secondary/20 flex items-center justify-center text-secondary font-label-code font-bold text-xs">
+          UZUM
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-ui text-label-ui text-on-surface truncate">Uzum Bank</span>
+<span class="font-label-code text-[10px] text-outline">Keshbek 2%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-label-code text-xs">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-ui text-label-ui text-on-surface truncate">Bank Invoysi</span>
+<span class="font-label-code text-[10px] text-outline">Yuridik shaxs</span>
+</div>
+</div>
+</div>
+<!-- Invoice Download & Billing Documents Trigger -->
+<a class="flex items-center justify-between p-space-sm bg-surface-container-high rounded-lg text-primary hover:bg-surface-container-highest transition-colors mt-space-xs" href="#">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">receipt</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Hisob-faktura va to'lov hujjatlarini yuklab olish</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">download</span>
+</a>
+</section>
+</div>
+<script>
+  function setBillingCycle(cycle) {
+    const monthlyBtn = document.getElementById('monthlyToggleBtn');
+    const annualBtn = document.getElementById('annualToggleBtn');
+    const proPrice = document.getElementById('proPrice');
+    const proCycle = document.getElementById('proCycle');
+    const entPrice = document.getElementById('entPrice');
+    const entCycle = document.getElementById('entCycle');
+
+    if (cycle === 'annual') {
+      monthlyBtn.className = "flex-1 py-2 rounded-lg font-label-ui text-label-ui transition-all duration-200 text-center text-on-surface-variant flex items-center justify-center gap-1";
+      annualBtn.className = "flex-1 py-2 rounded-lg font-label-ui text-label-ui transition-all duration-200 text-center bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1.5";
+      
+      proPrice.textContent = "4 700 000";
+      proCycle.textContent = "/ yil";
+      entPrice.textContent = "13 900 000";
+      entCycle.textContent = "/ yil";
+    } else {
+      monthlyBtn.className = "flex-1 py-2 rounded-lg font-label-ui text-label-ui transition-all duration-200 text-center bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1";
+      annualBtn.className = "flex-1 py-2 rounded-lg font-label-ui text-label-ui transition-all duration-200 text-center text-on-surface-variant flex items-center justify-center gap-1.5";
+      
+      proPrice.textContent = "490 000";
+      proCycle.textContent = "/ oy";
+      entPrice.textContent = "1 450 000";
+      entCycle.textContent = "/ oy";
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="advokat-ishchi-stoli" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-label-code text-[10px] tracking-tight">Ishlar</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="tezkor-skaner-batch" href="#"><span class="material-symbols-outlined text-[22px]">document_scanner</span><span class="font-label-code text-[10px] tracking-tight">Skaner</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="hujjat-konstruktori" href="#"><span class="material-symbols-outlined text-[22px]">contract</span><span class="font-label-code text-[10px] tracking-tight">Hujjatlar</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="imo-ishora-moduli" href="#"><span class="material-symbols-outlined text-[22px]">sign_language</span><span class="font-label-code text-[10px] tracking-tight">Imo-Ishora</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary font-semibold" data-path="tariflar-va-obuna-boshqaruvi" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-code text-[10px] tracking-tight">Boshqaruv</span></a></div></nav></body></html>

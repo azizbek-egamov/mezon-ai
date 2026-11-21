@@ -1,0 +1,97 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "qdrant",
+      "runtimeExecutable": "E:/mezon/qdrant_server/qdrant.exe",
+      "runtimeArgs": [
+        "--config-path",
+        "E:/mezon/qdrant_server/config.yaml"
+      ],
+      "port": 6333
+    },
+    {
+      "name": "mezon-backend",
+      "runtimeExecutable": "E:/mezon/mezon_backend/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "E:/mezon/mezon_backend/manage.py",
+        "runserver",
+        "127.0.0.1:8010",
+        "--noreload"
+      ],
+      "port": 8010
+    },
+    {
+      "name": "mezon-api-nollm",
+      "runtimeExecutable": "E:/mezon/mezon_backend/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "E:/mezon/mezon_backend/tools/dev_nollm.py",
+        "8011"
+      ],
+      "port": 8011
+    },
+    {
+      "name": "mezon-api-gemini",
+      "runtimeExecutable": "E:/mezon/mezon_backend/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "E:/mezon/mezon_backend/tools/dev_llm.py",
+        "8011"
+      ],
+      "port": 8011
+    },
+    {
+      "name": "mezon-web-nollm",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "E:/mezon/frontend/node_modules/vite/bin/vite.js",
+        "E:/mezon/frontend/apps/web",
+        "--mode",
+        "nollm"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "mezon-admin-nollm",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "E:/mezon/frontend/node_modules/vite/bin/vite.js",
+        "E:/mezon/frontend/apps/admin",
+        "--mode",
+        "nollm"
+      ],
+      "port": 5174
+    },
+    {
+      "name": "mezon-mobile-web",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "E:/mezon/frontend/apps/mobile/scripts/dev-web.js",
+        "8081"
+      ],
+      "port": 8081
+    },
+    {
+      "name": "mezon-mobile-metro",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "E:/mezon/frontend/apps/mobile/scripts/dev-metro.js",
+        "8081"
+      ],
+      "port": 8081,
+      "autoPort": false
+    },
+    {
+      "name": "mezon-prod-nollm",
+      "runtimeExecutable": "E:/mezon/mezon_backend/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "E:/mezon/mezon_backend/tools/serve.py",
+        "--port",
+        "8011",
+        "--nollm",
+        "--trycloudflare"
+      ],
+      "port": 8011,
+      "autoPort": false
+    }
+  ]
+}

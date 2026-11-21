@@ -1,0 +1,36 @@
+{
+  "name": "@mezon/web-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Veb va admin uchun umumiy UI komponentlari, tema, auth/i18n provayderlari",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme.css": "./src/theme.css"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@mezon/api-client": "*",
+    "@mezon/i18n": "*",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.64.0",
+    "radix-ui": "^1.8.1",
+    "sonner": "^2.0.8",
+    "tailwind-merge": "^3.7.0"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5",
+    "react": "^19",
+    "react-i18next": "^17",
+    "react-router": "^7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "typescript": "~5.9.3"
+  }
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="uz"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#adc6ff", "secondary-fixed-dim": "#e7c35a", "tertiary": "#4edea3", "inverse-on-surface": "#2c3039", "error-container": "#93000a", "surface-tint": "#adc6ff", "on-primary-container": "#00285d", "on-secondary-fixed": "#241a00", "surface": "#0f131c", "on-secondary-fixed-variant": "#584400", "inverse-surface": "#dfe2ee", "secondary-fixed": "#ffe08b", "on-primary-fixed": "#001a42", "error": "#ffb4ab", "surface-container-highest": "#31353e", "on-surface-variant": "#c2c6d6", "on-tertiary-fixed": "#002113", "surface-container-high": "#262a33", "on-error-container": "#ffdad6", "on-primary": "#002e6a", "secondary": "#e7c35a", "outline-variant": "#424754", "surface-container-low": "#181c24", "tertiary-fixed": "#6ffbbe", "on-tertiary-container": "#00311f", "surface-variant": "#31353e", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#004395", "outline": "#8c909f", "background": "#0f131c", "tertiary-container": "#00a572", "on-tertiary": "#003824", "primary-container": "#4d8eff", "on-background": "#dfe2ee", "secondary-container": "#896c00", "on-secondary-container": "#fff3dc", "primary-fixed-dim": "#adc6ff", "surface-container-lowest": "#0a0e16", "surface-bright": "#353942", "surface-container": "#1c2028", "tertiary-fixed-dim": "#4edea3", "on-secondary": "#3d2f00", "on-surface": "#dfe2ee", "inverse-primary": "#005ac2", "surface-dim": "#0f131c", "primary-fixed": "#d8e2ff", "on-error": "#690005" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-desktop": "2rem", "space-md": "0.75rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "1rem", "space-lg": "1.25rem", "gutter": "1rem" }, fontFamily: { "body-md": ["Plus Jakarta Sans"], "legal-cite": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-ui": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-code": ["JetBrains Mono"] }, fontSize: { "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "legal-cite": ["13px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }], "label-ui": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-code": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>body { min-height: max(884px, 100dvh); }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Orqaga" class="w-10 h-10 -ml-2 rounded flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0"><span class="font-headline-md text-[18px] tracking-tight font-bold text-on-surface leading-tight truncate">Superadmin &amp; Anti Fraud Radar</span><span class="font-label-code text-[11px] text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Himoyalangan rejim</span></div></div><div class="flex items-center gap-2"><div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-code text-[10px]"><span class="material-symbols-outlined text-[12px] text-tertiary">verified</span>UZB-LEX</div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe px-margin bg-surface"><div class="flex flex-col w-full pb-8 space-y-4">
+<!-- Ambient Radar Wave Header (Delight Micro-Canvas) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-4 shadow-xl">
+<div class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-primary/5 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+<span class="font-label-code text-label-code text-tertiary uppercase tracking-wider">MEZON SENTINEL ENGINE v3.7</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-code text-label-code">
+        LIVE MONITOR
+      </span>
+</div>
+<!-- Mini dynamic sparkline header metric -->
+<div class="flex items-end justify-between">
+<div>
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">SuperAdmin Radar</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tizim xavfsizligi &amp; AI hisoblash resurslari nazorati</p>
+</div>
+<div class="h-8 flex items-end gap-1 px-2 py-1 rounded bg-surface-container-highest">
+<span class="w-1 bg-tertiary h-3 rounded-full animate-pulse"></span>
+<span class="w-1 bg-tertiary h-5 rounded-full"></span>
+<span class="w-1 bg-primary h-7 rounded-full"></span>
+<span class="w-1 bg-tertiary h-4 rounded-full"></span>
+<span class="w-1 bg-secondary h-6 rounded-full"></span>
+</div>
+</div>
+</div>
+<!-- Top Metrics Row: 4 Compact KPI Cards (2x2 Grid) -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- KPI 1 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Faol Advokatlar</span>
+<span class="material-symbols-outlined text-[18px] text-primary">gavel</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">1,284</div>
+<div class="flex items-center gap-1 font-label-code text-label-code text-tertiary mt-0.5">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+<span>+12% bugun</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Zero-H Indeksi</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">99.98%</div>
+<div class="font-label-code text-label-code text-on-surface-variant mt-0.5 truncate">Critic: 0 xato</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Token Xarajati</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">database</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-md text-headline-md text-secondary font-bold">$142.60</div>
+<div class="font-label-code text-label-code text-on-surface-variant mt-0.5 truncate">Bugungi AI sarfi</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm truncate">lex.uz Sinxron</span>
+<span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+</div>
+<div class="mt-2">
+<div class="font-legal-cite text-legal-cite text-tertiary font-bold truncate">02:00 Yangilandi</div>
+<div class="font-label-code text-label-code text-on-surface-variant mt-0.5 truncate">38 ta modda kiritildi</div>
+</div>
+</div>
+</div>
+<!-- Anti-Fraud Xavfsizlik Radari Section -->
+<div class="rounded-xl bg-surface-container-low p-4 shadow-lg space-y-4">
+<!-- Section Header with Radar Pulse -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="relative flex items-center justify-center w-7 h-7 rounded-full bg-surface-container-highest">
+<svg class="w-7 h-7 text-error/30 animate-spin" style="animation-duration: 4s;" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="none" r="14" stroke="currentColor" stroke-dasharray="20 40" stroke-width="1.5"></circle>
+</svg>
+<span class="absolute w-2 h-2 rounded-full bg-error animate-pulse"></span>
+</div>
+<div>
+<h2 class="font-headline-md text-[16px] text-on-surface leading-tight font-semibold">Shubhali Faollik Radari</h2>
+<p class="font-label-code text-label-code text-on-surface-variant">Active Anti-Fraud Engine</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold animate-pulse">
+        2 SIGNAL
+      </span>
+</div>
+<!-- Radar Sweep Visual Mini-Bar -->
+<div class="relative h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-gradient-to-r from-transparent via-error to-transparent w-1/3 animate-[pulse_2s_infinite]"></div>
+</div>
+<!-- Flagged Items List -->
+<div class="space-y-3">
+<!-- Item 1: High Risk -->
+<div class="rounded-lg bg-surface-container p-3 space-y-2.5 transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-error text-on-error font-label-code text-label-code font-bold tracking-wider">
+              XAVF: YUQORI
+            </span>
+<span class="font-label-code text-label-code text-on-surface-variant">Toshkent, Ucell VPN</span>
+</div>
+<span class="font-label-code text-label-code text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+            98% Risk
+          </span>
+</div>
+<div class="space-y-1 font-legal-cite text-legal-cite">
+<div class="text-on-surface flex items-center gap-1">
+<span class="text-on-surface-variant font-label-code text-label-code">IP:</span>
+<span>185.139.xxx.xx</span>
+</div>
+<div class="text-on-surface-variant text-[12px] leading-tight">
+<span class="text-on-surface font-medium">Qurilma ID:</span> Android MediaDrm #92a4...
+            <span class="text-error font-semibold block mt-0.5">↳ 5 xil telefon raqamidan sinov olingan</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="w-full py-2 px-2.5 rounded bg-error text-on-error font-label-ui text-label-ui font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="triggerDeviceBan(this)">
+<span class="material-symbols-outlined text-[16px]">phonelink_erase</span>
+<span>Qurilmani Bloklash</span>
+</button>
+<button class="w-full py-2 px-2.5 rounded bg-surface-container-highest text-on-surface font-label-ui text-label-ui font-medium flex items-center justify-center gap-1 hover:bg-surface-bright active:scale-95 transition-all" onclick="triggerIpRestrict(this)">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">shield</span>
+<span>IP Cheklash</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Medium Risk -->
+<div class="rounded-lg bg-surface-container p-3 space-y-2.5 transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold tracking-wider">
+              XAVF: O'RTA
+            </span>
+<span class="font-label-code text-label-code text-on-surface-variant">Samarqand, Sarkor</span>
+</div>
+<span class="font-label-code text-label-code text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">policy</span>
+            64% Risk
+          </span>
+</div>
+<div class="space-y-1 font-legal-cite text-legal-cite">
+<div class="text-on-surface flex items-center gap-1">
+<span class="text-on-surface-variant font-label-code text-label-code">IP:</span>
+<span>84.54.xxx.xx</span>
+</div>
+<div class="text-on-surface-variant text-[12px] leading-tight">
+            Batch skanerda <span class="text-secondary font-semibold">400 varaqdan ortiq</span> bir martalik yuklash anomaliyasi aniqlandi.
+          </div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="w-full py-2 px-2.5 rounded bg-surface-container-highest text-on-surface font-label-ui text-label-ui font-medium flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="triggerWarn(this)">
+<span class="material-symbols-outlined text-[16px] text-secondary">notifications_active</span>
+<span>Ogohlantirish</span>
+</button>
+<button class="w-full py-2 px-2.5 rounded bg-surface-container-highest text-on-surface-variant font-label-ui text-label-ui font-medium flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="triggerWatch(this)">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Kuzatish</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Tarif va Limitlar Boshqaruvi (Slider Controllers) -->
+<div class="rounded-xl bg-surface-container-low p-4 space-y-4 shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<div>
+<h2 class="font-headline-md text-[16px] text-on-surface leading-tight font-semibold">Tarif va Limitlar</h2>
+<p class="font-label-code text-label-code text-on-surface-variant">Real-vaqt dinamik kvotalar</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-code text-label-code">ADMIN</span>
+</div>
+<!-- Sliders Container -->
+<div class="space-y-4">
+<!-- Controller 1: Bepul sinov varaq limiti -->
+<div class="rounded-lg bg-surface-container p-3 space-y-2">
+<div class="flex justify-between items-center">
+<label class="font-body-md text-body-md text-on-surface" for="trial-slider">Bepul sinov varaq limiti</label>
+<span class="font-legal-cite text-legal-cite text-primary font-bold px-2 py-0.5 rounded bg-surface-container-highest" id="trial-val">
+            15 varaq
+          </span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="trial-slider" max="50" min="5" oninput="document.getElementById('trial-val').innerText = this.value + ' varaq'" step="5" type="range" value="15"/>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>5 varaq</span>
+<span>Max: 50 varaq</span>
+</div>
+</div>
+<!-- Controller 2: Pro tarif kunlik kvotasi -->
+<div class="rounded-lg bg-surface-container p-3 space-y-2">
+<div class="flex justify-between items-center">
+<label class="font-body-md text-body-md text-on-surface" for="pro-slider">Pro tarif kunlik kvotasi</label>
+<span class="font-legal-cite text-legal-cite text-secondary font-bold px-2 py-0.5 rounded bg-surface-container-highest" id="pro-val">
+            10 ta ish
+          </span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary" id="pro-slider" max="100" min="5" oninput="document.getElementById('pro-val').innerText = this.value + ' ta ish'" step="5" type="range" value="10"/>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>5 ish/kun</span>
+<span>Max: 100 ish</span>
+</div>
+</div>
+<!-- Controller 3: Celery Worker AI quvvati -->
+<div class="rounded-lg bg-surface-container p-3 space-y-2.5">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface">Celery Worker AI quvvati</span>
+<span class="font-label-code text-label-code text-tertiary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> ACTIVE
+          </span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">memory</span>
+<span class="font-headline-md text-[15px] font-bold text-on-surface">8x Parallel GPU Node</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">A100 TensorCore</span>
+</div>
+</div>
+</div>
+</div>
+<!-- lex.uz Sinxronizatsiya Statusi -->
+<div class="rounded-xl bg-surface-container-low p-4 space-y-3.5 shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary animate-ping"></div>
+<h2 class="font-headline-md text-[16px] text-on-surface font-semibold">lex.uz Sinxronizatsiyasi</h2>
+</div>
+<span class="font-label-code text-label-code text-tertiary px-2 py-0.5 rounded bg-on-tertiary-container/30">
+        AVTOMATIK: AKTIV
+      </span>
+</div>
+<!-- Status Banner Details -->
+<div class="rounded-lg bg-surface-container p-3 space-y-2">
+<div class="flex items-center justify-between font-legal-cite text-legal-cite text-on-surface-variant">
+<span>Oxirgi yangilanish:</span>
+<span class="text-on-surface font-semibold">Bugun, 02:00:14</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="p-2 rounded bg-surface-container-highest text-center">
+<div class="font-label-code text-label-code text-on-surface-variant">Yangi qonunlar</div>
+<div class="font-headline-md text-[18px] font-bold text-tertiary mt-0.5">14 ta</div>
+</div>
+<div class="p-2 rounded bg-surface-container-highest text-center">
+<div class="font-label-code text-label-code text-on-surface-variant">O'zgargan moddalar</div>
+<div class="font-headline-md text-[18px] font-bold text-secondary mt-0.5">38 ta</div>
+</div>
+</div>
+</div>
+<!-- Mandatory Trigger Button with State Delight -->
+<button class="w-full py-3 px-4 rounded bg-primary text-on-primary font-label-ui text-label-ui font-semibold flex items-center justify-center gap-2 shadow-md hover:brightness-110 active:scale-[0.98] transition-all" id="sync-trigger-btn" onclick="executeManualSync(this)">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-700" id="sync-icon">sync</span>
+<span id="sync-text">Majburiy Sinxronizatsiyani Boshlash</span>
+</button>
+</div>
+<!-- Toast Notification Container for Micro-actions -->
+<div class="fixed bottom-6 inset-x-margin max-w-sm mx-auto p-3 rounded-lg bg-surface-container-highest text-on-surface shadow-2xl flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-3 z-50" id="radar-toast">
+<span class="material-symbols-outlined text-tertiary text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm flex-1" id="toast-msg">Amal muvaffaqiyatli bajarildi</span>
+</div>
+</div>
+<script>
+function showToast(message, isError = false) {
+  const toast = document.getElementById('radar-toast');
+  const msgEl = document.getElementById('toast-msg');
+  const iconEl = document.getElementById('toast-icon');
+  
+  msgEl.innerText = message;
+  iconEl.innerText = isError ? 'error' : 'check_circle';
+  iconEl.className = isError ? 'material-symbols-outlined text-error text-[20px]' : 'material-symbols-outlined text-tertiary text-[20px]';
+  
+  toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+  toast.classList.add('opacity-100', 'translate-y-0');
+
+  setTimeout(() => {
+    toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+    toast.classList.remove('opacity-100', 'translate-y-0');
+  }, 2400);
+}
+
+function triggerDeviceBan(btn) {
+  btn.disabled = true;
+  btn.innerHTML = `<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> Bloklanmoqda...`;
+  setTimeout(() => {
+    btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">done</span> Bloklandi`;
+    btn.classList.replace('bg-error', 'bg-surface-container-highest');
+    btn.classList.replace('text-on-error', 'text-on-surface-variant');
+    showToast("Qurilma apparat ID bo'yicha butunlay bloklandi!", true);
+  }, 800);
+}
+
+function triggerIpRestrict(btn) {
+  btn.disabled = true;
+  btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">done</span> Cheklandi`;
+  showToast("185.139.xxx.xx IP tarmog'iga 24 soatlik limit qo'yildi");
+}
+
+function triggerWarn(btn) {
+  btn.disabled = true;
+  btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">done</span> Yuborildi`;
+  showToast("Advokat kabinetiga xavfsizlik ogohlantirishi yuborildi");
+}
+
+function triggerWatch(btn) {
+  btn.disabled = true;
+  btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">done</span> Nazoratda`;
+  showToast("Foydalanuvchi chuqur telemetriya nazoratiga olindi");
+}
+
+function executeManualSync(btn) {
+  const icon = document.getElementById('sync-icon');
+  const text = document.getElementById('sync-text');
+  btn.disabled = true;
+  icon.classList.add('animate-spin');
+  text.innerText = "lex.uz milliy bazasi bilan tekshirilmoqda...";
+
+  setTimeout(() => {
+    icon.classList.remove('animate-spin');
+    text.innerText = "Sinxronizatsiya Yakunlandi (+4 yangi akt)";
+    btn.classList.replace('bg-primary', 'bg-tertiary-container');
+    btn.classList.replace('text-on-primary', 'text-on-tertiary-container');
+    showToast("lex.uz bazasi muvaffaqiyatli to'liq yangilandi!");
+    
+    setTimeout(() => {
+      text.innerText = "Majburiy Sinxronizatsiyani Boshlash";
+      btn.disabled = false;
+      btn.classList.replace('bg-tertiary-container', 'bg-primary');
+      btn.classList.replace('text-on-tertiary-container', 'text-on-primary');
+    }, 4000);
+  }, 1600);
+}
+</script></main></body></html>

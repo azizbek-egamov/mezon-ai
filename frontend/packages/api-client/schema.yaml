@@ -1,0 +1,4428 @@
+openapi: 3.0.3
+info:
+  title: MEZON AI API
+  version: 1.0.0
+  description: 'Veb, admin va mobil ilova uchun JSON API (TZ v2.1). Autentifikatsiya:
+    `Authorization: Bearer <access>`.'
+paths:
+  /api/v1/admin/antifraud:
+    get:
+      operationId: admin_antifraud_retrieve
+      parameters:
+      - in: query
+        name: min
+        schema:
+          type: integer
+        description: Bitta IP dagi kamida akkaunt (sukut 3)
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/admin/audit/:
+    get:
+      operationId: admin_audit_list
+      parameters:
+      - in: query
+        name: action
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: target
+        schema:
+          type: string
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedAuditEventList'
+          description: ''
+  /api/v1/admin/costs:
+    get:
+      operationId: admin_costs_retrieve
+      parameters:
+      - in: query
+        name: days
+        schema:
+          type: integer
+        description: 7–90, sukut 30
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/admin/dashboard:
+    get:
+      operationId: admin_dashboard_retrieve
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/admin/me:
+    get:
+      operationId: admin_me_retrieve
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StaffMe'
+          description: ''
+  /api/v1/admin/payments/:
+    get:
+      operationId: admin_payments_list
+      description: To'lovlar; qo'lda yaratish (provider=MANUAL — naqd/bank o'tkazmasi),
+        keyin "to'langan deb belgilash".
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: status
+        schema:
+          type: string
+          enum:
+          - CANCELED
+          - FAILED
+          - PAID
+          - PENDING
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPaymentList'
+          description: ''
+    post:
+      operationId: admin_payments_create
+      description: To'lovlar; qo'lda yaratish (provider=MANUAL — naqd/bank o'tkazmasi),
+        keyin "to'langan deb belgilash".
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PaymentRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Payment'
+          description: ''
+  /api/v1/admin/payments/{payment_id}/cancel:
+    post:
+      operationId: admin_payments_cancel_create
+      parameters:
+      - in: path
+        name: payment_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Payment'
+          description: ''
+  /api/v1/admin/payments/{payment_id}/mark-paid:
+    post:
+      operationId: admin_payments_mark_paid_create
+      description: To'lov tasdiqlandi → obuna yoqiladi (quota.mark_paid; takror chaqirish
+        xavfsiz)
+      parameters:
+      - in: path
+        name: payment_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Payment'
+          description: ''
+  /api/v1/admin/plans/:
+    get:
+      operationId: admin_plans_list
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdminPlan'
+          description: ''
+    post:
+      operationId: admin_plans_create
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminPlanRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AdminPlanRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminPlan'
+          description: ''
+  /api/v1/admin/plans/{plan_id}:
+    get:
+      operationId: admin_plans_retrieve
+      description: 'Tarif konstruktori: limitlar, narx, muddat, faollik. O''chirish
+        yo''q — `is_active=false` (obunalar saqlanadi).'
+      parameters:
+      - in: path
+        name: plan_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminPlan'
+          description: ''
+    patch:
+      operationId: admin_plans_partial_update
+      description: 'Tarif konstruktori: limitlar, narx, muddat, faollik. O''chirish
+        yo''q — `is_active=false` (obunalar saqlanadi).'
+      parameters:
+      - in: path
+        name: plan_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAdminPlanRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAdminPlanRequest'
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminPlan'
+          description: ''
+  /api/v1/admin/subscriptions/:
+    get:
+      operationId: admin_subscriptions_list
+      parameters:
+      - in: query
+        name: current
+        schema:
+          type: boolean
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubscriptionList'
+          description: ''
+  /api/v1/admin/subscriptions/{sub_id}/cancel:
+    post:
+      operationId: admin_subscriptions_cancel_create
+      parameters:
+      - in: path
+        name: sub_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+          description: ''
+  /api/v1/admin/sync/:
+    get:
+      operationId: admin_sync_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSyncRunList'
+          description: ''
+  /api/v1/admin/sync/start:
+    post:
+      operationId: admin_sync_start_create
+      description: '{"days": 7, "check_codes": false}'
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: {}
+          multipart/form-data:
+            schema:
+              type: object
+              additionalProperties: {}
+      security:
+      - jwtAuth: []
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/admin/templates/:
+    get:
+      operationId: admin_templates_list
+      parameters:
+      - in: query
+        name: pending
+        schema:
+          type: boolean
+        description: Faqat tasdiqlanmaganlar
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TemplateListItem'
+          description: ''
+    post:
+      operationId: admin_templates_create
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminTemplateRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AdminTemplateRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTemplate'
+          description: ''
+  /api/v1/admin/templates/{template_id}:
+    get:
+      operationId: admin_templates_retrieve
+      description: Matn yoki sxema o'zgarsa — versiya oshadi va tasdiq bekor bo'ladi
+        (DocumentTemplate.save).
+      parameters:
+      - in: path
+        name: template_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTemplate'
+          description: ''
+    patch:
+      operationId: admin_templates_partial_update
+      description: Matn yoki sxema o'zgarsa — versiya oshadi va tasdiq bekor bo'ladi
+        (DocumentTemplate.save).
+      parameters:
+      - in: path
+        name: template_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAdminTemplateRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAdminTemplateRequest'
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTemplate'
+          description: ''
+  /api/v1/admin/templates/{template_id}/approve:
+    post:
+      operationId: admin_templates_approve_create
+      description: Joriy versiyani tasdiqlash va e'lon qilish (yurist-moderator)
+      parameters:
+      - in: path
+        name: template_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTemplate'
+          description: ''
+  /api/v1/admin/templates/{template_id}/preview:
+    post:
+      operationId: admin_templates_preview_create
+      description: Moderator e'lon qilinmagan shablonni ham sinab ko'radi (kvota olinmaydi,
+        ma'lumot saqlanmaydi).
+      parameters:
+      - in: path
+        name: template_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TemplateValuesRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TemplateValuesRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Preview'
+          description: ''
+  /api/v1/admin/users/:
+    get:
+      operationId: admin_users_list
+      parameters:
+      - in: query
+        name: flagged
+        schema:
+          type: boolean
+      - in: query
+        name: ip
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+      - in: query
+        name: role
+        schema:
+          type: string
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedAdminUserList'
+          description: ''
+  /api/v1/admin/users/{user_id}:
+    get:
+      operationId: admin_users_retrieve
+      description: Profil, sarf, obunalar, to'lovlar, ishlar metama'lumoti, jurnal
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - admin
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+    patch:
+      operationId: admin_users_partial_update
+      description: 'O''zgartirish mumkin: full_name, role, advocate_license_no, is_active,
+        is_fraud_flagged'
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAdminUserRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAdminUserRequest'
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminUser'
+          description: ''
+  /api/v1/admin/users/{user_id}/subscriptions:
+    post:
+      operationId: admin_users_subscriptions_create
+      description: 'Obuna berish (qo''lda): tarif va muddat; shu tarifning faol obunasi
+        bo''lsa — oxiridan uzaytiriladi.'
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GrantRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GrantRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+          description: ''
+  /api/v1/auth/language:
+    post:
+      operationId: auth_language_create
+      description: 'Interfeys tili: kirgan bo''lsa — profilga, har holda `django_language`
+        cookie ga (HTML sahifalar bilan umumiy).'
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LanguageRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/LanguageRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Language'
+          description: ''
+  /api/v1/auth/login:
+    post:
+      operationId: auth_login_create
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+        required: true
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPair'
+          description: ''
+        '400':
+          description: Telefon yoki parol noto'g'ri
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/auth/logout:
+    post:
+      operationId: auth_logout_create
+      description: Refresh token qora ro'yxatga qo'shiladi (access o'z muddati tugaguncha
+        amal qiladi — 15 daq).
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RefreshRequest'
+      security:
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v1/auth/me:
+    get:
+      operationId: auth_me_retrieve
+      tags:
+      - auth
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    patch:
+      operationId: auth_me_partial_update
+      description: 'O''zgartirish mumkin: full_name, advocate_license_no, language'
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUserRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUserRequest'
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+  /api/v1/auth/refresh:
+    post:
+      operationId: auth_refresh_create
+      description: Yangi access (va rotatsiya qilingan refresh). Refresh tanada bo'lmasa
+        — HttpOnly cookie dan.
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RefreshRequest'
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Access'
+          description: ''
+        '401':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/auth/register:
+    post:
+      operationId: auth_register_create
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+        required: true
+      security:
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPair'
+          description: ''
+  /api/v1/billing/plans:
+    get:
+      operationId: billing_plans_list
+      description: Tariflar sahifasi uchun (kirmagan foydalanuvchiga ham ochiq).
+      tags:
+      - billing
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Plan'
+          description: ''
+  /api/v1/billing/usage:
+    get:
+      operationId: billing_usage_retrieve
+      tags:
+      - billing
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usage'
+          description: ''
+  /api/v1/cases/:
+    get:
+      operationId: cases_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCaseList'
+          description: ''
+    post:
+      operationId: cases_create
+      description: 'Ko''p fayl: `files` maydoni takrorlanadi. 429 — tarif limiti.'
+      tags:
+      - cases
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CaseUploadRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseDetail'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/cases/{run_id}:
+    get:
+      operationId: cases_retrieve
+      description: Holat va progress (tahlil paytida 2–3 s da bir so'rang)
+      parameters:
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseDetail'
+          description: ''
+    delete:
+      operationId: cases_destroy
+      description: Ishni butunlay o'chirish (PDF, hisobot, yozuv). Tahlil ketayotganda
+        — 409.
+      parameters:
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '204':
+          description: No response body
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/cases/{run_id}/confirmation:
+    get:
+      operationId: cases_confirmation_retrieve
+      description: 'Tasdiq oynasi: keltirilgan moddalar, tasdiqlanmagan baholar, confirmed_at'
+      parameters:
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+    post:
+      operationId: cases_confirmation_create
+      parameters:
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfirmRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ConfirmRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseDetail'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/cases/{run_id}/export/{fmt}:
+    get:
+      operationId: cases_export_retrieve
+      description: Rasmiy DOCX/PDF — faqat "tanishdim" tasdig'idan keyin (aks holda
+        403)
+      parameters:
+      - in: path
+        name: fmt
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: string
+                format: binary
+          description: Fayl
+        '403':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/cases/{run_id}/pdf:
+    get:
+      operationId: cases_pdf_retrieve
+      description: Yuklangan ishning birlashtirilgan PDF i (deshifrlangan, keshlanmaydi)
+      parameters:
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: string
+                format: binary
+          description: Fayl
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/cases/{run_id}/report:
+    get:
+      operationId: cases_report_retrieve
+      description: Tayyor tahlil hisoboti (pipeline JSON). Tahlil tugamagan bo'lsa
+        — 409.
+      parameters:
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/cases/{run_id}/retry:
+    post:
+      operationId: cases_retry_create
+      parameters:
+      - in: path
+        name: run_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseDetail'
+          description: ''
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/cases/options:
+    get:
+      operationId: cases_options_retrieve
+      tags:
+      - cases
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseOptions'
+          description: ''
+  /api/v1/chat/ask:
+    post:
+      operationId: chat_ask_create
+      tags:
+      - chat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AskRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AskRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            text/event-stream:
+              schema:
+                type: string
+          description: SSE oqimi
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/health:
+    get:
+      operationId: health_retrieve
+      description: 'Holat tekshiruvi (tools/prod.ps1, tashqi monitoring): baza va
+        qidiruv serveri. Ichki tafsilot qaytarilmaydi.'
+      tags:
+      - meta
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+          description: ''
+  /api/v1/i18n/languages:
+    get:
+      operationId: i18n_languages_list
+      tags:
+      - i18n
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LanguageInfo'
+          description: ''
+  /api/v1/laws/articles/{article_id}:
+    get:
+      operationId: laws_articles_retrieve
+      parameters:
+      - in: path
+        name: article_id
+        schema:
+          type: integer
+        required: true
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - cyr
+          - lat
+          - ru
+        description: Matn tili; sukut — interfeys tilidan
+      tags:
+      - laws
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+          description: ''
+  /api/v1/laws/documents:
+    get:
+      operationId: laws_documents_list
+      description: Matni bazada bor hujjatlar (yadro korpusi), nomi bo'yicha qidiruv.
+      parameters:
+      - in: query
+        name: doc_type
+        schema:
+          type: string
+        description: CODE, LAW, PRES_DECREE, …
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - cyr
+          - lat
+          - ru
+        description: Matn tili; sukut — interfeys tilidan
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: Nomi yoki raqami bo'yicha
+      tags:
+      - laws
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedLawDocumentList'
+          description: ''
+  /api/v1/laws/documents/{doc_id}:
+    get:
+      operationId: laws_documents_retrieve
+      description: Hujjat va joriy tahrirdagi moddalar ro'yxati (matnsiz)
+      parameters:
+      - in: path
+        name: doc_id
+        schema:
+          type: integer
+        required: true
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - cyr
+          - lat
+          - ru
+        description: Matn tili; sukut — interfeys tilidan
+      tags:
+      - laws
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LawDocumentDetail'
+          description: ''
+  /api/v1/laws/search:
+    get:
+      operationId: laws_search_list
+      description: Gibrid qidiruv (bge-m3 + Qdrant + reranker), LLM siz. 'JK 168-modda'
+        — aniq havola.
+      parameters:
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - cyr
+          - lat
+          - ru
+        description: Matn tili; sukut — interfeys tilidan
+      - in: query
+        name: limit
+        schema:
+          type: integer
+        description: 1–20, sukut 10
+      - in: query
+        name: q
+        schema:
+          type: string
+        required: true
+      tags:
+      - laws
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SearchHit'
+          description: ''
+        '503':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/student/calculator/court-fee:
+    post:
+      operationId: student_calculator_court_fee_create
+      description: Davlat boji kalkulyatori (O'RQ-600 qonuni asosida, ZERO API COST).
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CourtFeeCalculateRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CourtFeeCalculateRequestRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/calculator/procedural-deadline:
+    post:
+      operationId: student_calculator_procedural_deadline_create
+      description: Protsessual muddatlar kalkulyatori (FPK, IPK, MSIYK, JPK asosida,
+        ZERO API COST).
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProceduralDeadlineRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProceduralDeadlineRequestRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/cases/bank:
+    get:
+      operationId: student_cases_bank_list
+      description: Tayyor namunaviy kazuslar banki ro'yxati.
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: string
+        description: CIVIL, CRIMINAL, LABOR, ADMINISTRATIVE...
+      - in: query
+        name: difficulty
+        schema:
+          type: string
+        description: EASY, MEDIUM, HARD
+      tags:
+      - student
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StudentCaseBank'
+          description: ''
+  /api/v1/student/cases/bank/{id}:
+    get:
+      operationId: student_cases_bank_retrieve
+      description: Namunaviy kazus tafsiloti.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - student
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentCaseBank'
+          description: ''
+  /api/v1/student/cases/history:
+    get:
+      operationId: student_cases_history_list
+      description: Foydalanuvchining shaxsiy kazus yechimlari tarixi.
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - student
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedStudentCaseSubmissionList'
+          description: ''
+  /api/v1/student/cases/history/{id}:
+    get:
+      operationId: student_cases_history_retrieve
+      description: Foydalanuvchining shaxsiy kazus yechimi tafsiloti.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - student
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentCaseSubmission'
+          description: ''
+  /api/v1/student/cases/solve:
+    post:
+      operationId: student_cases_solve_create
+      description: Kazusni IRAC uslubida tahlil qilish va yechish.
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CaseSolveRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CaseSolveRequestRequest'
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/diff:
+    post:
+      operationId: student_diff_create
+      description: Yuridik matnlarni qiyosiy taqqoslash (ZERO API COST).
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LegalDiffRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/LegalDiffRequestRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/glossary:
+    get:
+      operationId: student_glossary_list
+      description: Yuridik atamalar, rim huquqi va lotincha iboralar glossariysi (ZERO
+        API COST).
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: string
+        description: CIVIL, CRIMINAL, etc.
+      - in: query
+        name: is_roman_latin
+        schema:
+          type: boolean
+        description: Faqat rim/lotin iboralari
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: Qidiruv so'zi
+      tags:
+      - student
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StudentLegalGlossary'
+          description: ''
+  /api/v1/student/moot-court/simulate:
+    post:
+      operationId: student_moot_court_simulate_create
+      description: Sud simulyatsiyasi (Moot Court & 3 tomonlama argumentlar xaritasi).
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MootCourtRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MootCourtRequestRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/presentations/generate:
+    post:
+      operationId: student_presentations_generate_create
+      description: Yuridik taqdimot (.pptx) generatsiya qilish.
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PresentationGenerateRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PresentationGenerateRequestRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/quiz/questions:
+    get:
+      operationId: student_quiz_questions_retrieve
+      description: Lokal test savollarini olish (ZERO API COST).
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: string
+        description: CIVIL, LABOR, CRIMINAL...
+      - in: query
+        name: limit
+        schema:
+          type: integer
+        description: Nechta savol (default 10)
+      tags:
+      - student
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/quiz/submit:
+    post:
+      operationId: student_quiz_submit_create
+      description: Test javoblarini tekshirish va baholash (ZERO API COST).
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuizSubmitRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/QuizSubmitRequestRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/student/thesis/roadmap:
+    post:
+      operationId: student_thesis_roadmap_create
+      description: Kurs ishi va BMI (Bitiruv malakaviy ishi) tadqiqot rejasi konstruktori.
+      tags:
+      - student
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ThesisRoadmapRequestRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ThesisRoadmapRequestRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v1/templates/:
+    get:
+      operationId: templates_list
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: string
+        description: CONTRACTS, STATEMENTS, PERSONAL, NOTARIAL, COURT, CORPORATE,
+          …
+      - in: query
+        name: lang
+        schema:
+          type: string
+        description: Hujjat tili (uz-Latn, uz-Cyrl, ru)
+      - in: query
+        name: subcategory
+        schema:
+          type: string
+        description: Subcategory slug (e.g. court-claims, real-estate-contracts)
+      tags:
+      - templates
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Template'
+          description: ''
+  /api/v1/templates/{template_id}:
+    get:
+      operationId: templates_retrieve
+      description: 'form_schema: [{name, label, type, required, options, help}]'
+      parameters:
+      - in: query
+        name: lang
+        schema:
+          type: string
+        description: Hujjat tili (uz-Latn, uz-Cyrl, ru)
+      - in: path
+        name: template_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - templates
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TemplateDetail'
+          description: ''
+  /api/v1/templates/{template_id}/preview:
+    post:
+      operationId: templates_preview_create
+      parameters:
+      - in: path
+        name: template_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - templates
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TemplateValuesRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TemplateValuesRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Preview'
+          description: ''
+  /api/v1/templates/{template_id}/render/{fmt}:
+    post:
+      operationId: templates_render_create
+      parameters:
+      - in: path
+        name: fmt
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: template_id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - templates
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TemplateValuesRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TemplateValuesRequest'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: string
+                format: binary
+          description: Fayl
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+components:
+  schemas:
+    Access:
+      type: object
+      properties:
+        access:
+          type: string
+        refresh:
+          type: string
+          description: Yangi (rotatsiya); cookie rejimida tanada bo'lmaydi
+      required:
+      - access
+    AdminPlan:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        code:
+          type: string
+          description: FREE, PRO_MONTHLY, ENTERPRISE_YEARLY yoki yangi kod
+          maxLength: 30
+        name:
+          type: string
+          description: Interfeysda ko'rsatiladigan nom (standart kodlar tarjima qilinadi)
+          maxLength: 80
+        display_name:
+          type: string
+          readOnly: true
+        price_uzs:
+          type: number
+          format: double
+          maximum: 10000000000
+          minimum: -10000000000
+          exclusiveMaximum: true
+          exclusiveMinimum: true
+          nullable: true
+        duration_days:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+          description: Obuna muddati (kun); FREE uchun bo'sh
+        daily_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        monthly_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+          description: Umrbod (FREE = 1)
+        max_pages_per_case:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+        daily_chat_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_chat_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        daily_template_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_template_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        watermark:
+          type: boolean
+          description: Shablonlarga "bepul tarif" belgisi qo'shiladi
+        priority_queue:
+          type: boolean
+          description: Ish tahlili navbatida oldinda
+        is_active:
+          type: boolean
+          description: Faolsiz tarif yangi obunaga berilmaydi
+        sort_order:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+        subscribers:
+          type: integer
+          readOnly: true
+          default: 0
+      required:
+      - code
+      - display_name
+      - id
+      - name
+      - subscribers
+    AdminPlanRequest:
+      type: object
+      properties:
+        code:
+          type: string
+          minLength: 1
+          description: FREE, PRO_MONTHLY, ENTERPRISE_YEARLY yoki yangi kod
+          maxLength: 30
+        name:
+          type: string
+          minLength: 1
+          description: Interfeysda ko'rsatiladigan nom (standart kodlar tarjima qilinadi)
+          maxLength: 80
+        price_uzs:
+          type: number
+          format: double
+          maximum: 10000000000
+          minimum: -10000000000
+          exclusiveMaximum: true
+          exclusiveMinimum: true
+          nullable: true
+        duration_days:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+          description: Obuna muddati (kun); FREE uchun bo'sh
+        daily_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        monthly_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+          description: Umrbod (FREE = 1)
+        max_pages_per_case:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+        daily_chat_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_chat_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        daily_template_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_template_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        watermark:
+          type: boolean
+          description: Shablonlarga "bepul tarif" belgisi qo'shiladi
+        priority_queue:
+          type: boolean
+          description: Ish tahlili navbatida oldinda
+        is_active:
+          type: boolean
+          description: Faolsiz tarif yangi obunaga berilmaydi
+        sort_order:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+      required:
+      - code
+      - name
+    AdminTemplate:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        category:
+          $ref: '#/components/schemas/TemplateCategoryEnum'
+        category_label:
+          type: string
+          readOnly: true
+        language:
+          type: string
+          maxLength: 8
+        description:
+          type: string
+          description: Qachon ishlatiladi (foydalanuvchiga ko'rinadi)
+        legal_basis:
+          type: string
+          description: Qonuniy asoslar, har biri yangi qatorda (ma'lumot uchun)
+        form_schema:
+          description: '[{"name": "fio", "label": "F.I.Sh.", "type": "text", "required":
+            true}]'
+        body:
+          type: string
+          description: 'Hujjat matni: {{ maydon }}, {% if maydon %}…{% endif %}; qator
+            belgilari — modul izohida'
+        version:
+          type: integer
+          readOnly: true
+        is_published:
+          type: boolean
+          description: Foydalanuvchilarga ko'rinadi
+        approved_by:
+          type: string
+          format: uuid
+          readOnly: true
+          nullable: true
+        approved_by_name:
+          type: string
+          readOnly: true
+          default: ''
+        approved_at:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - approved_at
+      - approved_by
+      - approved_by_name
+      - body
+      - category
+      - category_label
+      - created_at
+      - form_schema
+      - id
+      - title
+      - updated_at
+      - version
+    AdminTemplateRequest:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+        category:
+          $ref: '#/components/schemas/TemplateCategoryEnum'
+        language:
+          type: string
+          minLength: 1
+          maxLength: 8
+        description:
+          type: string
+          description: Qachon ishlatiladi (foydalanuvchiga ko'rinadi)
+        legal_basis:
+          type: string
+          description: Qonuniy asoslar, har biri yangi qatorda (ma'lumot uchun)
+        form_schema:
+          description: '[{"name": "fio", "label": "F.I.Sh.", "type": "text", "required":
+            true}]'
+        body:
+          type: string
+          minLength: 1
+          description: 'Hujjat matni: {{ maydon }}, {% if maydon %}…{% endif %}; qator
+            belgilari — modul izohida'
+        is_published:
+          type: boolean
+          description: Foydalanuvchilarga ko'rinadi
+      required:
+      - body
+      - category
+      - form_schema
+      - title
+    AdminUser:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        phone_number:
+          type: string
+          readOnly: true
+          title: Telefon
+        full_name:
+          type: string
+          title: F.I.Sh.
+          maxLength: 255
+        role:
+          $ref: '#/components/schemas/UserRoleEnum'
+        role_label:
+          type: string
+          readOnly: true
+        advocate_license_no:
+          type: string
+          title: Advokatlik guvohnomasi
+          maxLength: 50
+        language:
+          type: string
+          readOnly: true
+          title: Til
+          description: Interfeys tili (settings.LANGUAGES)
+        is_active:
+          type: boolean
+        is_staff:
+          type: boolean
+          readOnly: true
+          description: Admin panelga kira oladi
+        is_superuser:
+          type: boolean
+          readOnly: true
+          title: Superuser status
+          description: Designates that this user has all permissions without explicitly
+            assigning them.
+        is_fraud_flagged:
+          type: boolean
+        date_joined:
+          type: string
+          format: date-time
+          readOnly: true
+        last_login:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          title: Oxirgi kirish
+        registered_ip:
+          type: string
+          readOnly: true
+          nullable: true
+        last_login_ip:
+          type: string
+          readOnly: true
+          nullable: true
+        plan:
+          type: string
+          readOnly: true
+          description: Joriy tarif kodi (xodim — UNLIMITED)
+        plan_name:
+          type: string
+          readOnly: true
+        cases_count:
+          type: integer
+          readOnly: true
+          default: 0
+      required:
+      - cases_count
+      - date_joined
+      - full_name
+      - id
+      - is_staff
+      - is_superuser
+      - language
+      - last_login
+      - last_login_ip
+      - phone_number
+      - plan
+      - plan_name
+      - registered_ip
+      - role_label
+    Article:
+      type: object
+      properties:
+        id:
+          type: integer
+        document_id:
+          type: integer
+        doc_title:
+          type: string
+        lang:
+          type: string
+          description: Qaytarilgan matn tili (so'ralgan tilda bo'lmasa — asosiy til)
+        unit_type:
+          type: string
+        article_number:
+          type: string
+        label:
+          type: string
+        section_path:
+          type: string
+        text:
+          type: string
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/ArticlePart'
+        edition:
+          type: string
+        is_current:
+          type: boolean
+        valid_from:
+          type: string
+          format: date
+          nullable: true
+        valid_until:
+          type: string
+          format: date
+          nullable: true
+        lex_url:
+          type: string
+      required:
+      - article_number
+      - doc_title
+      - document_id
+      - edition
+      - id
+      - is_current
+      - label
+      - lang
+      - lex_url
+      - parts
+      - section_path
+      - text
+      - unit_type
+      - valid_from
+      - valid_until
+    ArticlePart:
+      type: object
+      properties:
+        n:
+          type: string
+        text:
+          type: string
+      required:
+      - n
+      - text
+    ArticleRef:
+      type: object
+      properties:
+        id:
+          type: integer
+        unit_type:
+          type: string
+        article_number:
+          type: string
+        label:
+          type: string
+        section_path:
+          type: string
+      required:
+      - article_number
+      - id
+      - label
+      - section_path
+      - unit_type
+    AskRequest:
+      type: object
+      properties:
+        question:
+          type: string
+          minLength: 1
+          maxLength: 2000
+        lang:
+          type: string
+          minLength: 1
+          default: uz-Latn
+          description: 'Javob tili: uz-Latn | uz-Cyrl | ru | kaa | en'
+        effort:
+          allOf:
+          - $ref: '#/components/schemas/EffortEnum'
+          default: medium
+        on_date:
+          type: string
+          format: date
+          nullable: true
+          description: Voqea sanasi (o'sha sanadagi tahrir)
+      required:
+      - question
+    AuditEvent:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        actor:
+          type: string
+          format: uuid
+          readOnly: true
+          nullable: true
+        actor_name:
+          type: string
+          readOnly: true
+          default: ''
+        actor_phone:
+          type: string
+          readOnly: true
+          default: ''
+        action:
+          type: string
+          readOnly: true
+          description: user.update, subscription.grant, payment.mark_paid…
+        target:
+          type: string
+          readOnly: true
+          description: user:<id>, plan:<kod>, template:<id>…
+        details:
+          readOnly: true
+        ip:
+          type: string
+          readOnly: true
+          nullable: true
+      required:
+      - action
+      - actor
+      - actor_name
+      - actor_phone
+      - created_at
+      - details
+      - id
+      - ip
+      - target
+    Block:
+      type: object
+      properties:
+        kind:
+          type: string
+          description: right | center | h2 | item | sign | p | space | meta
+        text:
+          type: string
+      required:
+      - kind
+      - text
+    Case:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+          readOnly: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        category:
+          allOf:
+          - $ref: '#/components/schemas/CaseCategoryEnum'
+          readOnly: true
+          description: |-
+            Ish turi: huquqiy qidiruv doirasi va tahlil promptlari (case_types.py)
+
+            * `criminal` - Jinoyat ishi
+            * `civil` - Fuqarolik ishi
+            * `economic` - Iqtisodiy ish
+            * `administrative` - Maʼmuriy ish
+            * `any` - Boshqa / aralash
+        category_label:
+          type: string
+          readOnly: true
+        status:
+          allOf:
+          - $ref: '#/components/schemas/CaseStatusEnum'
+          readOnly: true
+        status_label:
+          type: string
+          readOnly: true
+        stage:
+          type: string
+          readOnly: true
+          description: Joriy bosqich (progress uchun)
+        progress:
+          type: integer
+          readOnly: true
+          description: 0–100
+        pages:
+          type: integer
+          readOnly: true
+        zero_retention:
+          type: boolean
+          readOnly: true
+          description: Tahlil tugagach yuklangan PDF o'chiriladi (TZ §5.3)
+        error:
+          type: string
+          readOnly: true
+        cost_usd:
+          type: number
+          format: double
+          readOnly: true
+        confirmed_at:
+          type: string
+          format: date-time
+          readOnly: true
+        has_pdf:
+          type: boolean
+          readOnly: true
+      required:
+      - category
+      - category_label
+      - confirmed_at
+      - cost_usd
+      - created_at
+      - error
+      - has_pdf
+      - id
+      - pages
+      - progress
+      - stage
+      - status
+      - status_label
+      - title
+      - zero_retention
+    CaseCategoryEnum:
+      enum:
+      - criminal
+      - civil
+      - economic
+      - administrative
+      - any
+      type: string
+      description: |-
+        * `criminal` - Jinoyat ishi
+        * `civil` - Fuqarolik ishi
+        * `economic` - Iqtisodiy ish
+        * `administrative` - Maʼmuriy ish
+        * `any` - Boshqa / aralash
+    CaseDetail:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+          readOnly: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        category:
+          allOf:
+          - $ref: '#/components/schemas/CaseCategoryEnum'
+          readOnly: true
+          description: |-
+            Ish turi: huquqiy qidiruv doirasi va tahlil promptlari (case_types.py)
+
+            * `criminal` - Jinoyat ishi
+            * `civil` - Fuqarolik ishi
+            * `economic` - Iqtisodiy ish
+            * `administrative` - Maʼmuriy ish
+            * `any` - Boshqa / aralash
+        category_label:
+          type: string
+          readOnly: true
+        status:
+          allOf:
+          - $ref: '#/components/schemas/CaseStatusEnum'
+          readOnly: true
+        status_label:
+          type: string
+          readOnly: true
+        stage:
+          type: string
+          readOnly: true
+          description: Joriy bosqich (progress uchun)
+        progress:
+          type: integer
+          readOnly: true
+          description: 0–100
+        pages:
+          type: integer
+          readOnly: true
+        zero_retention:
+          type: boolean
+          readOnly: true
+          description: Tahlil tugagach yuklangan PDF o'chiriladi (TZ §5.3)
+        error:
+          type: string
+          readOnly: true
+        cost_usd:
+          type: number
+          format: double
+          readOnly: true
+        confirmed_at:
+          type: string
+          format: date-time
+          readOnly: true
+        has_pdf:
+          type: boolean
+          readOnly: true
+        sources:
+          type: array
+          items:
+            $ref: '#/components/schemas/CaseSource'
+          readOnly: true
+          description: Yuklangan fayllar va ularning varaqlari
+      required:
+      - category
+      - category_label
+      - confirmed_at
+      - cost_usd
+      - created_at
+      - error
+      - has_pdf
+      - id
+      - pages
+      - progress
+      - sources
+      - stage
+      - status
+      - status_label
+      - title
+      - zero_retention
+    CaseOptions:
+      type: object
+      properties:
+        case_types:
+          type: array
+          items:
+            $ref: '#/components/schemas/CaseType'
+        max_files:
+          type: integer
+        max_mb:
+          type: integer
+        max_pages:
+          type: integer
+          description: Foydalanuvchi tarifi boʻyicha maksimal varaq (FREE=15, PRO=150)
+        server_max_pages:
+          type: integer
+          description: Server texnik chegarasi (200)
+        plan_code:
+          type: string
+          nullable: true
+        plan_name:
+          type: string
+          nullable: true
+        unlimited:
+          type: boolean
+        cases_remaining:
+          type: integer
+          nullable: true
+        cases_exhausted:
+          type: boolean
+      required:
+      - case_types
+      - max_files
+      - max_mb
+      - max_pages
+    CaseSolveRequestRequest:
+      type: object
+      properties:
+        facts:
+          type: string
+        task_question:
+          type: string
+        student_answer:
+          type: string
+        case_bank_id:
+          type: integer
+          nullable: true
+        lang:
+          type: string
+          minLength: 1
+          default: lat
+    CaseSource:
+      type: object
+      properties:
+        name:
+          type: string
+        kind:
+          type: string
+          description: pdf | docx | image
+        first_page:
+          type: integer
+        last_page:
+          type: integer
+      required:
+      - first_page
+      - kind
+      - last_page
+      - name
+    CaseStatusEnum:
+      enum:
+      - QUEUED
+      - RUNNING
+      - DONE
+      - FAILED
+      type: string
+      description: |-
+        * `QUEUED` - Navbatda
+        * `RUNNING` - Tahlil qilinmoqda
+        * `DONE` - Tayyor
+        * `FAILED` - Xato
+    CaseType:
+      type: object
+      properties:
+        code:
+          type: string
+        label:
+          type: string
+      required:
+      - code
+      - label
+    CaseUploadRequest:
+      type: object
+      properties:
+        files:
+          type: array
+          items:
+            type: string
+            format: binary
+          description: PDF, DOCX, JPG, PNG — bitta PDF ga birlashtiriladi
+        category:
+          $ref: '#/components/schemas/CaseCategoryEnum'
+        title:
+          type: string
+          maxLength: 255
+        zero_retention:
+          type: boolean
+          default: false
+      required:
+      - files
+    ClaimTypeEnum:
+      enum:
+      - PROPERTY
+      - NON_PROPERTY
+      - DIVORCE
+      - ORDER
+      - CONTRACT_DISPUTE
+      type: string
+      description: |-
+        * `PROPERTY` - PROPERTY
+        * `NON_PROPERTY` - NON_PROPERTY
+        * `DIVORCE` - DIVORCE
+        * `ORDER` - ORDER
+        * `CONTRACT_DISPUTE` - CONTRACT_DISPUTE
+    ConfirmRequest:
+      type: object
+      properties:
+        acknowledged:
+          type: boolean
+          description: '"Asosiy dalillar va qonun moddalari bilan tanishdim" (TZ §12)'
+      required:
+      - acknowledged
+    CourtFeeCalculateRequestRequest:
+      type: object
+      properties:
+        court_type:
+          $ref: '#/components/schemas/CourtTypeEnum'
+        claim_type:
+          $ref: '#/components/schemas/ClaimTypeEnum'
+        claim_amount:
+          type: number
+          format: double
+          default: 0.0
+        is_repeated_divorce:
+          type: boolean
+          default: false
+        stage:
+          allOf:
+          - $ref: '#/components/schemas/StageEnum'
+          default: FIRST_INSTANCE
+      required:
+      - claim_type
+      - court_type
+    CourtTypeEnum:
+      enum:
+      - CIVIL
+      - ECONOMIC
+      - ADMINISTRATIVE
+      type: string
+      description: |-
+        * `CIVIL` - CIVIL
+        * `ECONOMIC` - ECONOMIC
+        * `ADMINISTRATIVE` - ADMINISTRATIVE
+    Detail:
+      type: object
+      properties:
+        detail:
+          type: string
+        code:
+          type: string
+      required:
+      - detail
+    DifficultyEnum:
+      enum:
+      - EASY
+      - MEDIUM
+      - HARD
+      type: string
+      description: |-
+        * `EASY` - Boshlangʻich (1-2 kurs)
+        * `MEDIUM` - Oʻrta (3-4 kurs)
+        * `HARD` - Murakkab (Magistratura / Sud)
+    EffortEnum:
+      enum:
+      - low
+      - medium
+      - high
+      type: string
+      description: |-
+        * `low` - low
+        * `medium` - medium
+        * `high` - high
+    GrantRequest:
+      type: object
+      properties:
+        plan:
+          type: string
+          minLength: 1
+          description: FREE, PRO_MONTHLY, ENTERPRISE_YEARLY yoki yangi kod
+        days:
+          type: integer
+          maximum: 3660
+          minimum: 1
+          description: Bo'sh — tarif muddati
+      required:
+      - plan
+    Health:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/HealthStatusEnum'
+        database:
+          type: boolean
+        search:
+          type: boolean
+          description: Qdrant server (QDRANT_URL) javob beryaptimi
+      required:
+      - database
+      - search
+      - status
+    HealthStatusEnum:
+      enum:
+      - ok
+      - degraded
+      type: string
+      description: |-
+        * `ok` - ok
+        * `degraded` - degraded
+    Language:
+      type: object
+      properties:
+        language:
+          type: string
+          description: uz-latn | uz-latn-2026 | uz-cyrl | ru | kaa | en (TZ kodlari
+            ham qabul qilinadi)
+      required:
+      - language
+    LanguageInfo:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Django kodi (uz-latn)
+        tz_code:
+          type: string
+          description: TZ kodi (uz-Latn)
+        name:
+          type: string
+          description: O'z yozuvidagi nomi
+      required:
+      - code
+      - name
+      - tz_code
+    LanguageRequest:
+      type: object
+      properties:
+        language:
+          type: string
+          minLength: 1
+          description: uz-latn | uz-latn-2026 | uz-cyrl | ru | kaa | en (TZ kodlari
+            ham qabul qilinadi)
+      required:
+      - language
+    LawCategoryEnum:
+      enum:
+      - CIVIL
+      - CRIMINAL
+      - LABOR
+      - ADMINISTRATIVE
+      - FAMILY
+      - BUSINESS
+      - CONSTITUTIONAL
+      type: string
+      description: |-
+        * `CIVIL` - Fuqarolik huquqi
+        * `CRIMINAL` - Jinoyat huquqi
+        * `LABOR` - Mehnat huquqi
+        * `ADMINISTRATIVE` - Maʼmuriy huquq
+        * `FAMILY` - Oila huquqi
+        * `BUSINESS` - Tadbirkorlik (Iqtisodiy) huquqi
+        * `CONSTITUTIONAL` - Konstitutsiyaviy huquq
+    LawDocument:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        doc_type:
+          type: string
+        doc_type_label:
+          type: string
+        official_number:
+          type: string
+        adoption_date:
+          type: string
+          format: date
+          nullable: true
+        status:
+          type: string
+        status_label:
+          type: string
+        lex_url:
+          type: string
+        languages:
+          type: array
+          items:
+            type: string
+          description: 'Bazadagi matn tillari: lat | cyr | ru'
+      required:
+      - adoption_date
+      - doc_type
+      - doc_type_label
+      - id
+      - languages
+      - lex_url
+      - official_number
+      - status
+      - status_label
+      - title
+    LawDocumentDetail:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        doc_type:
+          type: string
+        doc_type_label:
+          type: string
+        official_number:
+          type: string
+        adoption_date:
+          type: string
+          format: date
+          nullable: true
+        status:
+          type: string
+        status_label:
+          type: string
+        lex_url:
+          type: string
+        languages:
+          type: array
+          items:
+            type: string
+          description: 'Bazadagi matn tillari: lat | cyr | ru'
+        edition:
+          type: string
+          description: Joriy tahrir yorlig'i
+        articles:
+          type: array
+          items:
+            $ref: '#/components/schemas/ArticleRef'
+      required:
+      - adoption_date
+      - articles
+      - doc_type
+      - doc_type_label
+      - edition
+      - id
+      - languages
+      - lex_url
+      - official_number
+      - status
+      - status_label
+      - title
+    LegalDiffRequestRequest:
+      type: object
+      properties:
+        text_a:
+          type: string
+        text_b:
+          type: string
+      required:
+      - text_a
+      - text_b
+    LoginRequest:
+      type: object
+      properties:
+        phone_number:
+          type: string
+          minLength: 1
+        password:
+          type: string
+          minLength: 1
+        cookie:
+          type: boolean
+          default: false
+          description: true — refresh token HttpOnly cookie da (veb SPA), javob tanasida
+            bo'lmaydi; false — tanada (mobil)
+      required:
+      - password
+      - phone_number
+    MootCourtRequestRequest:
+      type: object
+      properties:
+        case_facts:
+          type: string
+          minLength: 1
+        claim_dispute:
+          type: string
+          default: ''
+        lang:
+          type: string
+          minLength: 1
+          default: lat
+      required:
+      - case_facts
+    PaginatedAdminUserList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminUser'
+    PaginatedAuditEventList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuditEvent'
+    PaginatedCaseList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Case'
+    PaginatedLawDocumentList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/LawDocument'
+    PaginatedPaymentList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Payment'
+    PaginatedStudentCaseSubmissionList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/StudentCaseSubmission'
+    PaginatedSubscriptionList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Subscription'
+    PaginatedSyncRunList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/SyncRun'
+    PatchedAdminPlanRequest:
+      type: object
+      properties:
+        code:
+          type: string
+          minLength: 1
+          description: FREE, PRO_MONTHLY, ENTERPRISE_YEARLY yoki yangi kod
+          maxLength: 30
+        name:
+          type: string
+          minLength: 1
+          description: Interfeysda ko'rsatiladigan nom (standart kodlar tarjima qilinadi)
+          maxLength: 80
+        price_uzs:
+          type: number
+          format: double
+          maximum: 10000000000
+          minimum: -10000000000
+          exclusiveMaximum: true
+          exclusiveMinimum: true
+          nullable: true
+        duration_days:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+          description: Obuna muddati (kun); FREE uchun bo'sh
+        daily_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        monthly_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_case_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+          description: Umrbod (FREE = 1)
+        max_pages_per_case:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+        daily_chat_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_chat_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        daily_template_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        lifetime_template_limit:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          nullable: true
+        watermark:
+          type: boolean
+          description: Shablonlarga "bepul tarif" belgisi qo'shiladi
+        priority_queue:
+          type: boolean
+          description: Ish tahlili navbatida oldinda
+        is_active:
+          type: boolean
+          description: Faolsiz tarif yangi obunaga berilmaydi
+        sort_order:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+    PatchedAdminTemplateRequest:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+        category:
+          $ref: '#/components/schemas/TemplateCategoryEnum'
+        language:
+          type: string
+          minLength: 1
+          maxLength: 8
+        description:
+          type: string
+          description: Qachon ishlatiladi (foydalanuvchiga ko'rinadi)
+        legal_basis:
+          type: string
+          description: Qonuniy asoslar, har biri yangi qatorda (ma'lumot uchun)
+        form_schema:
+          description: '[{"name": "fio", "label": "F.I.Sh.", "type": "text", "required":
+            true}]'
+        body:
+          type: string
+          minLength: 1
+          description: 'Hujjat matni: {{ maydon }}, {% if maydon %}…{% endif %}; qator
+            belgilari — modul izohida'
+        is_published:
+          type: boolean
+          description: Foydalanuvchilarga ko'rinadi
+    PatchedAdminUserRequest:
+      type: object
+      properties:
+        full_name:
+          type: string
+          minLength: 1
+          title: F.I.Sh.
+          maxLength: 255
+        role:
+          $ref: '#/components/schemas/UserRoleEnum'
+        advocate_license_no:
+          type: string
+          title: Advokatlik guvohnomasi
+          maxLength: 50
+        is_active:
+          type: boolean
+        is_fraud_flagged:
+          type: boolean
+    PatchedUserRequest:
+      type: object
+      properties:
+        full_name:
+          type: string
+          minLength: 1
+          title: F.I.Sh.
+          maxLength: 255
+        advocate_license_no:
+          type: string
+          title: Advokatlik guvohnomasi
+          maxLength: 50
+        university:
+          type: string
+          title: OTM / Universitet
+          maxLength: 150
+        study_level:
+          type: string
+          title: Bosqich / Kurs
+          maxLength: 50
+        student_id_no:
+          type: string
+          title: Talabalik guvohnomasi / HEMIS ID
+          maxLength: 50
+        language:
+          type: string
+          minLength: 1
+          title: Til
+          description: Interfeys tili (settings.LANGUAGES)
+          maxLength: 16
+    Payment:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user:
+          type: string
+          format: uuid
+        user_phone:
+          type: string
+          readOnly: true
+        user_name:
+          type: string
+          readOnly: true
+        plan_code:
+          type: string
+          description: FREE, PRO_MONTHLY, ENTERPRISE_YEARLY yoki yangi kod
+        provider:
+          $ref: '#/components/schemas/ProviderEnum'
+        provider_label:
+          type: string
+          readOnly: true
+        amount_uzs:
+          type: number
+          format: double
+          maximum: 10000000000
+          minimum: 0
+          exclusiveMaximum: true
+        status:
+          allOf:
+          - $ref: '#/components/schemas/PaymentStatusEnum'
+          readOnly: true
+        status_label:
+          type: string
+          readOnly: true
+        external_id:
+          type: string
+          description: Payme/Click tranzaksiya id si
+          maxLength: 100
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        paid_at:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+      required:
+      - amount_uzs
+      - created_at
+      - id
+      - paid_at
+      - plan_code
+      - provider
+      - provider_label
+      - status
+      - status_label
+      - user
+      - user_name
+      - user_phone
+    PaymentRequest:
+      type: object
+      properties:
+        user:
+          type: string
+          format: uuid
+        plan_code:
+          type: string
+          minLength: 1
+          description: FREE, PRO_MONTHLY, ENTERPRISE_YEARLY yoki yangi kod
+        provider:
+          $ref: '#/components/schemas/ProviderEnum'
+        amount_uzs:
+          type: number
+          format: double
+          maximum: 10000000000
+          minimum: 0
+          exclusiveMaximum: true
+        external_id:
+          type: string
+          description: Payme/Click tranzaksiya id si
+          maxLength: 100
+      required:
+      - amount_uzs
+      - plan_code
+      - provider
+      - user
+    PaymentStatusEnum:
+      enum:
+      - PENDING
+      - PAID
+      - FAILED
+      - CANCELED
+      type: string
+      description: |-
+        * `PENDING` - Kutilmoqda
+        * `PAID` - To'langan
+        * `FAILED` - Muvaffaqiyatsiz
+        * `CANCELED` - Bekor qilingan
+    Plan:
+      type: object
+      properties:
+        code:
+          type: string
+          readOnly: true
+          description: FREE, PRO_MONTHLY, ENTERPRISE_YEARLY yoki yangi kod
+        name:
+          type: string
+          readOnly: true
+        price_uzs:
+          type: number
+          format: double
+          maximum: 10000000000
+          minimum: -10000000000
+          exclusiveMaximum: true
+          exclusiveMinimum: true
+          readOnly: true
+          nullable: true
+        duration_days:
+          type: integer
+          readOnly: true
+          nullable: true
+          description: Obuna muddati (kun); FREE uchun bo'sh
+        daily_case_limit:
+          type: integer
+          readOnly: true
+          nullable: true
+        monthly_case_limit:
+          type: integer
+          readOnly: true
+          nullable: true
+        lifetime_case_limit:
+          type: integer
+          readOnly: true
+          nullable: true
+          description: Umrbod (FREE = 1)
+        max_pages_per_case:
+          type: integer
+          readOnly: true
+        daily_chat_limit:
+          type: integer
+          readOnly: true
+          nullable: true
+        lifetime_chat_limit:
+          type: integer
+          readOnly: true
+          nullable: true
+        daily_template_limit:
+          type: integer
+          readOnly: true
+          nullable: true
+        lifetime_template_limit:
+          type: integer
+          readOnly: true
+          nullable: true
+        watermark:
+          type: boolean
+          readOnly: true
+          description: Shablonlarga "bepul tarif" belgisi qo'shiladi
+        priority_queue:
+          type: boolean
+          readOnly: true
+          description: Ish tahlili navbatida oldinda
+      required:
+      - code
+      - daily_case_limit
+      - daily_chat_limit
+      - daily_template_limit
+      - duration_days
+      - lifetime_case_limit
+      - lifetime_chat_limit
+      - lifetime_template_limit
+      - max_pages_per_case
+      - monthly_case_limit
+      - name
+      - price_uzs
+      - priority_queue
+      - watermark
+    PresentationGenerateRequestRequest:
+      type: object
+      properties:
+        topic:
+          type: string
+          minLength: 1
+          maxLength: 500
+        slide_count:
+          type: integer
+          maximum: 12
+          minimum: 3
+          default: 5
+        author_name:
+          type: string
+          minLength: 1
+          default: Mezon Huquqshunos Talabasi
+        download:
+          type: boolean
+          default: false
+      required:
+      - topic
+    Preview:
+      type: object
+      properties:
+        blocks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Block'
+      required:
+      - blocks
+    ProceduralDeadlineRequestRequest:
+      type: object
+      properties:
+        procedure:
+          $ref: '#/components/schemas/ProcedureEnum'
+        start_date:
+          type: string
+          format: date
+      required:
+      - procedure
+      - start_date
+    ProcedureEnum:
+      enum:
+      - CIVIL_APPEAL
+      - CIVIL_CASSATION
+      - CIVIL_SUPERVISORY
+      - ECONOMIC_APPEAL
+      - ECONOMIC_CASSATION
+      - ADMIN_APPEAL
+      - ADMIN_CLAIM
+      - CRIMINAL_APPEAL
+      - CRIMINAL_CASSATION
+      type: string
+      description: |-
+        * `CIVIL_APPEAL` - CIVIL_APPEAL
+        * `CIVIL_CASSATION` - CIVIL_CASSATION
+        * `CIVIL_SUPERVISORY` - CIVIL_SUPERVISORY
+        * `ECONOMIC_APPEAL` - ECONOMIC_APPEAL
+        * `ECONOMIC_CASSATION` - ECONOMIC_CASSATION
+        * `ADMIN_APPEAL` - ADMIN_APPEAL
+        * `ADMIN_CLAIM` - ADMIN_CLAIM
+        * `CRIMINAL_APPEAL` - CRIMINAL_APPEAL
+        * `CRIMINAL_CASSATION` - CRIMINAL_CASSATION
+    ProviderEnum:
+      enum:
+      - CLICK
+      - PAYME
+      - MANUAL
+      type: string
+      description: |-
+        * `CLICK` - Click
+        * `PAYME` - Payme
+        * `MANUAL` - Qo'lda (admin)
+    QuizAnswerItemRequest:
+      type: object
+      properties:
+        question_id:
+          type: integer
+        selected_option:
+          type: string
+          minLength: 1
+          maxLength: 4
+      required:
+      - question_id
+      - selected_option
+    QuizSubmitRequestRequest:
+      type: object
+      properties:
+        answers:
+          type: array
+          items:
+            $ref: '#/components/schemas/QuizAnswerItemRequest'
+      required:
+      - answers
+    RefreshRequest:
+      type: object
+      properties:
+        refresh:
+          type: string
+          minLength: 1
+          description: Bo'sh — HttpOnly cookie dan olinadi
+    RegisterRequest:
+      type: object
+      properties:
+        phone_number:
+          type: string
+          minLength: 1
+        full_name:
+          type: string
+          minLength: 1
+        role:
+          $ref: '#/components/schemas/RegisterRoleEnum'
+        advocate_license_no:
+          type: string
+        university:
+          type: string
+        study_level:
+          type: string
+        student_id_no:
+          type: string
+        password1:
+          type: string
+          minLength: 1
+        password2:
+          type: string
+          minLength: 1
+        consent:
+          type: boolean
+          description: Shaxsiy ma'lumotlarni qayta ishlashga rozilik (O'RQ-547)
+        cookie:
+          type: boolean
+          default: false
+      required:
+      - consent
+      - full_name
+      - password1
+      - password2
+      - phone_number
+      - role
+    RegisterRoleEnum:
+      enum:
+      - LAWYER
+      - STUDENT
+      - CLIENT
+      type: string
+      description: |-
+        * `LAWYER` - Advokat / yurist
+        * `STUDENT` - Talaba
+        * `CLIENT` - Fuqaro
+    SearchHit:
+      type: object
+      properties:
+        article_id:
+          type: integer
+        document_id:
+          type: integer
+        doc_title:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        lex_url:
+          type: string
+        edition:
+          type: string
+        exact:
+          type: boolean
+        score:
+          type: number
+          format: double
+      required:
+      - article_id
+      - doc_title
+      - document_id
+      - edition
+      - exact
+      - label
+      - lex_url
+      - score
+      - text
+    StaffMe:
+      type: object
+      description: 'Admin ilova uchun: foydalanuvchining admin huquqlari.'
+      properties:
+        is_staff_role:
+          type: boolean
+        is_superadmin:
+          type: boolean
+      required:
+      - is_staff_role
+      - is_superadmin
+    StageEnum:
+      enum:
+      - FIRST_INSTANCE
+      - APPEAL_CASSATION
+      type: string
+      description: |-
+        * `FIRST_INSTANCE` - FIRST_INSTANCE
+        * `APPEAL_CASSATION` - APPEAL_CASSATION
+    StudentCaseBank:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          title: Kazus mavzusi
+          maxLength: 255
+        category:
+          $ref: '#/components/schemas/LawCategoryEnum'
+        category_label:
+          type: string
+          readOnly: true
+        difficulty:
+          $ref: '#/components/schemas/DifficultyEnum'
+        difficulty_label:
+          type: string
+          readOnly: true
+        facts:
+          type: string
+          title: Kazus holati (faktlar)
+        task_question:
+          type: string
+          title: Hal qilinishi lozim boʻlgan savol
+        relevant_laws:
+          title: Tegishli qonun moddalari
+        reference_solution:
+          title: Namunaviy IRAC yechimi
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - category_label
+      - created_at
+      - difficulty_label
+      - facts
+      - id
+      - task_question
+      - title
+    StudentCaseSubmission:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        case_bank:
+          type: integer
+          nullable: true
+        title:
+          type: string
+          title: Kazus sarlavhasi
+          maxLength: 255
+        facts:
+          type: string
+          title: Kazus faktlari
+        student_answer:
+          type: string
+          title: Talaba taklif qilgan yechim
+        irac_solution:
+          readOnly: true
+          title: AI / IRAC tahlili
+        score:
+          type: integer
+          readOnly: true
+          nullable: true
+          title: Baholash (0-100)
+        feedback:
+          type: string
+          readOnly: true
+          title: Taqriz va kamchiliklar
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - facts
+      - feedback
+      - id
+      - irac_solution
+      - score
+      - title
+    StudentLegalGlossary:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        term:
+          type: string
+          title: Atama / Iboraning nomi
+          maxLength: 255
+        latin_term:
+          type: string
+          title: Lotincha yozilishi
+          maxLength: 255
+        category:
+          $ref: '#/components/schemas/LawCategoryEnum'
+        category_label:
+          type: string
+          readOnly: true
+        is_roman_latin:
+          type: boolean
+          title: Rim huquqi / Lotincha aforizm
+        definition:
+          type: string
+          title: Mazmuni va huquqiy taʼrifi
+        legal_source:
+          type: string
+          title: Qonuniy asosi
+          maxLength: 255
+        example_usage:
+          type: string
+          title: Qoʻllanish misoli
+      required:
+      - category_label
+      - definition
+      - id
+      - term
+    Subscription:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user:
+          type: string
+          format: uuid
+          readOnly: true
+        user_phone:
+          type: string
+          readOnly: true
+        plan_code:
+          type: string
+          readOnly: true
+        plan_name:
+          type: string
+          readOnly: true
+        status:
+          allOf:
+          - $ref: '#/components/schemas/SubscriptionStatusEnum'
+          readOnly: true
+        started_at:
+          type: string
+          format: date-time
+          readOnly: true
+        expires_at:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Bo'sh — muddatsiz
+        source:
+          type: string
+          readOnly: true
+          description: ADMIN | PAYMENT
+        payment:
+          type: integer
+          readOnly: true
+          nullable: true
+        is_current:
+          type: boolean
+          readOnly: true
+      required:
+      - expires_at
+      - id
+      - is_current
+      - payment
+      - plan_code
+      - plan_name
+      - source
+      - started_at
+      - status
+      - user
+      - user_phone
+    SubscriptionStatusEnum:
+      enum:
+      - ACTIVE
+      - CANCELED
+      type: string
+      description: |-
+        * `ACTIVE` - Faol
+        * `CANCELED` - Bekor qilingan
+    SyncRun:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        started_at:
+          type: string
+          format: date-time
+          readOnly: true
+        finished_at:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+        status:
+          allOf:
+          - $ref: '#/components/schemas/SyncStatusEnum'
+          readOnly: true
+        status_label:
+          type: string
+          readOnly: true
+        summary:
+          type: object
+          additionalProperties: {}
+          readOnly: true
+          description: Ro'yxatlar o'rniga sonlar
+        log:
+          type: string
+          readOnly: true
+      required:
+      - finished_at
+      - id
+      - log
+      - started_at
+      - status
+      - status_label
+      - summary
+    SyncStatusEnum:
+      enum:
+      - RUNNING
+      - OK
+      - PARTIAL
+      - FAILED
+      type: string
+      description: |-
+        * `RUNNING` - Bajarilmoqda
+        * `OK` - Muvaffaqiyatli
+        * `PARTIAL` - Xatolar bilan
+        * `FAILED` - Xato
+    Template:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        doc_id:
+          type: integer
+          readOnly: true
+          nullable: true
+          description: Yurxizmat ID raqami
+        title:
+          type: string
+          readOnly: true
+        title_translations:
+          readOnly: true
+          description: 'Har bir tildagi sarlavha: {''uz-Latn'': ''...'', ''uz-Cyrl'':
+            ''...'', ''ru'': ''...''}'
+        category:
+          allOf:
+          - $ref: '#/components/schemas/TemplateCategoryEnum'
+          readOnly: true
+        category_label:
+          type: string
+          readOnly: true
+        subcategory:
+          type: string
+          readOnly: true
+        subcategory_slug:
+          type: string
+          readOnly: true
+        subcategory_translations:
+          readOnly: true
+          description: 'Har bir tildagi bo''lim nomi: {''uz-Latn'': ''...'', ''uz-Cyrl'':
+            ''...'', ''ru'': ''...''}'
+        available_languages:
+          readOnly: true
+        language:
+          type: string
+          readOnly: true
+        description:
+          type: string
+          readOnly: true
+          description: Qachon ishlatiladi (foydalanuvchiga ko'rinadi)
+        version:
+          type: integer
+          readOnly: true
+        is_approved:
+          type: boolean
+          readOnly: true
+          description: Joriy versiyani yurist-moderator tasdiqlaganmi
+      required:
+      - available_languages
+      - category
+      - category_label
+      - description
+      - doc_id
+      - id
+      - is_approved
+      - language
+      - subcategory
+      - subcategory_slug
+      - subcategory_translations
+      - title
+      - title_translations
+      - version
+    TemplateCategoryEnum:
+      enum:
+      - CONTRACTS
+      - STATEMENTS
+      - PERSONAL
+      - NOTARIAL
+      - COURT
+      - CORPORATE
+      - ADVOCATE_REQUEST
+      - MOTION
+      - CLAIM
+      - APPEAL
+      - POWER_OF_ATTORNEY
+      - CONTRACT
+      - ORDER
+      - OTHER
+      type: string
+      description: |-
+        * `CONTRACTS` - Shartnomalar
+        * `STATEMENTS` - Arizalar
+        * `PERSONAL` - Shaxsiy tarkibga oid hujjatlar
+        * `NOTARIAL` - Notarial tasdiqlanadigan hujjatlar
+        * `COURT` - Sudga oid hujjatlar
+        * `CORPORATE` - Korporativ hujjatlar
+        * `ADVOCATE_REQUEST` - Advokat soʻrovi
+        * `MOTION` - Iltimosnoma
+        * `CLAIM` - Daʼvo arizasi
+        * `APPEAL` - Shikoyat
+        * `POWER_OF_ATTORNEY` - Ishonchnoma
+        * `CONTRACT` - Shartnoma
+        * `ORDER` - Buyruq
+        * `OTHER` - Boshqa
+    TemplateDetail:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        doc_id:
+          type: integer
+          readOnly: true
+          nullable: true
+          description: Yurxizmat ID raqami
+        title:
+          type: string
+          readOnly: true
+        title_translations:
+          readOnly: true
+          description: 'Har bir tildagi sarlavha: {''uz-Latn'': ''...'', ''uz-Cyrl'':
+            ''...'', ''ru'': ''...''}'
+        category:
+          allOf:
+          - $ref: '#/components/schemas/TemplateCategoryEnum'
+          readOnly: true
+        category_label:
+          type: string
+          readOnly: true
+        subcategory:
+          type: string
+          readOnly: true
+        subcategory_slug:
+          type: string
+          readOnly: true
+        subcategory_translations:
+          readOnly: true
+          description: 'Har bir tildagi bo''lim nomi: {''uz-Latn'': ''...'', ''uz-Cyrl'':
+            ''...'', ''ru'': ''...''}'
+        available_languages:
+          readOnly: true
+        language:
+          type: string
+          readOnly: true
+        description:
+          type: string
+          readOnly: true
+          description: Qachon ishlatiladi (foydalanuvchiga ko'rinadi)
+        version:
+          type: integer
+          readOnly: true
+        is_approved:
+          type: boolean
+          readOnly: true
+          description: Joriy versiyani yurist-moderator tasdiqlaganmi
+        form_schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
+          readOnly: true
+        legal_basis:
+          type: array
+          items:
+            type: string
+          readOnly: true
+      required:
+      - available_languages
+      - category
+      - category_label
+      - description
+      - doc_id
+      - form_schema
+      - id
+      - is_approved
+      - language
+      - legal_basis
+      - subcategory
+      - subcategory_slug
+      - subcategory_translations
+      - title
+      - title_translations
+      - version
+    TemplateListItem:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        category:
+          $ref: '#/components/schemas/TemplateCategoryEnum'
+        category_label:
+          type: string
+          readOnly: true
+        language:
+          type: string
+          maxLength: 8
+        version:
+          type: integer
+          readOnly: true
+        is_published:
+          type: boolean
+          description: Foydalanuvchilarga ko'rinadi
+        approved_by_name:
+          type: string
+          readOnly: true
+          default: ''
+        approved_at:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - approved_at
+      - approved_by_name
+      - category
+      - category_label
+      - id
+      - title
+      - updated_at
+      - version
+    TemplateValuesRequest:
+      type: object
+      properties:
+        values:
+          type: object
+          additionalProperties: {}
+          description: 'Forma maydonlari: {nom: qiymat}; sana — YYYY-MM-DD'
+        lang:
+          type: string
+          minLength: 1
+          default: uz-Latn
+          description: Hujjat tuzish tili (uz-Latn, uz-Cyrl, ru)
+      required:
+      - values
+    ThesisRoadmapRequestRequest:
+      type: object
+      properties:
+        topic:
+          type: string
+          minLength: 1
+          maxLength: 500
+        work_type:
+          allOf:
+          - $ref: '#/components/schemas/WorkTypeEnum'
+          default: COURSEWORK
+        lang:
+          type: string
+          minLength: 1
+          default: lat
+      required:
+      - topic
+    TokenPair:
+      type: object
+      properties:
+        access:
+          type: string
+        refresh:
+          type: string
+          description: cookie=false bo'lsa
+        user:
+          $ref: '#/components/schemas/User'
+      required:
+      - access
+      - user
+    Usage:
+      type: object
+      properties:
+        plan:
+          type: string
+        plan_name:
+          type: string
+        max_pages:
+          type: integer
+        unlimited:
+          type: boolean
+        expires_at:
+          type: string
+          format: date-time
+          nullable: true
+        usage:
+          type: array
+          items:
+            $ref: '#/components/schemas/UsageRow'
+      required:
+      - expires_at
+      - max_pages
+      - plan
+      - plan_name
+      - unlimited
+      - usage
+    UsageRow:
+      type: object
+      properties:
+        kind:
+          type: string
+          description: case | chat | template
+        scope:
+          type: string
+          description: daily | monthly | lifetime
+        label:
+          type: string
+        used:
+          type: integer
+        limit:
+          type: integer
+      required:
+      - label
+      - limit
+      - used
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        phone_number:
+          type: string
+          readOnly: true
+          title: Telefon
+        full_name:
+          type: string
+          title: F.I.Sh.
+          maxLength: 255
+        role:
+          allOf:
+          - $ref: '#/components/schemas/UserRoleEnum'
+          readOnly: true
+        role_label:
+          type: string
+          readOnly: true
+        advocate_license_no:
+          type: string
+          title: Advokatlik guvohnomasi
+          maxLength: 50
+        university:
+          type: string
+          title: OTM / Universitet
+          maxLength: 150
+        study_level:
+          type: string
+          title: Bosqich / Kurs
+          maxLength: 50
+        student_id_no:
+          type: string
+          title: Talabalik guvohnomasi / HEMIS ID
+          maxLength: 50
+        language:
+          type: string
+          title: Til
+          description: Interfeys tili (settings.LANGUAGES)
+          maxLength: 16
+        language_tz:
+          type: string
+          readOnly: true
+          description: 'TZ kodi: uz-Latn | uz-Latn-2026 | uz-Cyrl | ru | kaa | en'
+        is_staff:
+          type: boolean
+          readOnly: true
+          description: Admin panelga kira oladi
+        date_joined:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - date_joined
+      - full_name
+      - id
+      - is_staff
+      - language_tz
+      - phone_number
+      - role
+      - role_label
+    UserRoleEnum:
+      enum:
+      - LAWYER
+      - STUDENT
+      - CLIENT
+      - MODERATOR
+      - SUPERADMIN
+      type: string
+      description: |-
+        * `LAWYER` - Advokat / yurist
+        * `STUDENT` - Talaba
+        * `CLIENT` - Fuqaro
+        * `MODERATOR` - Yurist-moderator
+        * `SUPERADMIN` - Superadmin
+    WorkTypeEnum:
+      enum:
+      - COURSEWORK
+      - THESIS_BACHELOR
+      - MASTER_DISSERTATION
+      type: string
+      description: |-
+        * `COURSEWORK` - COURSEWORK
+        * `THESIS_BACHELOR` - THESIS_BACHELOR
+        * `MASTER_DISSERTATION` - MASTER_DISSERTATION
+  securitySchemes:
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
